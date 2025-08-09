@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium real estate development with uncompromising quality, innovative design, and exceptional attention to detail. Building tomorrow's landmarks since 1994.">
+    <meta name="keywords" content="real estate development, luxury properties, commercial development, residential development, construction, architecture">
+    <meta name="author" content="Pinnacle Development">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pinnacle Development - Premium Real Estate Development">
+    <meta property="og:description" content="Building tomorrow's landmarks with uncompromising quality and innovative design.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pinnacle Development - Premium Real Estate Development">
+    <meta name="twitter:description" content="Building tomorrow's landmarks with uncompromising quality and innovative design.">
+    
+    <title>Pinnacle Development - Premium Real Estate Development</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+     <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c5530;
+            letter-spacing: -0.5px;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links li {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 400;
+            transition: all 0.4s ease;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a:before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2c5530;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover:before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #2c5530;
+            transform: translateY(-2px);
+        }
+
+        .contact-btn {
+            background: #2c5530;
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
+        }
+
+        .contact-btn:hover {
+            background: #1e3a21;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(44, 85, 48, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(44, 85, 48, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(60px);
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .cta-button {
+            background: rgba(44, 85, 48, 0.9);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(30px) scale(0.9);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background: rgba(30, 58, 33, 0.95);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+    </style>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+       <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Villa Serenité</div>
+            <ul class="nav-links">
+                <li><a href="#residences">Résidences</a></li>
+                <li><a href="#disponibilite">Disponibilité</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#contact" class="contact-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <h1>Un cadre de vie exceptionnel</h1>
+            <p class="hero-tagline">Convivial et élégant, au cœur de la nature</p>
+            <a href="#residences" class="cta-button">Découvrir nos résidences</a>
+        </div>
+    </section>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Pinnacle Development</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Three decades of excellence in luxury real estate development</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-text-header">
+                        <h3>Excellence Since 1994</h3>
+                        <div class="text-divider"></div>
+                    </div>
+                    
+                    <div class="about-paragraphs">
+                        <p>
+                            Since 1994, Pinnacle Development has been at the forefront of luxury real estate development, 
+                            creating iconic properties that define skylines and communities across the nation.
+                        </p>
+                        <p>
+                            Our commitment to architectural excellence, sustainable development practices, and customer 
+                            satisfaction has established us as a trusted leader in the industry, with over $2.5 billion 
+                            in successful projects delivered.
+                        </p>
+                        <p>
+                            Every project we undertake reflects our core values of innovation, quality, and integrity, 
+                            ensuring that each development exceeds expectations and stands the test of time.
+                        </p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">$2.5B</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Completed Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img src="/" alt="Architectural Excellence" class="about-img">
+                    <div class="about-image-overlay">
+                        <p>Architectural Excellence Since 1994</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Architectural Showcase -->
+            <div class="arch-showcase mb-20">
+                <div class="text-center mb-16">
+                    <h2 class="arch-title text-6xl font-extralight text-slate-800 mb-8 opacity-0 translate-y-12">
+                        Une architecture qui <span class="gradient-text">respire</span>
+                    </h2>
+                    <div class="arch-underline w-32 h-1 bg-gradient-to-r from-emerald-600 to-emerald-800 mx-auto rounded-full opacity-0 scale-x-0"></div>
+                </div>
+
+                <!-- Visual Architecture Grid -->
+                <div class="arch-visual-grid grid lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Large Feature Image -->
+                    <div class="lg:col-span-2 relative">
+                        <div class="arch-main-image h-96 rounded-3xl overflow-hidden relative group">
+                            <img src="/architects-reviewing-plans-stockcake.jpg" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0" alt="Architecture moderne">
+                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-transparent"></div>
+                            
+                            <!-- Floating Info Elements -->
+                            <div class="absolute top-8 right-8 glass bg-white/90 px-6 py-3 rounded-2xl opacity-0 translate-y-4 info-bubble">
+                                <div class="text-sm text-slate-600">Surface habitable</div>
+                                <div class="text-2xl font-light gradient-text">280m²</div>
+                            </div>
+                            <div class="absolute bottom-8 left-8 glass bg-white/90 px-6 py-3 rounded-2xl opacity-0 translate-y-4 info-bubble">
+                                <div class="text-sm text-slate-600">Terrasse</div>
+                                <div class="text-2xl font-light gradient-text">150m²</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Side Images Stack -->
+                    <div class="space-y-8">
+                        <div class="arch-side-image h-44 rounded-2xl overflow-hidden relative group">
+                            <img src="pexels-mantasink-1106476.jpg" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0" alt="Détail façade">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        </div>
+                        <div class="arch-side-image h-44 rounded-2xl overflow-hidden relative group">
+                            <img src="/elegant-mixed-use.png" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0" alt="Intérieur moderne">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Architectural Showcase -->
+            <div class="arch-showcase mb-20">
+                <div class="text-center mb-16">
+                    <h2 class="arch-title text-6xl font-extralight text-slate-800 mb-8 opacity-0 translate-y-12">
+                        Une architecture qui <span class="gradient-text">respire</span>
+                    </h2>
+                    <div class="arch-underline w-32 h-1 bg-gradient-to-r from-emerald-600 to-emerald-800 mx-auto rounded-full opacity-0 scale-x-0"></div>
+                </div>
+
+                <!-- Visual Architecture Grid -->
+                <div class="arch-visual-grid grid lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Large Feature Image -->
+                    <div class="lg:col-span-2 relative">
+                        <div class="arch-main-image h-96 rounded-3xl overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0" alt="Architecture moderne">
+                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-transparent"></div>
+                            
+                            <!-- Floating Info Elements -->
+                            <div class="absolute top-8 right-8 glass bg-white/90 px-6 py-3 rounded-2xl opacity-0 translate-y-4 info-bubble">
+                                <div class="text-sm text-slate-600">Surface habitable</div>
+                                <div class="text-2xl font-light gradient-text">280m²</div>
+                            </div>
+                            <div class="absolute bottom-8 left-8 glass bg-white/90 px-6 py-3 rounded-2xl opacity-0 translate-y-4 info-bubble">
+                                <div class="text-sm text-slate-600">Terrasse</div>
+                                <div class="text-2xl font-light gradient-text">150m²</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Side Images Stack -->
+                    <div class="space-y-8">
+                        <div class="arch-side-image h-44 rounded-2xl overflow-hidden relative group">
+                            <img src="pexels-mantasink-1106476.jpg" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0" alt="Détail façade">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        </div>
+                        <div class="arch-side-image h-44 rounded-2xl overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0" alt="Intérieur moderne">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section id="architecture" class="py-32 bg-gradient-to-br from-slate-100 to-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <!-- Interactive Section Header -->
+                <div class="text-center mb-20">
+                    <div class="inline-block relative">
+                        <h2 class="arch-title text-5xl font-extralight text-slate-800 mb-6 opacity-0 translate-y-12">
+                            Une architecture qui <span class="gradient-text font-light">respire</span>
+                        </h2>
+                        <!-- Animated Underline -->
+                        <div class="arch-underline absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-emerald-600 to-emerald-800 scale-x-0 origin-left rounded-full"></div>
+                    </div>
+                    <p class="arch-subtitle text-xl text-slate-600 max-w-3xl mx-auto font-light opacity-0 translate-y-8 mt-8">
+                        Chaque détail architectural a été pensé pour créer une harmonie parfaite entre intérieur et extérieur
+                    </p>
+                </div>
+
+                <!-- Interactive Architecture Grid -->
+                <div class="arch-grid grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Content Side with Morphing Elements -->
+                    <div class="arch-content space-y-8">
+                        <!-- Feature List with Interactive Icons -->
+                        <div class="feature-list space-y-6">
+                            <div class="feature-item flex items-start space-x-4 opacity-0 -translate-x-8 cursor-pointer magnetic">
+                                <div class="feature-icon w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white text-xl shadow-lg transform hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 21l4-4 4 4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-medium text-slate-800 mb-2">Façades ouvertes</h4>
+                                    <p class="text-slate-600">Sur jardins privatifs avec vue dégagée</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item flex items-start space-x-4 opacity-0 -translate-x-8 cursor-pointer magnetic">
+                                <div class="feature-icon w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white text-xl shadow-lg transform hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-medium text-slate-800 mb-2">Terrasses panoramiques</h4>
+                                    <p class="text-slate-600">Optimisation de la lumière naturelle</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item flex items-start space-x-4 opacity-0 -translate-x-8 cursor-pointer magnetic">
+                                <div class="feature-icon w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white text-xl shadow-lg transform hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-medium text-slate-800 mb-2">Matériaux nobles</h4>
+                                    <p class="text-slate-600">Intégration paysagère respectueuse</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Side with Stacked Images -->
+                    <div class="arch-images relative">
+                        <div class="image-stack relative">
+                            <!-- Main Image -->
+                            <div class="main-arch-image relative z-20 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-700 opacity-0 translate-y-12">
+                                <img src="/pexels-mantasink-1106476.jpg" 
+                                    class="w-full h-80 object-cover" alt="Architecture moderne">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                            </div>
+                            
+                            <!-- Floating Secondary Images -->
+                            <div class="secondary-arch-image absolute -top-8 -right-8 w-48 h-48 rounded-2xl overflow-hidden shadow-xl z-10 transform rotate-6 hover:rotate-0 transition-transform duration-500 opacity-0 translate-x-12">
+                                <img src="/architects-reviewing-plans-stockcake.jpg" 
+                                    class="w-full h-full object-cover" alt="Détail architectural">
+                            </div>
+                            
+                            <div class="tertiary-arch-image absolute -bottom-6 -left-6 w-40 h-40 rounded-2xl overflow-hidden shadow-xl z-30 transform -rotate-3 hover:rotate-0 transition-transform duration-500 opacity-0 -translate-x-12">
+                                <img src="/blog-architecture-cs-civil-engeneering.jpg" 
+                                    class="w-full h-full object-cover" alt="Espace intérieur">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Why Choose Us -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Pinnacle Development</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Our commitment to excellence sets us apart in the industry</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Award-Winning Design</h3>
+                    <p class="feature-description">
+                        Our projects have received numerous architectural awards and industry recognition for innovative design and excellence.
+                    </p>
+                    <div class="feature-stats">
+                        <div class="feature-stat">25+ Awards</div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">On-Time Delivery</h3>
+                    <p class="feature-description">
+                        We pride ourselves on delivering every project on schedule and within budget, with a 98% on-time completion rate.
+                    </p>
+                    <div class="feature-stats">
+                        <div class="feature-stat">98% On-Time</div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3 class="feature-title">Sustainable Development</h3>
+                    <p class="feature-description">
+                        Environmental responsibility is at our core, with all projects meeting or exceeding green building standards.
+                    </p>
+                    <div class="feature-stats">
+                        <div class="feature-stat">LEED Certified</div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3 class="feature-title">Premium Quality</h3>
+                    <p class="feature-description">
+                        Only the finest materials and craftsmanship go into our developments, ensuring lasting value and beauty.
+                    </p>
+                    <div class="feature-stats">
+                        <div class="feature-stat">Premium Materials</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Hear what our satisfied clients have to say about their experience</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Pinnacle Development transformed our vision into reality. The attention to detail and commitment to excellence exceeded our expectations at every turn. Their team's professionalism and expertise made the entire process seamless."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Mitchell</div>
+                            <div class="author-role">Property Investor</div>
+                            <div class="author-company">Mitchell Holdings</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Working with Pinnacle was a seamless experience. Their professionalism and expertise made our commercial development project a tremendous success. The quality of construction is unmatched in the industry."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RC</div>
+                        <div class="author-info">
+                            <div class="author-name">Robert Chen</div>
+                            <div class="author-role">Business Owner</div>
+                            <div class="author-company">Chen Enterprises</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "The quality of construction and innovative design approach by Pinnacle Development has set a new standard in our community. Their commitment to sustainability is truly commendable."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <div class="author-name">Maria Rodriguez</div>
+                            <div class="author-role">City Planner</div>
+                            <div class="author-company">Metropolitan Planning</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News & Press</a></li>
+                        <li><a href="#">Awards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#projects">Residential Development</a></li>
+                        <li><a href="#projects">Commercial Projects</a></li>
+                        <li><a href="#">Mixed-Use Development</a></li>
+                        <li><a href="#">Property Management</a></li>
+                        <li><a href="#">Design & Planning</a></li>
+                        <li><a href="#">Consulting Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Project Gallery</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Development Process</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Investment Opportunities</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal & Support</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#contact">Contact Support</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Our Projects</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pinnacle Development. All rights reserved. | Designed with excellence in mind.</p>
+                <p class="footer-tagline">Building Tomorrow's Landmarks Since 1994</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Initialize animations on load
+        window.addEventListener('load', initAnimations);
+
+        function initAnimations() {
+            // Navbar animation
+            const navTl = gsap.timeline({ delay: 0.5 });
+            navTl.to('.navbar', { 
+                y: 0, 
+                duration: 1, 
+                ease: "power3.out" 
+            })
+            .to('.logo', { 
+                opacity: 1, 
+                x: 0, 
+                duration: 0.8, 
+                ease: "power2.out" 
+            }, "-=0.5")
+            .to('.nav-link', { 
+                opacity: 1, 
+                y: 0, 
+                duration: 0.6, 
+                stagger: 0.1, 
+                ease: "power2.out" 
+            }, "-=0.6");
+
+            // Hero animations
+            const heroTl = gsap.timeline({ delay: 1 });
+            heroTl.to('.hero-title', { 
+                opacity: 1, 
+                y: 0, 
+                duration: 1.5, 
+                ease: "power3.out" 
+            })
+            .to('.hero-subtitle', { 
+                opacity: 1, 
+                y: 0, 
+                duration: 1, 
+                ease: "power2.out" 
+            }, "-=1")
+            .to('.hero-cta', { 
+                opacity: 1, 
+                scale: 1, 
+                duration: 0.8, 
+                ease: "back.out(1.7)" 
+            }, "-=0.5")
+            .to('.scroll-indicator', { 
+                opacity: 1, 
+                duration: 0.6 
+            }, "-=0.3");
+
+            gsap.to('.arch-underline', {
+                scaleX: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.arch-title',
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Feature items animation
+            gsap.utils.toArray('.feature-item').forEach((item, index) => {
+                gsap.to(item, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    delay: index * 0.15,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Architecture images animations
+            gsap.to('.main-arch-image', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.main-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            gsap.to('.secondary-arch-image', {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: '.secondary-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            gsap.to('.tertiary-arch-image', {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                delay: 0.6,
+                scrollTrigger: {
+                    trigger: '.tertiary-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Section titles animations
+            gsap.utils.toArray('.section-title, .arch-title, .specs-title, .contact-title').forEach(title => {
+                gsap.to(title, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: title,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Stats visual animation
+            gsap.to('.stats-visual', {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.stats-visual',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Villa images reveal with stagger
+            gsap.utils.toArray('.villa-image').forEach((img, index) => {
+                gsap.to(img, {
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    delay: index * 0.2,
+                    scrollTrigger: {
+                        trigger: img,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Villa overlays animation
+            gsap.utils.toArray('.villa-overlay').forEach((overlay, index) => {
+                gsap.to(overlay, {
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    delay: index * 0.15 + 0.5,
+                    scrollTrigger: {
+                        trigger: overlay,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Architecture underline animation
+            gsap.to('.arch-underline', {
+                opacity: 1,
+                scaleX: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.arch-title',
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Architecture images reveal
+            gsap.utils.toArray('.arch-main-image img, .arch-side-image img').forEach((img, index) => {
+                gsap.to(img, {
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    delay: index * 0.2,
+                    scrollTrigger: {
+                        trigger: img,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Info bubbles animation
+            gsap.utils.toArray('.info-bubble').forEach((bubble, index) => {
+                gsap.to(bubble, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "back.out(1.7)",
+                    delay: index * 0.3 + 0.8,
+                    scrollTrigger: {
+                        trigger: bubble,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Feature visuals animation
+            gsap.utils.toArray('.feature-visual').forEach((feature, index) => {
+                gsap.to(feature, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    delay: index * 0.15,
+                    scrollTrigger: {
+                        trigger: feature,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Specs rows animation with stagger
+            gsap.utils.toArray('.specs-row').forEach((row, index) => {
+                gsap.to(row, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    delay: index * 0.2,
+                    scrollTrigger: {
+                        trigger: row,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Contact items animation
+            gsap.utils.toArray('.contact-item').forEach((item, index) => {
+                gsap.to(item, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "back.out(1.7)",
+                    delay: index * 0.2,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Final CTA animation
+            gsap.to('.final-cta', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                scrollTrigger: {
+                    trigger: '.final-cta',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Parallax effects for floating elements
+            gsap.utils.toArray('.floating').forEach(element => {
+                gsap.to(element, {
+                    y: -100,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+            });
+gsap.to('.arch-underline', {
+                scaleX: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.arch-title',
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Feature items animation
+            gsap.utils.toArray('.feature-item').forEach((item, index) => {
+                gsap.to(item, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    delay: index * 0.15,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Architecture images animations
+            gsap.to('.main-arch-image', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.main-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            gsap.to('.secondary-arch-image', {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: '.secondary-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            gsap.to('.tertiary-arch-image', {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                delay: 0.6,
+                scrollTrigger: {
+                    trigger: '.tertiary-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Section titles animations
+            gsap.utils.toArray('.section-title, .arch-title, .specs-title, .contact-title').forEach(title => {
+                gsap.to(title, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: title,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Stats visual animation
+            gsap.to('.stats-visual', {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.stats-visual',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Villa images reveal with stagger
+            gsap.utils.toArray('.villa-image').forEach((img, index) => {
+                gsap.to(img, {
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    delay: index * 0.2,
+                    scrollTrigger: {
+                        trigger: img,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Villa overlays animation
+            gsap.utils.toArray('.villa-overlay').forEach((overlay, index) => {
+                gsap.to(overlay, {
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    delay: index * 0.15 + 0.5,
+                    scrollTrigger: {
+                        trigger: overlay,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Architecture underline animation
+            gsap.to('.arch-underline', {
+                opacity: 1,
+                scaleX: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.arch-title',
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Architecture images reveal
+            gsap.utils.toArray('.arch-main-image img, .arch-side-image img').forEach((img, index) => {
+                gsap.to(img, {
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    delay: index * 0.2,
+                    scrollTrigger: {
+                        trigger: img,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Info bubbles animation
+            gsap.utils.toArray('.info-bubble').forEach((bubble, index) => {
+                gsap.to(bubble, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "back.out(1.7)",
+                    delay: index * 0.3 + 0.8,
+                    scrollTrigger: {
+                        trigger: bubble,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+            // Villa hover effects
+            document.querySelectorAll('.main-villa, .villa-item').forEach(villa => {
+                villa.addEventListener('mouseenter', () => {
+                    gsap.to(villa.querySelector('.villa-image'), {
+                        scale: 1.1,
+                        duration: 0.8,
+                        ease: "power2.out"
+                    });
+                });
+
+                villa.addEventListener('mouseleave', () => {
+                    gsap.to(villa.querySelector('.villa-image'), {
+                        scale: 1,
+                        duration: 0.8,
+                        ease: "power2.out"
+                    });
+                });
+            });
+
+            // Architecture image hover effects
+            document.querySelectorAll('.arch-main-image, .arch-side-image').forEach(img => {
+                img.addEventListener('mouseenter', () => {
+                    gsap.to(img.querySelector('img'), {
+                        scale: 1.1,
+                        duration: 0.6,
+                        ease: "power2.out"
+                    });
+                });
+
+                img.addEventListener('mouseleave', () => {
+                    gsap.to(img.querySelector('img'), {
+                        scale: 1,
+                        duration: 0.6,
+                        ease: "power2.out"
+                    });
+                });
+            });
+
+            // Specs row hover effects
+            document.querySelectorAll('.specs-row').forEach(row => {
+                row.addEventListener('mouseenter', () => {
+                    gsap.to(row, {
+                        x: 20,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                    gsap.to(row.querySelector('.spec-visual-element'), {
+                        scale: 1.1,
+                        rotation: 5,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+
+                row.addEventListener('mouseleave', () => {
+                    gsap.to(row, {
+                        x: 0,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                    gsap.to(row.querySelector('.spec-visual-element'), {
+                        scale: 1,
+                        rotation: 0,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+
+            // Contact visual hover effects
+            document.querySelectorAll('.contact-visual').forEach(visual => {
+                visual.addEventListener('mouseenter', () => {
+                    gsap.to(visual, {
+                        scale: 1.1,
+                        rotation: 5,
+                        duration: 0.3,
+                        ease: "back.out(1.7)"
+                    });
+                });
+
+                visual.addEventListener('mouseleave', () => {
+                    gsap.to(visual, {
+                        scale: 1,
+                        rotation: 0,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+
+            // Button hover effects
+            document.querySelectorAll('.hero-cta, .final-cta').forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    gsap.to(btn, {
+                        scale: 1.05,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+
+                btn.addEventListener('mouseleave', () => {
+                    gsap.to(btn, {
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        }
+
+        // Scroll progress indicator
+        gsap.to('.scroll-progress', {
+            width: '100%',
+            ease: "none",
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 0.3
+            }
+        });
+
+        // Navbar background change on scroll
+        ScrollTrigger.create({
+            start: "top -100",
+            end: 99999,
+            toggleClass: { className: "bg-white/95 shadow-lg", targets: ".navbar" }
+        });
+
+        // Custom cursor trail effect
+        const cursorTrail = document.querySelector('.cursor-trail');
+        let mouseX = 0, mouseY = 0;
+        let trailX = 0, trailY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateTrail() {
+            const dx = mouseX - trailX;
+            const dy = mouseY - trailY;
+            
+            trailX += dx * 0.1;
+            trailY += dy * 0.1;
+            
+            cursorTrail.style.left = trailX + 'px';
+            cursorTrail.style.top = trailY + 'px';
+            
+            requestAnimationFrame(animateTrail);
+        }
+        animateTrail();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    gsap.to(window, {
+                        duration: 1.5,
+                        scrollTo: { y: target, offsetY: 100 },
+                        ease: "power3.inOut"
+                    });
+                }
+            });
+        });
+
+        // Feature icon rotation on scroll
+        gsap.utils.toArray('.feature-icon').forEach(icon => {
+            gsap.to(icon, {
+                rotation: 360,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: icon,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    scrub: 1
+                }
+            });
+        });
+
+        // Text reveal animation for hero
+        const splitText = (element) => {
+            const text = element.textContent;
+            element.innerHTML = text.split('').map(char => 
+                `<span class="char" style="display:inline-block;opacity:0;transform:translateY(20px)">${char === ' ' ? '&nbsp;' : char}</span>`
+            ).join('');
+            
+            gsap.to(element.querySelectorAll('.char'), {
+                opacity: 1,
+                y: 0,
+                duration: 0.05,
+                stagger: 0.02,
+                ease: "power2.out",
+                delay: 1.5
+            });
+        };
+
+        // Apply text reveal to hero subtitle
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        if (heroSubtitle) {
+            splitText(heroSubtitle);
+        }
+
+        // Infinite scroll effect for background elements
+        gsap.to('.floating-elements .floating:nth-child(1)', {
+            rotation: 360,
+            duration: 20,
+            ease: "none",
+            repeat: -1
+        });
+
+        gsap.to('.floating-elements .floating:nth-child(2)', {
+            rotation: -360,
+            duration: 25,
+            ease: "none",
+            repeat: -1
+        });
+
+        // Image parallax effects
+        gsap.utils.toArray('.villa-image, .arch-main-image img, .arch-side-image img').forEach(img => {
+            gsap.to(img, {
+                y: -50,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: img,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        });
+            gsap.utils.toArray('.section-title, .arch-title, .specs-title, .contact-title, .architecture-title').forEach(title => {
+        gsap.fromTo(title, {
+            opacity: 0,
+            y: 50,
+            x: title.classList.contains('architecture-title') ? -50 : 0
+        }, {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            duration: 1.2,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: title,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Section subtitles animations
+    gsap.utils.toArray('.section-subtitle, .arch-subtitle, .specs-subtitle, .contact-subtitle').forEach(subtitle => {
+        gsap.fromTo(subtitle, {
+            opacity: 0,
+            y: 30
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: subtitle,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Stats visual animation
+    gsap.to('.stats-visual', {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: '.stats-visual',
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // Villa images reveal with stagger
+    gsap.utils.toArray('.villa-image').forEach((img, index) => {
+        gsap.to(img, {
+            opacity: 1,
+            duration: 1.2,
+            ease: "power2.out",
+            delay: index * 0.2,
+            scrollTrigger: {
+                trigger: img,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Villa overlays animation
+    gsap.utils.toArray('.villa-overlay').forEach((overlay, index) => {
+        gsap.to(overlay, {
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.out",
+            delay: index * 0.15 + 0.5,
+            scrollTrigger: {
+                trigger: overlay,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Residence cards staggered animation
+    gsap.utils.toArray(".residence-card").forEach((card, index) => {
+        gsap.fromTo(card, {
+            opacity: 0,
+            y: 80,
+            rotationX: 10
+        }, {
+            opacity: 1,
+            y: 0,
+            rotationX: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            },
+            delay: index * 0.2
+        });
+
+        // Animate specs within each card
+        const specs = card.querySelectorAll('.spec');
+        specs.forEach((spec, specIndex) => {
+            gsap.fromTo(spec, {
+                opacity: 0,
+                y: 20
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                ease: "power2.out",
+                delay: specIndex * 0.1 + 0.5,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+    });
+
+    // Info cards animations
+    gsap.utils.toArray('.info-card').forEach((card, index) => {
+        gsap.to(card, {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            ease: "back.out(1.7)",
+            delay: index * 0.2,
+            scrollTrigger: {
+                trigger: card,
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Architecture underline animation
+    gsap.to('.arch-underline', {
+        opacity: 1,
+        scaleX: 1,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: '.arch-title',
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // Architecture features list animation
+    gsap.utils.toArray(".architecture-features li").forEach((item, index) => {
+        gsap.fromTo(item, {
+            opacity: 0,
+            x: -30
+        }, {
+            opacity: 1,
+            x: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            delay: index * 0.1,
+            scrollTrigger: {
+                trigger: ".architecture-features",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Architecture images reveal
+    gsap.utils.toArray('.arch-main-image img, .arch-side-image img, .arch-image').forEach((img, index) => {
+        gsap.fromTo(img, {
+            opacity: 0,
+            y: 50,
+            scale: 0.9
+        }, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            ease: "power2.out",
+            delay: index * 0.2,
+            scrollTrigger: {
+                trigger: img,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Main architecture image
+    gsap.to('.main-arch-image', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: '.main-arch-image',
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // Secondary and tertiary architecture images
+    gsap.to('.secondary-arch-image', {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        delay: 0.3,
+        scrollTrigger: {
+            trigger: '.secondary-arch-image',
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    gsap.to('.tertiary-arch-image', {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        delay: 0.6,
+        scrollTrigger: {
+            trigger: '.tertiary-arch-image',
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // Info bubbles animation
+    gsap.utils.toArray('.info-bubble').forEach((bubble, index) => {
+        gsap.to(bubble, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "back.out(1.7)",
+            delay: index * 0.3 + 0.8,
+            scrollTrigger: {
+                trigger: bubble,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Feature visuals animation
+    gsap.utils.toArray('.feature-visual').forEach((feature, index) => {
+        gsap.to(feature, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            delay: index * 0.15,
+            scrollTrigger: {
+                trigger: feature,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Feature items animation
+    gsap.utils.toArray('.feature-item').forEach((item, index) => {
+        gsap.to(item, {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            delay: index * 0.15,
+            scrollTrigger: {
+                trigger: item,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Specs rows animation with stagger
+    gsap.utils.toArray('.specs-row').forEach((row, index) => {
+        gsap.to(row, {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power2.out",
+            delay: index * 0.2,
+            scrollTrigger: {
+                trigger: row,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Spec cards animation with SVG drawing
+    gsap.utils.toArray('.spec-card').forEach((card, index) => {
+        gsap.fromTo(card, {
+            opacity: 0,
+            y: 50,
+            rotationY: 10
+        }, {
+            opacity: 1,
+            y: 0,
+            rotationY: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            delay: index * 0.1,
+            scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        // Animate SVG paths
+        const svgElements = card.querySelectorAll('.draw-svg');
+        svgElements.forEach((element, svgIndex) => {
+            const pathLength = element.getTotalLength ? element.getTotalLength() : 100;
+            gsap.fromTo(element, {
+                strokeDasharray: pathLength,
+                strokeDashoffset: pathLength
+            }, {
+                strokeDashoffset: 0,
+                duration: 1,
+                ease: "power2.out",
+                delay: index * 0.1 + svgIndex * 0.2,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+    });
+
+
+        // Refresh ScrollTrigger on window resize
+        window.addEventListener('resize', () => {
+            ScrollTrigger.refresh();
+        });
+
+        // Performance optimization
+        gsap.config({ force3D: true });
+
+        // Add loading animation
+        gsap.set("body", { opacity: 0 });
+        gsap.to("body", { 
+            opacity: 1, 
+            duration: 1, 
+            ease: "power2.out",
+            delay: 0.5
+        });
+
+         gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+        // Initialize GSAP timeline
+        const tl = gsap.timeline();
+
+        // Navbar animation on page load
+        tl.to(".navbar", {
+            duration: 1,
+            y: 0,
+            ease: "power3.out"
+        })
+        .to(".logo", {
+            duration: 0.8,
+            opacity: 1,
+            x: 0,
+            ease: "power2.out"
+        }, "-=0.5")
+        .to(".nav-links li", {
+            duration: 0.6,
+            opacity: 1,
+            y: 0,
+            stagger: 0.1,
+            ease: "power2.out"
+        }, "-=0.6");
+
+        // Hero section animations
+        gsap.set([".hero h1", ".hero-tagline", ".cta-button"], {
+            opacity: 0,
+            y: 60
+        });
+
+        const heroTl = gsap.timeline({delay: 0.5});
+        heroTl.to(".hero h1", {
+            duration: 1.2,
+            opacity: 1,
+            y: 0,
+            ease: "power3.out"
+        })
+        .to(".hero-tagline", {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: "power2.out"
+        }, "-=0.8")
+        .to(".cta-button", {
+            duration: 0.8,
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            ease: "back.out(1.7)"
+        }, "-=0.5");
+    </script>
+</body>
+</html>

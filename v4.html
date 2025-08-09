@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium real estate development with uncompromising quality, innovative design, and exceptional attention to detail. Building tomorrow's landmarks since 1994.">
+    <meta name="keywords" content="real estate development, luxury properties, commercial development, residential development, construction, architecture">
+    <meta name="author" content="Pinnacle Development">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pinnacle Development - Premium Real Estate Development">
+    <meta property="og:description" content="Building tomorrow's landmarks with uncompromising quality and innovative design.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pinnacle Development - Premium Real Estate Development">
+    <meta name="twitter:description" content="Building tomorrow's landmarks with uncompromising quality and innovative design.">
+    
+    <title>Pinnacle Development - Premium Real Estate Development</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Header -->
+     <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fdfdfd;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c5530;
+            letter-spacing: -0.5px;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links li {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 400;
+            transition: all 0.4s ease;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a:before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2c5530;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover:before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #2c5530;
+            transform: translateY(-2px);
+        }
+
+        .contact-btn {
+            background: #2c5530;
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
+        }
+
+        .contact-btn:hover {
+            background: #1e3a21;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(44, 85, 48, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(44, 85, 48, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(60px);
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .cta-button {
+            background: rgba(44, 85, 48, 0.9);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(30px) scale(0.9);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background: rgba(30, 58, 33, 0.95);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Section Base */
+        .section {
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        /* Residences Section */
+        .residences {
+            background: linear-gradient(135deg, #f8faf9 0%, #f1f5f2 100%);
+            position: relative;
+        }
+
+        .residences:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to bottom, rgba(44, 85, 48, 0.02), transparent);
+            pointer-events: none;
+        }
+
+        .residence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+
+        .residence-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.6s ease;
+            opacity: 0;
+            transform: translateY(80px) rotateX(10deg);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .residence-card:hover {
+            transform: translateY(-10px) rotateX(0deg) scale(1.02);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+        }
+
+        .residence-image {
+            height: 280px;
+            background: center/cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .residence-image:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(44, 85, 48, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .residence-card:hover .residence-image:before {
+            opacity: 1;
+        }
+
+        .residence-content {
+            padding: 2rem;
+        }
+
+        .residence-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .residence-tagline {
+            color: #2c5530;
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .residence-description {
+            color: #7f8c8d;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .residence-specs {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .spec {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .spec-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+            font-size: 1.2rem;
+        }
+
+        .spec-label {
+            font-size: 0.85rem;
+            color: #95a5a6;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .spec-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        /* Architecture Highlights */
+        .architecture {
+            padding: 8rem 2rem;
+            background: linear-gradient(45deg, #fdfdfd 0%, #f9fbfa 100%);
+            position: relative;
+        }
+
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .architecture-content {
+            padding: 0 2rem;
+        }
+
+        .architecture-title {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .architecture-features {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .architecture-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: #7f8c8d;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.3s ease;
+        }
+
+        .architecture-features li:hover {
+            color: #2c5530;
+            transform: translateX(10px);
+        }
+
+        .architecture-features li:before {
+            content: "→";
+            margin-right: 1rem;
+            color: #2c5530;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .architecture-features li:hover:before {
+            transform: translateX(5px);
+        }
+
+        .architecture-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .arch-image {
+            height: 250px;
+            background: center/cover;
+            border-radius: 12px;
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .arch-image:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .arch-image.large {
+            grid-column: 1 / -1;
+            height: 300px;
+        }
+
+        /* Specs Section */
+        .specs-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 6rem 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .specs-section:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(44, 85, 48, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .specs-section .section-title {
+            color: white;
+        }
+
+        .specs-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .spec-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateY(50px) rotateY(10deg);
+            perspective: 1000px;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-10px) rotateY(0deg) scale(1.05);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .spec-card-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, #2c5530, #3e7b40);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 25px rgba(44, 85, 48, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .spec-card:hover .spec-card-icon {
+            transform: scale(1.1) rotateY(360deg);
+            box-shadow: 0 12px 35px rgba(44, 85, 48, 0.6);
+        }
+
+        .spec-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .spec-card-value {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #95a5a6;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f8faf9 0%, #ffffff 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #95a5a6;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 4rem 1rem;
+            }
+
+            .residence-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .architecture-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .specs-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(44, 85, 48, 0.1);
+            z-index: 9999;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #2c5530, #3e7b40);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* Custom cursor trail */
+        .cursor-trail {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(44, 85, 48, 0.3), transparent);
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+ -->
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Architectural Showcase -->
+            <div class="arch-showcase mb-20">
+                <div class="text-center mb-16">
+                    <h2 class="arch-title text-6xl font-extralight text-slate-800 mb-8 opacity-0 translate-y-12">
+                        Une architecture qui <span class="gradient-text">respire</span>
+                    </h2>
+                    <div class="arch-underline w-32 h-1 bg-gradient-to-r from-emerald-600 to-emerald-800 mx-auto rounded-full opacity-0 scale-x-0"></div>
+                </div>
+
+                <!-- Visual Architecture Grid -->
+                <div class="arch-visual-grid grid lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Large Feature Image -->
+                    <div class="lg:col-span-2 relative">
+                        <div class="arch-main-image h-96 rounded-3xl overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0" alt="Architecture moderne">
+                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-transparent"></div>
+                            
+                            <!-- Floating Info Elements -->
+                            <div class="absolute top-8 right-8 glass bg-white/90 px-6 py-3 rounded-2xl opacity-0 translate-y-4 info-bubble">
+                                <div class="text-sm text-slate-600">Surface habitable</div>
+                                <div class="text-2xl font-light gradient-text">280m²</div>
+                            </div>
+                            <div class="absolute bottom-8 left-8 glass bg-white/90 px-6 py-3 rounded-2xl opacity-0 translate-y-4 info-bubble">
+                                <div class="text-sm text-slate-600">Terrasse</div>
+                                <div class="text-2xl font-light gradient-text">150m²</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Side Images Stack -->
+                    <div class="space-y-8">
+                        <div class="arch-side-image h-44 rounded-2xl overflow-hidden relative group">
+                            <img src="pexels-mantasink-1106476.jpg" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0" alt="Détail façade">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        </div>
+                        <div class="arch-side-image h-44 rounded-2xl overflow-hidden relative group">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-0" alt="Intérieur moderne">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+    <script>
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Initialize animations on load
+        window.addEventListener('load', initAnimations);
+
+        function initAnimations() {
+            // Navbar animation
+
+            gsap.to('.arch-underline', {
+                scaleX: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.arch-title',
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Feature items animation
+            gsap.utils.toArray('.feature-item').forEach((item, index) => {
+                gsap.to(item, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    delay: index * 0.15,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Architecture images animations
+            gsap.to('.main-arch-image', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.main-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            gsap.to('.secondary-arch-image', {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: '.secondary-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            gsap.to('.tertiary-arch-image', {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                delay: 0.6,
+                scrollTrigger: {
+                    trigger: '.tertiary-arch-image',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Section titles animations
+            gsap.utils.toArray('.section-title, .arch-title, .specs-title, .contact-title').forEach(title => {
+                gsap.to(title, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: title,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Stats visual animation
+            gsap.to('.stats-visual', {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.stats-visual',
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Villa images reveal with stagger
+            gsap.utils.toArray('.villa-image').forEach((img, index) => {
+                gsap.to(img, {
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    delay: index * 0.2,
+                    scrollTrigger: {
+                        trigger: img,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Villa overlays animation
+            gsap.utils.toArray('.villa-overlay').forEach((overlay, index) => {
+                gsap.to(overlay, {
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    delay: index * 0.15 + 0.5,
+                    scrollTrigger: {
+                        trigger: overlay,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Architecture underline animation
+            gsap.to('.arch-underline', {
+                opacity: 1,
+                scaleX: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: '.arch-title',
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Architecture images reveal
+            gsap.utils.toArray('.arch-main-image img, .arch-side-image img').forEach((img, index) => {
+                gsap.to(img, {
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    delay: index * 0.2,
+                    scrollTrigger: {
+                        trigger: img,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Info bubbles animation
+            gsap.utils.toArray('.info-bubble').forEach((bubble, index) => {
+                gsap.to(bubble, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "back.out(1.7)",
+                    delay: index * 0.3 + 0.8,
+                    scrollTrigger: {
+                        trigger: bubble,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Feature visuals animation
+            
+
+            
+        }
+
+        
+    </script>
+</body>
+</html>

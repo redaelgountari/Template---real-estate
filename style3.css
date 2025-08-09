@@ -1,0 +1,285 @@
+/* style.css */
+:root {
+  --pc-bg: #0b0e13;
+  --pc-surface: #12161c;
+  --pc-text: #e8eaed;
+  --pc-muted: #a7b0ba;
+  --pc-white: #ffffff;
+  --pc-card-bg: rgba(10, 12, 16, 0.55);
+  --pc-border: rgba(255, 255, 255, 0.08);
+  --pc-gap: clamp(16px, 4vw, 36px);
+  --pc-slide-w: clamp(280px, 78vw, 980px);
+  --pc-slide-r: 20px;
+  --pc-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  --pc-focus: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 80% -10%, #1a1f27 0%, transparent 60%),
+    radial-gradient(900px 500px at -10% 100%, #141922 0%, transparent 60%),
+    var(--pc-bg);
+  color: var(--pc-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Carousel root */
+.pc {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(16px, 2vw, 24px) 0 72px;
+  min-height: 80vh;
+}
+
+/* Progress */
+.pc-progress {
+  position: absolute;
+  top: 8px;
+  left: max(16px, env(safe-area-inset-left));
+  right: max(16px, env(safe-area-inset-right));
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 5;
+}
+.pc-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #fff, #bbb);
+  transition: width 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Viewport/track */
+.pc-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 64px 0;
+  cursor: grab;
+  touch-action: pan-y;
+}
+.pc-viewport.is-dragging {
+  cursor: grabbing;
+}
+.pc-track {
+  display: flex;
+  align-items: stretch;
+  gap: var(--pc-gap);
+  padding: 0 var(--pc-gap);
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Edge fades */
+.pc-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: min(10vw, 160px);
+  pointer-events: none;
+  z-index: 3;
+}
+.pc-fade-l {
+  left: 0;
+  background: linear-gradient(90deg, var(--pc-bg), transparent);
+}
+.pc-fade-r {
+  right: 0;
+  background: linear-gradient(270deg, var(--pc-bg), transparent);
+}
+
+/* Slide */
+.pc-slide {
+  list-style: none;
+  flex: 0 0 var(--pc-slide-w);
+  border-radius: var(--pc-slide-r);
+  overflow: hidden;
+  background: var(--pc-surface);
+  position: relative;
+  box-shadow: var(--pc-shadow);
+  border: 1px solid var(--pc-border);
+  transform-origin: center center;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease, box-shadow 0.5s ease;
+  filter: saturate(0.85);
+}
+.pc-slide:hover {
+  filter: saturate(1);
+}
+.pc-slide.is-current {
+  transform: scale(1.02);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+}
+
+/* Media */
+.pc-media {
+  position: relative;
+  height: clamp(220px, 44vh, 520px);
+  overflow: hidden;
+  background: #0f1318;
+}
+.pc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.pc-slide:hover .pc-img {
+  transform: scale(1.08);
+}
+.pc-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+}
+
+/* Card */
+.pc-card {
+  position: absolute;
+  left: clamp(16px, 3vw, 36px);
+  right: clamp(16px, 3vw, 36px);
+  bottom: clamp(16px, 3vw, 36px);
+  background: var(--pc-card-bg);
+  border: 1px solid var(--pc-border);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: clamp(14px, 2.2vw, 20px) clamp(16px, 2.4vw, 24px);
+  color: var(--pc-white);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+.pc-title {
+  margin: 0 0 6px;
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.pc-location {
+  margin: 0 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e8eaed;
+  opacity: 0.9;
+  font-size: clamp(12px, 1.5vw, 14px);
+}
+.pc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.pc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f0f2f5;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--pc-border);
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+.pc-icon {
+  display: inline-flex;
+  color: #fff; /* icons are white only */
+}
+.pc-price {
+  font-weight: 700;
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #fff;
+}
+
+/* Controls */
+.pc-controls {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: 6;
+}
+.pc-arrow,
+.pc-play {
+  appearance: none;
+  border: 1px solid var(--pc-border);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.pc-arrow:hover,
+.pc-play:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+.pc-arrow:active,
+.pc-play:active {
+  transform: translateY(0);
+}
+.pc-arrow:focus-visible,
+.pc-play:focus-visible,
+.pc-dot:focus-visible {
+  outline: none;
+  box-shadow: var(--pc-focus);
+}
+
+/* Dots */
+.pc-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 72px;
+  display: flex;
+  gap: 10px;
+  z-index: 6;
+}
+.pc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.pc-dot.is-active {
+  transform: scale(1.4);
+  background: #fff;
+  border-color: #fff;
+}
+
+/* Reduce motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .pc-slide,
+  .pc-img,
+  .pc-progress-fill {
+    transition: none !important;
+  }
+}
