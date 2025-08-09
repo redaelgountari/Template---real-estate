@@ -1,553 +1,930 @@
- index.html 
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Carousel Immobilier</title>
-    <link rel="stylesheet" href="style3.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
-      defer
-    ></script>
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-     Only the carousel component below 
-    <section
-      class="pc"
-      id="property-carousel"
-      aria-label="Carrousel d'appartements"
-    >
-       Progress 
-      <div class="pc-progress" aria-hidden="true">
-        <div class="pc-progress-fill" id="pcProgress"></div>
-      </div>
 
-       Viewport/Track 
-      <div class="pc-viewport" id="pcViewport">
-        <ul class="pc-track" id="pcTrack" aria-live="polite">
-           Slide 1 
-          <li class="pc-slide is-current">
-            <div class="pc-media">
-              <img
-                class="pc-img"
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&auto=format&fit=crop&w=2000"
-                alt="Vue extérieure d'une résidence moderne"
-                loading="eager"
-              />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Sérénité - Excellence Architecturale</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            glow: 'glow 2s ease-in-out infinite alternate',
+            'slide-up': 'slideUp 0.4s ease-out',
+            'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+          },
+          backdropBlur: { xs: '2px' },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body>
+    
+    <!-- Animated Background -->
+    <div class="animated-background"></div>
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+                
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-gray-800">
+                    Villa Sérénité
+                </div>
+                
+                <!-- Contact Buttons and Social Icons Container -->
+                <div class="flex items-center space-x-8">
+                    
+                    <!-- Contact Button -->
+                    <div class="flex space-x-4">
+                        <a href="tel:+33123456789" class="flex items-center space-x-2 text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+33 1 23 45 67 89</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Enhanced Social Media Icons -->
+                    <div class="social-icons">
+                        <!-- Facebook -->
+                        <a href="https://facebook.com/villaserenite" target="_blank" rel="noopener noreferrer" 
+                           class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/villaserenite" target="_blank" rel="noopener noreferrer" 
+                           class="social-icon twitter" aria-label="Suivez-nous sur Twitter">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer" 
+                           class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+                
             </div>
-            <div class="pc-card">
-              <h3 class="pc-title">Résidence Panoramique</h3>
-              <p class="pc-location">
-                <span class="pc-icon" aria-hidden="true">
-                   map pin (white) 
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 21s7-5.33 7-12a7 7 0 1 0-14 0c0 6.67 7 12 7 12z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                    <circle
-                      cx="12"
-                      cy="9"
-                      r="2.5"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                  </svg>
-                </span>
-                Neuilly-sur-Seine
-              </p>
-              <div class="pc-meta">
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                     bed 
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 12h18M4 18v-6m16 6v-6M7 12V8a2 2 0 0 1 2-2h2a3 3 0 0 1 3 3v3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
+      
+    </div>
+  </div>
+</nav>
+
+
+
+
+    <!-- <div id="home" class="hero"> -->
+            <section class="image-carousel" id="imageCarousel">
+        <!-- Loading State -->
+        <div class="carousel-loading" id="carouselLoading">
+            <!-- <div class="loading-spinner"></div>
+            <div>Chargement des images...</div> -->
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+            <div id="playPauseBtn" title="Pause/Play"></div>
+            <div id="shuffleBtn" title="Mode aléatoire"></div>
+        </div>
+
+        <!-- Image Counter -->
+        <div class="image-counter" style="display: none;">
+            <span id="currentIndex">1</span> / <span id="totalImages">8</span>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar"></div>
+
+        <!-- Carousel Track -->
+        <div class="carousel-track" id="carouselTrack">
+            <!-- Slide 1: Exterior View -->
+            <div class="image-slide slide-1">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Vue Extérieure</h2>
+                    <p class="slide-description">Architecture contemporaine avec façade en verre et jardins paysagers
+                    </p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">4</span>
+                            <span class="feature-label">Étages</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">200</span>
+                            <span class="feature-label">Appartements</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">5000m²</span>
+                            <span class="feature-label">Jardins</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Living Room -->
+            <div class="image-slide slide-2">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Salon Principal</h2>
+                    <p class="slide-description">Espaces de vie lumineux avec vue panoramique et finitions premium</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">60m²</span>
+                            <span class="feature-label">Surface</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">4m</span>
+                            <span class="feature-label">Plafond</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">180°</span>
+                            <span class="feature-label">Vue</span>
+                        </div>
+                    </div>
+                    <!-- <a href="#contact" class="slide-cta">Découvrir l'intérieur</a> -->
+                </div>
+            </div>
+
+            <!-- Slide 3: Kitchen -->
+            <div class="image-slide slide-3">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Cuisine Moderne</h2>
+                    <p class="slide-description">Cuisine équipée avec îlot central et électroménager haut de gamme</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">25m²</span>
+                            <span class="feature-label">Surface</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Miele</span>
+                            <span class="feature-label">Équipement</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Quartz</span>
+                            <span class="feature-label">Plan Travail</span>
+                        </div>
+                    </div>
+                    <!-- <a href="#contact" class="slide-cta">Voir les équipements</a> -->
+                </div>
+            </div>
+
+            <!-- Slide 4: Bedroom -->
+            <div class="image-slide slide-4">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Suite Parentale</h2>
+                    <p class="slide-description">Chambre spacieuse avec dressing et salle de bain privative</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">35m²</span>
+                            <span class="feature-label">Chambre</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">15m²</span>
+                            <span class="feature-label">Dressing</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">12m²</span>
+                            <span class="feature-label">Sdb Privée</span>
+                        </div>
+                    </div>
+                    <!-- <a href="#contact" class="slide-cta">Voir les chambres</a> -->
+                </div>
+            </div>
+
+            <!-- Slide 5: Bathroom -->
+            <div class="image-slide slide-5">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Salle de Bain</h2>
+                    <p class="slide-description">Design spa avec baignoire îlot et douche à l'italienne</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">Marbre</span>
+                            <span class="feature-label">Revêtement</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Hansgrohe</span>
+                            <span class="feature-label">Robinetterie</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">LED</span>
+                            <span class="feature-label">Éclairage</span>
+                        </div>
+                    </div>
+                    <!-- <a href="#contact" class="slide-cta">Voir les finitions</a> -->
+                </div>
+            </div>
+
+            <!-- Slide 6: Balcony -->
+            <div class="image-slide slide-6">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Terrasse Privée</h2>
+                    <p class="slide-description">Espace extérieur avec vue imprenable sur la ville</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">40m²</span>
+                            <span class="feature-label">Surface</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Sud</span>
+                            <span class="feature-label">Exposition</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">360°</span>
+                            <span class="feature-label">Vue</span>
+                        </div>
+                    </div>
+                    <!-- <a href="#contact" class="slide-cta">Voir les terrasses</a> -->
+                </div>
+            </div>
+
+            <!-- Slide 7: Pool Area -->
+            <div class="image-slide slide-7">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Piscine & Spa</h2>
+                    <p class="slide-description">Espace détente avec piscine chauffée et zone spa</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">25m</span>
+                            <span class="feature-label">Piscine</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Chauffée</span>
+                            <span class="feature-label">Toute Année</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Spa</span>
+                            <span class="feature-label">Wellness</span>
+                        </div>
+                    </div>
+                    <!-- <a href="#contact" class="slide-cta">Réserver le spa</a> -->
+                </div>
+            </div>
+
+            <!-- Slide 8: Garden -->
+            <div class="image-slide slide-8">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Jardins Paysagers</h2>
+                    <p class="slide-description">Espaces verts conçus par des paysagistes renommés</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">3000m²</span>
+                            <span class="feature-label">Espaces Verts</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">50</span>
+                            <span class="feature-label">Essences</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">24/7</span>
+                            <span class="feature-label">Entretien</span>
+                        </div>
+                    </div>
+                    <!-- <a href="#contact" class="slide-cta">Visiter les jardins</a> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="carousel-arrow arrow-prev" id="prevBtn">‹</div>
+        <div class="carousel-arrow arrow-next" id="nextBtn">›</div>
+
+        <!-- Thumbnail Navigation -->
+        <div class="thumbnail-nav" id="thumbnailNav">
+            <!-- Thumbnails will be generated by JavaScript -->
+        </div>
+
+        <!-- Fullscreen Button -->
+        <div class="fullscreen-btn" id="fullscreenBtn" title="Mode plein écran">
+            ⛶
+        </div>
+    </section>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section about bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Villa Sérénité</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Excellence architecturale et art de vivre depuis plus de 30 ans</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-text-header">
+                        <h3>Excellence depuis 1994</h3>
+                        <div class="text-divider"></div>
+                    </div>
+
+                    <div class="about-paragraphs">
+                        <p>
+                            Depuis 1994, Villa Sérénité est à l'avant-garde du développement immobilier de luxe,
+                            créant des propriétés emblématiques qui définissent les horizons et les communautés.
+                        </p>
+                        <p>
+                            Notre engagement envers l'excellence architecturale, les pratiques de développement durable
+                            et la satisfaction client nous a établi comme un leader de confiance dans l'industrie.
+                        </p>
+                        <p>
+                            Chaque projet que nous entreprenons reflète nos valeurs fondamentales d'innovation,
+                            de qualité et d'intégrité, garantissant que chaque développement dépasse les attentes.
+                        </p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Années d'expérience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">2.5M€</div>
+                            <div class="stat-label">Projets livrés</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Projets terminés</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfaction client</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Excellence Architecturale" class="about-img">
+                    <div class="about-image-overlay">
+                        <p>Excellence Architecturale depuis 1994</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location and Environment Section -->
+    <section id="location" class="section location-section" style="background-color: #F8FAFC;">
+        <div class="location-container">
+            <div class="location-header">
+                <h2 class="location-title">Situation <span class="gradient-text">privilégiée</span></h2>
+                <div class="location-subtitle">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                     </svg>
-                  </span>
-                  3 ch
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                     bath 
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M7 10V6a3 3 0 1 1 6 0v4m-9 4h14l-1 4H5l-1-4z"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  2 sdb
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                     ruler 
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 8l5-5 13 13-5 5L3 8zM7 7l3 3M10 10l3 3M13 13l3 3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                  120 m²
-                </span>
+                    <span>Avenue des Jardins, Neuilly-sur-Seine</span>
+                </div>
+                <div class="location-divider"></div>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-item">
+                    <div class="location-icon" >
+                        <svg width="55" height="55" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linejoin="round" stroke-width="1" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                        </svg>
+                    </div>
+                    <h4 class="location-label">Transport Premium</h4>
+                    <p class="location-description">Accès direct RER A et métro ligne 1, aéroports à 30 minutes</p>
+                </div>
+
+                <div class="location-item">
+                    <div class="location-icon" >
+                        <svg width="55" height="55" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h4 class="location-label">Éducation d'Excellence</h4>
+                    <p class="location-description">Écoles internationales prestigieuses et universités de renom à proximité</p>
+                </div>
+
+                <div class="location-item">
+                    <div class="location-icon" >
+                        <svg width="55" height="55" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4l1-12z"/>
+                        </svg>
+                    </div>
+                    <h4 class="location-label">Shopping de Luxe</h4>
+                    <p class="location-description">Champs-Élysées, Galeries Lafayette et boutiques de créateurs</p>
+                </div>
+
+                <div class="location-item">
+                    <div class="location-icon" >
+                        <svg width="55" height="55" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="location-label">Santé & Bien-être</h4>
+                    <p class="location-description">Cliniques privées, spas haut de gamme et centres sportifs exclusifs</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Une architecture qui <span class="gradient-text">respire</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Chaque détail architectural a été pensé pour créer une harmonie parfaite
+                    entre intérieur et extérieur</p>
+            </div>
+            <div class="arch-grid">
+                <!-- Content Side -->
+                <div class="arch-content">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 21l4-4 4 4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Façades ouvertes</h4>
+                                <p>Sur jardins privatifs avec vue dégagée pour une connexion permanente avec la nature
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Terrasses panoramiques</h4>
+                                <p>Optimisation de la lumière naturelle et espaces de vie prolongés vers l'extérieur</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Matériaux nobles</h4>
+                                <p>Intégration paysagère respectueuse avec des matériaux durables et authentiques</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Visual Side -->
+                <div class="arch-images">
+                    <div class="arch-visual-grid">
+                        <div class="main-arch-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                alt="Architecture moderne">
+                            <div class="info-bubble info-bubble-1">
+                                <div class="label">Surface habitable</div>
+                                <div class="value">280m²</div>
+                            </div>
+                            <div class="info-bubble info-bubble-2">
+                                <div class="label">Terrasse</div>
+                                <div class="value">150m²</div>
+                            </div>
+                        </div>
+                        <div class="side-images">
+                            <div class="secondary-arch-image">
+                                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                    alt="Détail architectural">
+                            </div>
+                            <div class="tertiary-arch-image">
+                                <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                    alt="Espace intérieur">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 px-4 architecture">
+      <div class="max-w-7xl mx-auto">
+           <div class="section-header">
+                <h2 class="section-title">Discover Your  <span class="gradient-text">Dream Home</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Given the high-end imagery and pricing, a title that conveys exclusivity and sophistication will align best.</p>
+            </div>
+        <div class="carousel-container relative">
+          <div class="relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm  p-8">
+            <div class="relative">
+              <div id="carouselTrack" class="flex gap-8 transition-transform duration-700 ease-out will-change-transform">
+                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Luxury Villa in Malibu, California" tabindex="0">
+                  <div class="relative h-64 lg:h-72 overflow-hidden">
+                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Villa exterior with pool in Malibu" loading="lazy" draggable="false" />
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                        Luxury Villa
+                      </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                      Luxury
+                    </div>
+                   
+                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                        <div class="space-y-2">
+                          <div class="text-2xl font-bold text-slate-900">$2,500,000</div>
+                          <div class="flex items-center text-slate-700 text-sm">
+                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            Malibu, California
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">5 Bed</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">4 Bath</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2m-6 12V8"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">3,500 ft²</div>
+                          </div>
+                        </div>
+                        <!-- <div class="mt-4 flex">
+                          <button class="bg-slate-900 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-600 transition-colors shadow" type="button">View Details</button>
+                        </div> -->
+                      </div>
+                    </div>
+
+                  </div>
+                </article>
+                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Luxury Villa in Malibu, California" tabindex="0">
+                  <div class="relative h-64 lg:h-72 overflow-hidden">
+                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Villa exterior with pool in Malibu" loading="lazy" draggable="false" />
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                        Luxury Villa
+                      </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                      Luxury
+                    </div>
+                    
+                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                      <div class="w-full bg-white/90 backdrop-blur-3xl rounded-xl shadow-xl p-4">
+
+                        <div class="space-y-2">
+                          <div class="text-2xl font-bold text-slate-900">$2,500,000</div>
+                          <div class="flex items-center text-slate-700 text-sm">
+                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            Malibu, California
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">5 Bed</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">4 Bath</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2m-6 12V8"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">3,500 ft²</div>
+                          </div>
+                        </div>
+                        <!-- <div class="mt-4 flex">
+                          <button class="bg-slate-900 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-600 transition-colors shadow" type="button">View Details</button>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Modern Penthouse in Manhattan, New York" tabindex="0">
+                  <div class="relative h-64 lg:h-72 overflow-hidden">
+                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Penthouse interior in Manhattan" loading="lazy" draggable="false" />
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                        Modern Penthouse
+                      </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                      Featured
+                    </div>
+                    
+                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                        <div class="space-y-2">
+                          <div class="text-2xl font-bold text-slate-900">$3,200,000</div>
+                          <div class="flex items-center text-slate-700 text-sm">
+                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            Manhattan, New York
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">4 Bed</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">3 Bath</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">2,800 ft²</div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Waterfront Estate in Miami Beach, Florida" tabindex="0">
+                  <div class="relative h-64 lg:h-72 overflow-hidden">
+                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Waterfront Estate at Miami Beach" loading="lazy" draggable="false" />
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                        Waterfront Estate
+                      </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                      New
+                    </div>
+                   
+                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                        <div class="space-y-2">
+                          <div class="text-2xl font-bold text-slate-900">$4,750,000</div>
+                          <div class="flex items-center text-slate-700 text-sm">
+                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            Miami Beach, Florida
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">6 Bed</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">5 Bath</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">5,200 ft²</div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </article>
               </div>
-              <div class="pc-price">1 250 000 €</div>
             </div>
-          </li>
-
-           Slide 2 
-          <li class="pc-slide">
-            <div class="pc-media">
-              <img
-                class="pc-img"
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&auto=format&fit=crop&w=2000"
-                alt="Salon lumineux avec grandes baies vitrées"
-                loading="lazy"
-              />
-            </div>
-            <div class="pc-card">
-              <h3 class="pc-title">Lumière & Volumes</h3>
-              <p class="pc-location">
-                <span class="pc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 21s7-5.33 7-12a7 7 0 1 0-14 0c0 6.67 7 12 7 12z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                    <circle
-                      cx="12"
-                      cy="9"
-                      r="2.5"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                  </svg>
-                </span>
-                Paris 16e
-              </p>
-              <div class="pc-meta">
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 12h18M4 18v-6m16 6v-6M7 12V8a2 2 0 0 1 2-2h2a3 3 0 0 1 3 3v3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  2 ch
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M7 10V6a3 3 0 1 1 6 0v4m-9 4h14l-1 4H5l-1-4z"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  1 sdb
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 8l5-5 13 13-5 5L3 8zM7 7l3 3M10 10l3 3M13 13l3 3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                  86 m²
-                </span>
-              </div>
-              <div class="pc-price">890 000 €</div>
-            </div>
-          </li>
-
-           Slide 3 
-          <li class="pc-slide">
-            <div class="pc-media">
-              <img
-                class="pc-img"
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&auto=format&fit=crop&w=2000"
-                alt="Cuisine moderne avec îlot central"
-                loading="lazy"
-              />
-            </div>
-            <div class="pc-card">
-              <h3 class="pc-title">Cuisine Signature</h3>
-              <p class="pc-location">
-                <span class="pc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 21s7-5.33 7-12a7 7 0 1 0-14 0c0 6.67 7 12 7 12z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                    <circle
-                      cx="12"
-                      cy="9"
-                      r="2.5"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                  </svg>
-                </span>
-                Boulogne
-              </p>
-              <div class="pc-meta">
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 12h18M4 18v-6m16 6v-6M7 12V8a2 2 0 0 1 2-2h2a3 3 0 0 1 3 3v3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  4 ch
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M7 10V6a3 3 0 1 1 6 0v4m-9 4h14l-1 4H5l-1-4z"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  3 sdb
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 8l5-5 13 13-5 5L3 8zM7 7l3 3M10 10l3 3M13 13l3 3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                  160 m²
-                </span>
-              </div>
-              <div class="pc-price">1 950 000 €</div>
-            </div>
-          </li>
-
-           Slide 4 
-          <li class="pc-slide">
-            <div class="pc-media">
-              <img
-                class="pc-img"
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&auto=format&fit=crop&w=2000"
-                alt="Suite parentale avec grande baie vitrée"
-                loading="lazy"
-              />
-            </div>
-            <div class="pc-card">
-              <h3 class="pc-title">Suite Parentale</h3>
-              <p class="pc-location">
-                <span class="pc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 21s7-5.33 7-12a7 7 0 1 0-14 0c0 6.67 7 12 7 12z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                    <circle
-                      cx="12"
-                      cy="9"
-                      r="2.5"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                  </svg>
-                </span>
-                Levallois
-              </p>
-              <div class="pc-meta">
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 12h18M4 18v-6m16 6v-6M7 12V8a2 2 0 0 1 2-2h2a3 3 0 0 1 3 3v3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  2 ch
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M7 10V6a3 3 0 1 1 6 0v4m-9 4h14l-1 4H5l-1-4z"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  2 sdb
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 8l5-5 13 13-5 5L3 8zM7 7l3 3M10 10l3 3M13 13l3 3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                  98 m²
-                </span>
-              </div>
-              <div class="pc-price">1 090 000 €</div>
-            </div>
-          </li>
-
-           Slide 5 
-          <li class="pc-slide">
-            <div class="pc-media">
-              <img
-                class="pc-img"
-                src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&auto=format&fit=crop&w=2000"
-                alt="Salle de bain design style spa"
-                loading="lazy"
-              />
-            </div>
-            <div class="pc-card">
-              <h3 class="pc-title">Bien‑être Privé</h3>
-              <p class="pc-location">
-                <span class="pc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 21s7-5.33 7-12a7 7 0 1 0-14 0c0 6.67 7 12 7 12z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                    <circle
-                      cx="12"
-                      cy="9"
-                      r="2.5"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                  </svg>
-                </span>
-                Courbevoie
-              </p>
-              <div class="pc-meta">
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 12h18M4 18v-6m16 6v-6M7 12V8a2 2 0 0 1 2-2h2a3 3 0 0 1 3 3v3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  3 ch
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M7 10V6a3 3 0 1 1 6 0v4m-9 4h14l-1 4H5l-1-4z"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  2 sdb
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 8l5-5 13 13-5 5L3 8zM7 7l3 3M10 10l3 3M13 13l3 3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                  110 m²
-                </span>
-              </div>
-              <div class="pc-price">1 150 000 €</div>
-            </div>
-          </li>
-
-           Slide 6 
-          <li class="pc-slide">
-            <div class="pc-media">
-              <img
-                class="pc-img"
-                src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&auto=format&fit=crop&w=2000"
-                alt="Terrasse privée avec vue dégagée"
-                loading="lazy"
-              />
-            </div>
-            <div class="pc-card">
-              <h3 class="pc-title">Terrasse Ciel Ouvert</h3>
-              <p class="pc-location">
-                <span class="pc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 21s7-5.33 7-12a7 7 0 1 0-14 0c0 6.67 7 12 7 12z"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                    <circle
-                      cx="12"
-                      cy="9"
-                      r="2.5"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                    />
-                  </svg>
-                </span>
-                Issy‑les‑Moulineaux
-              </p>
-              <div class="pc-meta">
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 12h18M4 18v-6m16 6v-6M7 12V8a2 2 0 0 1 2-2h2a3 3 0 0 1 3 3v3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  2 ch
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M7 10V6a3 3 0 1 1 6 0v4m-9 4h14l-1 4H5l-1-4z"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  1 sdb
-                </span>
-                <span class="pc-chip">
-                  <span class="pc-icon" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M3 8l5-5 13 13-5 5L3 8zM7 7l3 3M10 10l3 3M13 13l3 3"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                  </span>
-                  92 m²
-                </span>
-              </div>
-              <div class="pc-price">760 000 €</div>
-            </div>
-          </li>
-        </ul>
-         Edge fade 
-        <div class="pc-fade pc-fade-l" aria-hidden="true"></div>
-        <div class="pc-fade pc-fade-r" aria-hidden="true"></div>
-      </div>
-
-       Controls 
-      <div class="pc-controls">
-        <button class="pc-arrow pc-prev" id="pcPrev" aria-label="Précédent">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M15 18l-6-6 6-6"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <button class="pc-play" id="pcPlay" aria-pressed="true" aria-label="Mettre en pause">
-           pause icon by default (autoplay on) 
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M8 6v12M16 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
-        </button>
-        <button class="pc-arrow pc-next" id="pcNext" aria-label="Suivant">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M9 6l6 6-6 6"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-
-       Dots 
-      <div class="pc-dots" role="tablist" aria-label="Aller à la diapositive">
-        <button class="pc-dot is-active" data-index="0" role="tab" aria-selected="true" aria-label="Diapositive 1"></button>
-        <button class="pc-dot" data-index="1" role="tab" aria-selected="false" aria-label="Diapositive 2"></button>
-        <button class="pc-dot" data-index="2" role="tab" aria-selected="false" aria-label="Diapositive 3"></button>
-        <button class="pc-dot" data-index="3" role="tab" aria-selected="false" aria-label="Diapositive 4"></button>
-        <button class="pc-dot" data-index="4" role="tab" aria-selected="false" aria-label="Diapositive 5"></button>
-        <button class="pc-dot" data-index="5" role="tab" aria-selected="false" aria-label="Diapositive 6"></button>
+          </div>
+          <button id="prevBtn" type="button" aria-label="Previous slide"
+            class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white border-2 border-blue-200 hover:border-blue-400 rounded-full flex items-center justify-center text-slate-700 hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl z-10 group">
+            <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button id="nextBtn" type="button" aria-label="Next slide"
+            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white border-2 border-blue-200 hover:border-blue-400 rounded-full flex items-center justify-center text-slate-700 hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl z-10 group">
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+        <div class="flex justify-center items-center mt-8 gap-6" style="visibility: hidden;">
+          <div id="dotsContainer" class="flex gap-3" aria-label="Slide navigation"></div>
+        </div>
       </div>
     </section>
-  </body>
+
+    <!-- Enhanced Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-split-container">
+            <!-- Left Side - Bedroom Interior -->
+            <div class="contact-image-side">
+                <div class="contact-image-overlay">
+                    <div class="contact-image-content">
+                        <h3>Votre nouveau cadre de vie</h3>
+                        <p>Découvrez l'art de vivre à la française dans nos résidences d'exception, où chaque détail
+                            sublime votre quotidien.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Side - Contact Form -->
+            <div class="contact-form-side" style="margin-top: -60px;">
+                <div class="luxury-form-container">
+                    <div class="form-header">
+                        <h2>Contactez-nous</h2>
+                        <p>Prêt à découvrir votre futur chez-vous ?</p>
+                    </div>
+                    <form class="luxury-contact-form" id="luxuryContactForm">
+                        <div class="minimal-form-group">
+                            <label for="fullName" class="minimal-label">Nom Complet <span
+                                    class="required">*</span></label>
+                            <input type="text" class="minimal-input" id="fullName" required>
+                        </div>
+                        <div class="minimal-form-group">
+                            <label for="phoneNumber" class="minimal-label">Téléphone <span
+                                    class="required">*</span></label>
+                            <input type="tel" class="minimal-input" id="phoneNumber" required>
+                        </div>
+                        <div class="minimal-form-group">
+                            <label for="emailAddress" class="minimal-label">E-mail</label>
+                            <input type="email" class="minimal-input" id="emailAddress" required>
+                        </div>
+                        <div class="minimal-form-group">
+                            <label for="messageContent" class="minimal-label">Message</label>
+                            <textarea class="minimal-textarea" id="messageContent" rows="1"></textarea>
+                        </div>
+                        <div class="minimal-checkbox-group">
+                            <div class="minimal-checkbox-item">
+                                <input type="checkbox" id="marketingConsent" class="minimal-checkbox-input">
+                                <label for="marketingConsent" class="minimal-checkbox-label">
+                                    J'accepte que mes données (nom, adresse e-mail, numéro de téléphone) soient
+                                    utilisées à des fins de marketing direct. <span class="required">*</span>
+                                </label>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="minimal-submit-btn">
+                            <span>ENVOYER</span>
+                            <div class="diagonal-lines">
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                            </div>
+                        </button>
+                        <div class="success-message" id="luxurySuccessMessage">
+                            ✓ Votre message a été envoyé avec succès ! Nous vous recontacterons bientôt.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+        <a href="https://wa.me/33123456789?text=Bonjour,%20je%20suis%20intéressé%20par%20Villa%20Sérénité" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="whatsapp-float" 
+       aria-label="Contactez-nous sur WhatsApp"
+       title="Contactez-nous sur WhatsApp">
+        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
+
+    <!-- Simplified Footer -->
+    <footer class="footer" style="margin-top: -180px;">
+        <div class="footer-simple">
+            <h4>Villa Sérénité</h4>
+            <p>Excellence architecturale et art de vivre depuis 1994. Nous créons des espaces de vie exceptionnels qui
+                respectent l'environnement et subliment votre quotidien.</p>
+
+            <div class="footer-contact-simple">
+                <div class="footer-contact-item">+33 1 23 45 67 89</div>
+                <div class="footer-contact-item">contact@villa-serenite.fr</div>
+                <div class="footer-contact-item">Avenue des Jardins, 92200 Neuilly-sur-Seine</div>
+            </div>
+
+            <div class="footer-bottom-simple">
+                <p>&copy; 2025 Villa Sérénité. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </div>
+    <script src="car2.js"></script>
+    <div style="position: fixed !important">helle</div>
+
+<style>
+  .float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 999999;
+  }
+</style>
+</head>
+<body>
+
+
+</body>
+
 </html>
