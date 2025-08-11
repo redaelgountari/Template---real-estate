@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Villa Sérénité</title>
+  </head>
+  <body>
+    <!-- Mobile toggle (hidden checkbox to drive CSS-only sidebar) -->
+    <input id="nav-toggle" type="checkbox" aria-hidden="true" />
+
+    <!-- Top Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Primary">
+      <div class="nav-container">
+        <!-- Left: Logo -->
+        <a href="#" class="logo" aria-label="Villa Sérénité Home">
+          Villa Sérénité
+        </a>
+
+        <!-- Right: Desktop actions -->
+        <div class="nav-right">
+          <a href="tel:+33123456789" class="phone-link" aria-label="Call +33 1 23 45 67 89">
+            <svg class="phone-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span class="phone-text">+33 1 23 45 67 89</span>
+          </a>
+
+          <div class="social-icons" aria-label="Réseaux sociaux">
+            <a href="https://facebook.com/villaserenite" target="_blank" rel="noopener noreferrer"
+               class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+            <a href="https://twitter.com/villaserenite" target="_blank" rel="noopener noreferrer"
+               class="social-icon twitter" aria-label="Suivez-nous sur Twitter">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+
+            <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer"
+               class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile: Hamburger -->
+        <label class="hamburger" for="nav-toggle" role="button" tabindex="0" aria-controls="mobile-sidebar" aria-label="Open menu">
+          <span class="sr-only">Open menu</span>
+          <span></span><span></span><span></span>
+        </label>
+      </div>
+    </nav>
+
+    <!-- Mobile: Overlay to close the drawer -->
+    <label class="sidebar-overlay" for="nav-toggle" aria-hidden="true"></label>
+
+    <!-- Mobile: Sidebar Drawer -->
+    <aside id="mobile-sidebar" class="mobile-sidebar" aria-label="Mobile menu">
+      <div class="sidebar-header">
+        <span class="sidebar-title">Villa Sérénité</span>
+        <label class="close-btn" for="nav-toggle" role="button" tabindex="0" aria-label="Close menu">
+          <span aria-hidden="true">&times;</span>
+        </label>
+      </div>
+
+      <div class="sidebar-content">
+        <a href="tel:+33123456789" class="sidebar-phone">
+          <svg class="phone-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>+33 1 23 45 67 89</span>
+        </a>
+
+        <div class="sidebar-divider" aria-hidden="true"></div>
+
+        <div class="sidebar-social">
+          <a href="https://facebook.com/villaserenite" target="_blank" rel="noopener noreferrer"
+             class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/villaserenite" target="_blank" rel="noopener noreferrer"
+             class="social-icon twitter" aria-label="Suivez-nous sur Twitter">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer"
+             class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Demo content placeholder -->
+    <main class="page-content">
+      <section class="placeholder">
+        <h1>Page Content</h1>
+        <p>Resize the window: on mobile, the navbar becomes a sidebar.</p>
+        <p>The navbar has been fixed with improved accessibility and cross-browser compatibility.</p>
+        <p>Test the hamburger menu on mobile devices or by resizing the window below 768px.</p>
+        <div style="margin-top: 2rem; padding: 1rem; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #2563eb;">
+          <h3 style="margin-top: 0;">Fixes Applied:</h3>
+          <ul style="margin-bottom: 0;">
+            <li>Enhanced mobile sidebar scroll behavior</li>
+            <li>Improved focus management for accessibility</li>
+            <li>Better keyboard navigation support</li>
+            <li>Fixed hamburger animation timing</li>
+            <li>Enhanced touch target sizes for mobile</li>
+            <li>Improved contrast and accessibility features</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <style>
+/* Base */
+* { 
+  box-sizing: border-box; 
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #111827;
+  background: #FAFBFC;
+}
+
+/* Prevent background scroll when sidebar open - Enhanced for all browsers */
+body.sidebar-open { 
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Modern browsers with :has() support */
+body:has(#nav-toggle:checked) { 
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Hidden checkbox toggle */
+#nav-toggle { 
+  position: absolute;
+  left: -9999px;
+  opacity: 0; 
+  pointer-events: none; 
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #111827;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.logo:hover {
+  color: #2563EB;
+}
+
+.logo:focus,
+.logo:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+/* Desktop right side */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Phone link */
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.phone-link:hover { 
+  color: #1D4ED8; 
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.phone-link:focus,
+.phone-link:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+.phone-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  color: #fff; 
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+  position: relative; 
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.social-icon svg { 
+  width: 20px; 
+  height: 20px; 
+  z-index: 1;
+}
+
+.social-icon::before {
+  content: "";
+  position: absolute; 
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.social-icon:hover::before { 
+  transform: translateX(100%); 
+}
+
+.social-icon:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18); 
+}
+
+.social-icon:focus,
+.social-icon:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.9);
+  outline-offset: 2px;
+}
+
+.social-icon.facebook { 
+  background: linear-gradient(45deg, #3b5998, #4c70ba); 
+}
+
+.social-icon.twitter  { 
+  background: linear-gradient(45deg, #1da1f2, #0d8bd9); 
+}
+
+.social-icon.linkedin { 
+  background: linear-gradient(45deg, #0077b5, #00a0dc); 
+}
+
+/* Hamburger (mobile only) */
+.hamburger {
+  display: none;
+  width: 44px; 
+  height: 44px;
+  border-radius: 8px;
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 52;
+}
+
+.hamburger:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.hamburger:focus,
+.hamburger:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px; 
+  height: 2px;
+  background: #111827;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  transform-origin: center;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed; 
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+  opacity: 0; 
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 40;
+}
+
+/* Sidebar drawer */
+.mobile-sidebar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(84vw, 320px);
+  background: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 2px 0 24px rgba(0,0,0,0.15);
+  z-index: 41;
+  display: flex; 
+  flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sidebar-header {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: #f9fafb;
+  flex-shrink: 0;
+}
+
+.sidebar-title {
+  font-weight: 700; 
+  font-size: 1.125rem;
+  color: #111827;
+}
+
+.close-btn {
+  width: 40px; 
+  height: 40px;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  border-radius: 8px; 
+  cursor: pointer; 
+  color: #111827;
+  transition: all 0.2s ease;
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  line-height: 1;
+}
+
+.close-btn:hover { 
+  background: rgba(0,0,0,0.08);
+  color: #2563EB; 
+}
+
+.close-btn:focus,
+.close-btn:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+.sidebar-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.sidebar-phone {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 12px;
+  color: #2563EB; 
+  text-decoration: none; 
+  font-weight: 600;
+  padding: 14px 16px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.sidebar-phone:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.sidebar-phone:focus,
+.sidebar-phone:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+.sidebar-divider {
+  height: 1px; 
+  background: rgba(0,0,0,0.08); 
+  margin: 12px 0;
+}
+
+.sidebar-social {
+  display: flex; 
+  gap: 16px; 
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Toggle interactions */
+#nav-toggle:checked ~ .sidebar-overlay {
+  opacity: 1; 
+  pointer-events: auto;
+}
+
+#nav-toggle:checked ~ .mobile-sidebar {
+  transform: translateX(0);
+}
+
+/* Animate hamburger into X when open */
+#nav-toggle:checked ~ .navbar .hamburger span:nth-child(2) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+#nav-toggle:checked ~ .navbar .hamburger span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+#nav-toggle:checked ~ .navbar .hamburger span:nth-child(4) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-right { 
+    display: none; 
+  }
+  
+  .hamburger { 
+    display: inline-flex; 
+  }
+  
+  .nav-container {
+    padding: 0 12px;
+  }
+  
+  .sidebar-social .social-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .sidebar-social .social-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-sidebar {
+    width: 100vw;
+  }
+  
+  .nav-container {
+    padding: 0 8px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .navbar {
+    border-bottom: 2px solid #000;
+  }
+  
+  .social-icon {
+    outline: 2px solid rgba(0,0,0,0.5);
+  }
+  
+  .hamburger span {
+    background: #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .social-icon::before {
+    display: none;
+  }
+}
+
+/* Demo page content */
+.page-content { 
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+}
+
+.placeholder {
+  max-width: 800px; 
+  margin: 32px auto; 
+  background: #fff; 
+  border-radius: 12px;
+  padding: 32px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06); 
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.placeholder h1 {
+  margin-top: 0;
+  color: #111827;
+}
+
+/* Accessibility utility */
+.sr-only {
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px;
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0); 
+  white-space: nowrap; 
+  border: 0;
+}
+
+/* Ensure interactive elements have minimum touch target size */
+@media (pointer: coarse) {
+  .social-icon {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .hamburger {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .close-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Focus trap for sidebar */
+.mobile-sidebar:focus-within {
+  outline: none;
+}
+
+/* Prevent text selection on interactive elements */
+.hamburger,
+.close-btn,
+.social-icon {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+    </style>
+
+    <script>
+      // Enhanced JavaScript for better cross-browser support
+      const navToggle = document.getElementById('nav-toggle');
+      const body = document.body;
+      const sidebar = document.querySelector('.mobile-sidebar');
+      const overlay = document.querySelector('.sidebar-overlay');
+      const hamburger = document.querySelector('.hamburger');
+      const closeBtn = document.querySelector('.close-btn');
+      
+      // Track focus for accessibility
+      let lastFocusedElement = null;
+      
+      // Toggle sidebar state
+      function toggleSidebar(open) {
+        navToggle.checked = open;
+        if (open) {
+          lastFocusedElement = document.activeElement;
+          body.classList.add('sidebar-open');
+          // Focus the close button for better UX
+          setTimeout(() => closeBtn?.focus(), 50);
+        } else {
+          body.classList.remove('sidebar-open');
+          // Return focus to hamburger
+          setTimeout(() => {
+            if (lastFocusedElement && lastFocusedElement.focus) {
+              lastFocusedElement.focus();
+            } else {
+              hamburger?.focus();
+            }
+          }, 50);
+        }
+      }
+      
+      // Listen for checkbox changes
+      navToggle.addEventListener('change', function() {
+        toggleSidebar(this.checked);
+      });
+      
+      // Handle keyboard activation for hamburger and close button
+      hamburger?.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleSidebar(true);
+        }
+      });
+      
+      closeBtn?.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleSidebar(false);
+        }
+      });
+      
+      // Handle window resize to close sidebar on desktop
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navToggle.checked) {
+          toggleSidebar(false);
+        }
+      });
+      
+      // Prevent scrolling on background when sidebar is open (iOS Safari fix)
+      let scrollPosition = 0;
+      
+      navToggle.addEventListener('change', function() {
+        if (this.checked) {
+          scrollPosition = window.pageYOffset;
+          body.style.position = 'fixed';
+          body.style.top = `-${scrollPosition}px`;
+          body.style.width = '100%';
+        } else {
+          body.style.position = '';
+          body.style.top = '';
+          body.style.width = '';
+          window.scrollTo(0, scrollPosition);
+        }
+      });
+      
+      // Enhanced touch handling for mobile
+      let touchStartY = 0;
+      let touchEndY = 0;
+      
+      sidebar?.addEventListener('touchstart', function(e) {
+        touchStartY = e.changedTouches[0].screenY;
+      }, { passive: true });
+      
+      sidebar?.addEventListener('touchend', function(e) {
+        touchEndY = e.changedTouches[0].screenY;
+        // Prevent accidental swipe-to-close on sidebar content
+        e.stopPropagation();
+      }, { passive: true });
+      
+      // Add swipe-to-close gesture
+      overlay?.addEventListener('touchstart', function(e) {
+        touchStartY = e.changedTouches[0].screenY;
+      }, { passive: true });
+      
+      overlay?.addEventListener('touchend', function(e) {
+        touchEndY = e.changedTouches[0].screenY;
+        const swipeDistance = Math.abs(touchEndY - touchStartY);
+        
+        // If it's more of a tap than a swipe, close the sidebar
+        if (swipeDistance < 50) {
+          toggleSidebar(false);
+        }
+      }, { passive: true });
+      
+      // Animate social icons on load
+      function animateSocialIcons() {
+        const socialIcons = document.querySelectorAll('.social-icon');
+        socialIcons.forEach((icon, index) => {
+          icon.style.opacity = '0';
+          icon.style.transform = 'translateY(20px)';
+          
+          setTimeout(() => {
+            icon.style.transition = 'all 0.6s cubic-bezier(0.4,0,0.2,1)';
+            icon.style.opacity = '1';
+            icon.style.transform = 'translateY(0)';
+          }, 100 + (index * 100));
+        });
+      }
+      
+      // Run animations when page loads
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', animateSocialIcons);
+      } else {
+        animateSocialIcons();
+      }
+      
+      // Add smooth scroll behavior for anchor links (if any are added later)
+      document.addEventListener('click', function(e) {
+        const target = e.target.closest('a[href^="#"]');
+        if (target && target.getAttribute('href') !== '#') {
+          e.preventDefault();
+          const targetElement = document.querySelector(target.getAttribute('href'));
+          if (targetElement) {
+            // Close sidebar if open
+            if (navToggle.checked) {
+              toggleSidebar(false);
+            }
+            
+            setTimeout(() => {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }, navToggle.checked ? 300 : 0);
+          }
+        }
+      });
+      
+      // Performance optimization: debounce resize handler
+      function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
+      
+      const debouncedResize = debounce(function() {
+        if (window.innerWidth > 768 && navToggle.checked) {
+          toggleSidebar(false);
+        }
+      }, 250);
+      
+      window.addEventListener('resize', debouncedResize);
+      
+      // Add loading state management
+      window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+      });
+    </script>
+  </body>
+</html>

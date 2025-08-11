@@ -56,13 +56,13 @@
     if (!hasGSAP) return;
     // Navbar
     if (exists('.navbar')) {
-      const navTl = gsap.timeline({ delay: 0.3 });
+      const navTl = gsap.timeline({ delay: 0.1 });
       navTl
-        .to('.navbar', { y: 0, duration: 1.2, ease: 'power3.out' })
-        .to('.logo', { opacity: 1, x: 0, duration: 0.8, ease: 'power2.out' }, '-=0.7')
+        .to('.navbar', { y: 0, duration: 0.3, ease: 'power3.out' })
+        .to('.logo', { opacity: 1, x: 0, duration: 0, ease: 'power2.out' }, '-=0.1')
         .to(
           '.nav-links li',
-          { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out' },
+          { opacity: 1, y: 0, duration: 0, stagger: 0.1, ease: 'power2.out' },
           '-=0.6'
         );
     }
@@ -493,13 +493,13 @@
     }
 
     // Navbar scrolled
-    if (plugins.ScrollTrigger && exists('.navbar')) {
-      plugins.ScrollTrigger.create({
-        start: 'top -100',
-        end: 99999,
-        toggleClass: { className: 'scrolled', targets: '.navbar' },
-      });
-    }
+    // if (plugins.ScrollTrigger && exists('.navbar')) {
+    //   plugins.ScrollTrigger.create({
+    //     start: 'top -100',
+    //     end: 99999,
+    //     toggleClass: { className: 'scrolled', targets: '.navbar' },
+    //   });
+    // }
 
     // Cursor trail
     const cursorTrail = $('.cursor-trail');
