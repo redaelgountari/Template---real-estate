@@ -36,7 +36,13 @@
 </head>
 
 <body>
-    
+     <style>
+      .luxury-bg{background-image:radial-gradient(1000px 500px at 80% -10%,rgba(0,0,0,.07),transparent 60%),linear-gradient(180deg,#fafafa 0%,#ffffff 45%,#f5f5f7 100%)}
+      .grain{position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:radial-gradient(#000 .45px,transparent .45px);background-size:3px 3px;mix-blend-mode:multiply}
+      .dot{width:10px;height:10px;border-radius:9999px;background:#d1d5db;transition:all .2s}
+      .dot[aria-current="true"]{background:#111827;transform:scale(1.1)}
+      @media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+    </style>
     <!-- Animated Background -->
     <!-- <div class="animated-background"></div> -->
     <div class="floating-particles">
@@ -372,7 +378,7 @@
         </div>
 
         <!-- Fullscreen Button -->
-        <div class="fullscreen-btn" id="fullscreenBtn" title="Mode plein écran">
+        <div class="fullscreen-btn" id="fullscreenBtn" title="Mode plein écran" style="visibility: hidden;">
             ⛶
         </div>
     </section>
@@ -592,6 +598,9 @@
                 <div class="section-divider"></div>
                 <p class="section-subtitle">Given the high-end imagery and pricing, a title that conveys exclusivity and sophistication will align best.</p>
             </div>
+
+            <!-- carouselle -->
+
         <div class="carousel-container relative">
           <div class="relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm  p-8">
             <div class="relative">
@@ -836,11 +845,228 @@
             </svg>
           </button>
         </div>
+        
         <div class="flex justify-center items-center mt-8 gap-6" style="visibility: hidden;">
           <div id="dotsContainer" class="flex gap-3" aria-label="Slide navigation"></div>
         </div>
       </div>
     </section>
+
+    <!-- carousell section 03  -->
+
+<section id="hero-carousel" class="relative w-full py-6 sm:py-10">
+        <div id="carousel" class="relative w-full overflow-hidden">
+          <div class="grain"></div>
+
+          <div id="carousel-track" class="flex w-full will-change-transform" style="touch-action: pan-y">
+            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Discover Your Next Escape" tabindex="0">
+              <figure class="relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
+                <img class="h-full w-full object-cover" src="/max-whitehead-uJ0aYoAyh7w-unsplash.jpg" alt="Sunlit coastline and sea." />
+
+                <div class="img-overlay pointer-events-none absolute inset-0 hidden md:flex items-end bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transform-gpu translate-y-2 transition duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                  <div class="p-6 text-white space-y-1">
+                    <h3 class="text-2xl font-semibold">Shoreline Serenity</h3>
+                    <p class="text-white/90">Salt air, golden hours, and coastal paths for lingering walks.</p>
+                  </div>
+                </div>
+
+                <figcaption class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent md:hidden"></figcaption>
+                <div class="absolute bottom-6 left-6 right-6 md:hidden text-white space-y-2">
+                  <h3 class="text-2xl font-semibold">Shoreline Serenity</h3>
+                  <p class="text-white/90">Salt air, golden hours, and coastal paths for lingering walks.</p>
+                </div>
+              </figure>
+
+              <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                <div class="max-w-xl space-y-4 ">
+                  <p class="text-sm tracking-wider uppercase text-ink-500">Curated Retreats</p>
+                  <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">Discover Your Next Escape</h2>
+                  <p class="text-ink-700">Immerse yourself in sunlit coastlines and crafted comforts. Designed for those who value time, taste, and tranquility.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae veniam excepturi odio laudantium, eius ea quasi impedit beatae quidem iusto. Expedita quam dolor qui voluptatem. Sed animi hic id nisi.
+                  </p>
+                  
+                  <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Tailored stays in handpicked coastal hideaways</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Concierge planning for seamless travel</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Exclusive experiences with local experts</span>
+                    </li>
+                  </ul>
+                  <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m16 8-4 8-4-4 8-4"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=200&auto=format&fit=crop" alt="Coastal thumbnail" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">Guided Tours</span>
+                      </div>
+                    </a>
+                    <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=200&auto=format&fit=crop" alt="Dining thumbnail" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">VIP Access</span>
+                      </div>
+                    </a>
+                    <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 10v12"/><path d="M19 3H5v1a7 7 0 0 0 14 0V3Z"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1456066775592-3aa39f5f58e8?q=80&w=200&auto=format&fit=crop" alt="Wine thumbnail" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">Tastings</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Live the Art of Comfort" tabindex="0">
+              <figure class="relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
+                <img class="h-full w-full object-cover" src="/blog-architecture-cs-civil-engeneering.jpg" alt="Minimalist luxury living room." />
+
+                <div class="img-overlay pointer-events-none absolute inset-0 hidden md:flex items-end bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transform-gpu translate-y-2 transition duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                  <div class="p-6 text-white space-y-1">
+                    <h3 class="text-2xl font-semibold">Interior Poise</h3>
+                    <p class="text-white/90">Soft textures and silhouettes that invite you to linger.</p>
+                  </div>
+                </div>
+
+                <figcaption class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent md:hidden"></figcaption>
+                <div class="absolute bottom-6 left-6 right-6 md:hidden text-white space-y-2">
+                  <h3 class="text-2xl font-semibold">Interior Poise</h3>
+                  <p class="text-white/90">Soft textures and silhouettes that invite you to linger.</p>
+                </div>
+              </figure>
+
+              <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                <div class="max-w-xl space-y-4">
+                  <p class="text-sm tracking-wider uppercase text-ink-500">Elevated Interiors</p>
+                  <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">Live the Art of Comfort</h2>
+                  <p class="text-ink-700">Immerse yourself in sunlit coastlines and crafted comforts. Designed for those who value time, taste, and tranquility.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae veniam excepturi odio laudantium, eius ea quasi impedit beatae quidem iusto. Expedita quam dolor qui voluptatem. Sed animi hic id nisi.
+                  </p>
+                  <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Handpicked textiles and crafted furnishings</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Ambient lighting by design studios</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Quiet palettes for restorative living</span>
+                    </li>
+                  </ul>
+                  <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1560448075-bb4caa6c0f11?q=80&w=200&auto=format&fit=crop" alt="Home thumb" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">Residences</span>
+                      </div>
+                    </a>
+                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8l3 7H5L8 2Z"/><path d="M12 9v13"/><path d="M8 22h8"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=200&auto=format&fit=crop" alt="Lamp thumb" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">Lighting</span>
+                      </div>
+                    </a>
+                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M4 12h16"/><path d="M5 22h14"/><path d="m7 12 1 10"/><path d="m16 12-1 10"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?q=80&w=200&auto=format&fit=crop" alt="Palette thumb" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">Finishes</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Find Calm in Nature" tabindex="0">
+              <figure class="relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
+                <img class="h-full w-full object-cover Slow Living" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop" alt="Serene forest path." />
+
+                <div class="img-overlay pointer-events-none absolute inset-0 hidden md:flex items-end bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transform-gpu translate-y-2 transition duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                  <div class="p-6 text-white space-y-1">
+                    <h3 class="text-2xl font-semibold">Alpine Quiet</h3>
+                    <p class="text-white/90">Forest trails and still lakes for unhurried time.</p>
+                  </div>
+                </div>
+
+                <figcaption class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent md:hidden"></figcaption>
+                <div class="absolute bottom-6 left-6 right-6 md:hidden text-white space-y-2">
+                  <h3 class="text-2xl font-semibold">Alpine Quiet</h3>
+                  <p class="text-white/90">Forest trails and still lakes for unhurried time.</p>
+                </div>
+              </figure>
+
+              <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                <div class="max-w-xl space-y-4">
+                  <p class="text-sm tracking-wider uppercase text-ink-500">Slow Living</p>
+                  <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">Find Calm in Nature</h2>
+                  <p class="text-ink-700">Immerse yourself in sunlit coastlines and crafted comforts. Designed for those who value time, taste, and tranquility.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae veniam excepturi odio laudantium, eius ea quasi impedit beatae quidem iusto. Expedita quam dolor qui voluptatem. Sed animi hic id nisi.
+                  </p>
+
+                  <ul class="mt-4 space-y-3">
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Guided hikes and nature immersion</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Mindful wellness sessions</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                      <span>Seasonal cuisine rooted in place</span>
+                    </li>
+                  </ul>
+
+                  
+                  <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 21S3 17 3 10a8 8 0 0 1 8-8c7 0 11 8 11 8s-2.5 7-11 11Z"/><path d="M12 5v14"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=200&auto=format&fit=crop" alt="Leaf thumb" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">Wellness</span>
+                      </div>
+                    </a>
+                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3l2-3h8l2 3h3a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=200&auto=format&fit=crop" alt="Camera thumb" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">Photo Walks</span>
+                      </div>
+                    </a>
+                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Z"/><path d="M9 3v15"/><path d="M15 6v15"/></svg>
+                      <div class="flex items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1520975922203-b285bcf0c8df?q=80&w=200&auto=format&fit=crop" alt="Map thumb" class="h-8 w-8 rounded object-cover" />
+                        <span class="font-medium">Trail Maps</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div style="margin-top: 50px;">
+            <nav id="dots" class="pointer-events-auto absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-white/90 px-2 py-1" role="tablist" aria-label="Slide navigation"></nav>
+          </div>
+        </div>
+      </section>
 
     <!-- Enhanced Contact Section -->
     <section id="contact" class="contact-section">
@@ -948,6 +1174,119 @@
 </head>
 <body>
    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const track = document.getElementById('carousel-track')
+        const slides = Array.from(track.querySelectorAll('.slide'))
+        const dotsNav = document.getElementById('dots')
+        const carouselSection = document.getElementById('hero-carousel')
+
+        let index = 0
+        const count = slides.length
+        const duration = 0.8
+        const ease = 'power3.inOut'
+        let autoTimer = null
+        const AUTOPLAY_MS = 9000
+
+        slides.forEach((_, i) => {
+          const b = document.createElement('button')
+          b.className = 'dot'
+          b.type = 'button'
+          b.setAttribute('role', 'tab')
+          b.setAttribute('aria-controls', `slide-${i + 1}`)
+          b.setAttribute('aria-label', `Go to slide ${i + 1}`)
+          b.addEventListener('click', () => goTo(i))
+          dotsNav.appendChild(b)
+        })
+
+        function updateDots() {
+          Array.from(dotsNav.children).forEach((dot, i) => dot.setAttribute('aria-current', i === index ? 'true' : 'false'))
+        }
+
+        slides.forEach((slide, i) => {
+          const image = slide.querySelector('figure img')
+          const textEls = slide.querySelectorAll('h2, p, li, .feature-card, .text-sm')
+          gsap.set(image, { opacity: 0, scale: 1.03, xPercent: 3 })
+          gsap.set(textEls, { opacity: 0, y: 18 })
+          slide.id = `slide-${i + 1}`
+        })
+
+        function animateSlideIn(i) {
+          const slide = slides[i]
+          const image = slide.querySelector('figure img')
+          const textEls = slide.querySelectorAll('h2, p, li, .feature-card, .text-sm')
+          const tl = gsap.timeline()
+          tl.to(track, { xPercent: -i * 100, duration, ease }, 0)
+          tl.to(image, { opacity: 1, xPercent: 0, scale: 1, duration: 0.9, ease: 'power3.out' }, 0.05)
+          tl.to(textEls, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.06 }, 0.15)
+        }
+
+        function resetSlideStates(i) {
+          const slide = slides[i]
+          const image = slide.querySelector('figure img')
+          const textEls = slide.querySelectorAll('h2, p, li, .feature-card, .text-sm')
+          gsap.set(image, { opacity: 0, scale: 1.03, xPercent: 3 })
+          gsap.set(textEls, { opacity: 0, y: 18 })
+        }
+
+        function goTo(i) {
+          if (i === index) return
+          index = (i + count) % count
+          slides.forEach((_, s) => { if (s !== index) resetSlideStates(s) })
+          updateDots()
+          animateSlideIn(index)
+          restartAutoplay()
+        }
+
+        function next() { goTo(index + 1) }
+        function prev() { goTo(index - 1) }
+
+        function startAutoplay() { stopAutoplay(); autoTimer = setInterval(next, AUTOPLAY_MS) }
+        function stopAutoplay() { if (autoTimer) clearInterval(autoTimer); autoTimer = null }
+        function restartAutoplay() { stopAutoplay(); startAutoplay() }
+
+        let startX = 0, deltaX = 0, isTouching = false
+        function onPointerDown(e) { isTouching = true; startX = e.touches ? e.touches[0].clientX : e.clientX; deltaX = 0; stopAutoplay() }
+        function onPointerMove(e) { if (!isTouching) return; const currentX = e.touches ? e.touches[0].clientX : e.clientX; deltaX = currentX - startX }
+        function onPointerUp() {
+          if (!isTouching) return
+          isTouching = false
+          const threshold = 50
+          if (deltaX > threshold) prev()
+          else if (deltaX < -threshold) next()
+          else restartAutoplay()
+          deltaX = 0
+        }
+
+        track.addEventListener('touchstart', onPointerDown, { passive: true })
+        track.addEventListener('touchmove', onPointerMove, { passive: true })
+        track.addEventListener('touchend', onPointerUp)
+        track.addEventListener('mousedown', onPointerDown)
+        window.addEventListener('mousemove', onPointerMove)
+        window.addEventListener('mouseup', onPointerUp)
+
+        const carousel = document.getElementById('carousel')
+        carousel.addEventListener('mouseenter', stopAutoplay)
+        carousel.addEventListener('mouseleave', startAutoplay)
+        carousel.addEventListener('focusin', stopAutoplay)
+        carousel.addEventListener('focusout', startAutoplay)
+
+        gsap.to(carousel, {
+          scale: 0.965,
+          autoAlpha: 0.78,
+          transformOrigin: 'center center',
+          ease: 'none',
+          scrollTrigger: { trigger: carouselSection, start: 'top top', end: 'bottom+=60% top', scrub: true }
+        })
+
+        updateDots()
+        animateSlideIn(0)
+        startAutoplay()
+
+        carouselSection.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight') next()
+          if (e.key === 'ArrowLeft') prev()
+        })
+      })
       // Enhanced JavaScript for better cross-browser support
       const navToggle = document.getElementById('nav-toggle');
       const body = document.body;
@@ -1122,6 +1461,7 @@
       window.addEventListener('load', function() {
         document.body.classList.add('loaded');
       });
+      
     </script>
 
 

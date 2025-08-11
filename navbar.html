@@ -1,797 +1,657 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Villa Sérénité</title>
-  </head>
-  <body>
-    <!-- Mobile toggle (hidden checkbox to drive CSS-only sidebar) -->
-    <input id="nav-toggle" type="checkbox" aria-hidden="true" />
-
-    <!-- Top Navbar -->
-    <nav class="navbar" role="navigation" aria-label="Primary">
-      <div class="nav-container">
-        <!-- Left: Logo -->
-        <a href="#" class="logo" aria-label="Villa Sérénité Home">
-          Villa Sérénité
-        </a>
-
-        <!-- Right: Desktop actions -->
-        <div class="nav-right">
-          <a href="tel:+33123456789" class="phone-link" aria-label="Call +33 1 23 45 67 89">
-            <svg class="phone-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <span class="phone-text">+33 1 23 45 67 89</span>
-          </a>
-
-          <div class="social-icons" aria-label="Réseaux sociaux">
-            <a href="https://facebook.com/villaserenite" target="_blank" rel="noopener noreferrer"
-               class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </a>
-
-            <a href="https://twitter.com/villaserenite" target="_blank" rel="noopener noreferrer"
-               class="social-icon twitter" aria-label="Suivez-nous sur Twitter">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-              </svg>
-            </a>
-
-            <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer"
-               class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Mobile: Hamburger -->
-        <label class="hamburger" for="nav-toggle" role="button" tabindex="0" aria-controls="mobile-sidebar" aria-label="Open menu">
-          <span class="sr-only">Open menu</span>
-          <span></span><span></span><span></span>
-        </label>
-      </div>
-    </nav>
-
-    <!-- Mobile: Overlay to close the drawer -->
-    <label class="sidebar-overlay" for="nav-toggle" aria-hidden="true"></label>
-
-    <!-- Mobile: Sidebar Drawer -->
-    <aside id="mobile-sidebar" class="mobile-sidebar" aria-label="Mobile menu">
-      <div class="sidebar-header">
-        <span class="sidebar-title">Villa Sérénité</span>
-        <label class="close-btn" for="nav-toggle" role="button" tabindex="0" aria-label="Close menu">
-          <span aria-hidden="true">&times;</span>
-        </label>
-      </div>
-
-      <div class="sidebar-content">
-        <a href="tel:+33123456789" class="sidebar-phone">
-          <svg class="phone-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          <span>+33 1 23 45 67 89</span>
-        </a>
-
-        <div class="sidebar-divider" aria-hidden="true"></div>
-
-        <div class="sidebar-social">
-          <a href="https://facebook.com/villaserenite" target="_blank" rel="noopener noreferrer"
-             class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-          <a href="https://twitter.com/villaserenite" target="_blank" rel="noopener noreferrer"
-             class="social-icon twitter" aria-label="Suivez-nous sur Twitter">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-            </svg>
-          </a>
-          <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer"
-             class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Demo content placeholder -->
-    <main class="page-content">
-      <section class="placeholder">
-        <h1>Page Content</h1>
-        <p>Resize the window: on mobile, the navbar becomes a sidebar.</p>
-        <p>The navbar has been fixed with improved accessibility and cross-browser compatibility.</p>
-        <p>Test the hamburger menu on mobile devices or by resizing the window below 768px.</p>
-        <div style="margin-top: 2rem; padding: 1rem; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #2563eb;">
-          <h3 style="margin-top: 0;">Fixes Applied:</h3>
-          <ul style="margin-bottom: 0;">
-            <li>Enhanced mobile sidebar scroll behavior</li>
-            <li>Improved focus management for accessibility</li>
-            <li>Better keyboard navigation support</li>
-            <li>Fixed hamburger animation timing</li>
-            <li>Enhanced touch target sizes for mobile</li>
-            <li>Improved contrast and accessibility features</li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Carousel Scroll Effect</title>
     <style>
-/* Base */
-* { 
-  box-sizing: border-box; 
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(180deg, #fafafa 0%, #ffffff 45%, #f5f5f7 100%);
+            overflow-x: hidden;
+        }
 
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #111827;
-  background: #FAFBFC;
-}
+        .carousel-section {
+            position: relative;
+            width: 100%;
+            padding: 4rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* Prevent background scroll when sidebar open - Enhanced for all browsers */
-body.sidebar-open { 
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-/* Modern browsers with :has() support */
-body:has(#nav-toggle:checked) { 
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
 
-/* Hidden checkbox toggle */
-#nav-toggle { 
-  position: absolute;
-  left: -9999px;
-  opacity: 0; 
-  pointer-events: none; 
-}
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-/* Navbar */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: #fff;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
+        .section-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
 
-.nav-container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 16px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  color: #111827;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  border-radius: 4px;
-  padding: 4px 8px;
-}
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
 
-.logo:hover {
-  color: #2563EB;
-}
+        .carousel-track {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            gap: 2rem;
+        }
 
-.logo:focus,
-.logo:focus-visible {
-  outline: 2px solid #2563EB;
-  outline-offset: 2px;
-}
+        .slide {
+            flex: none;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
 
-/* Desktop right side */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-/* Phone link */
-.phone-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #2563EB;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
+        .slide-image {
+            position: relative;
+            height: 400px;
+            border-radius: 16px;
+            overflow: hidden;
+            group: hover;
+        }
 
-.phone-link:hover { 
-  color: #1D4ED8; 
-  background: rgba(37, 99, 235, 0.1);
-}
+        .slide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease-out;
+        }
 
-.phone-link:focus,
-.phone-link:focus-visible {
-  outline: 2px solid #2563EB;
-  outline-offset: 2px;
-}
+        .slide-image:hover img {
+            transform: scale(1.05);
+        }
 
-.phone-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-}
+        .slide-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: end;
+            padding: 2rem;
+        }
 
-/* Social icons */
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+        .slide-image:hover .slide-overlay {
+            opacity: 1;
+        }
 
-.social-icon {
-  width: 40px; 
-  height: 40px;
-  border-radius: 50%;
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center;
-  color: #fff; 
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-  position: relative; 
-  overflow: hidden;
-  transition: all 0.25s ease;
-}
+        .slide-overlay-text {
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
 
-.social-icon svg { 
-  width: 20px; 
-  height: 20px; 
-  z-index: 1;
-}
+        .slide-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+        }
 
-.social-icon::before {
-  content: "";
-  position: absolute; 
-  inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
-}
+        .slide-category {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #667eea;
+        }
 
-.social-icon:hover::before { 
-  transform: translateX(100%); 
-}
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            line-height: 1.2;
+        }
 
-.social-icon:hover { 
-  transform: translateY(-2px); 
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18); 
-}
+        .slide-description {
+            font-size: 1.125rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
 
-.social-icon:focus,
-.social-icon:focus-visible {
-  outline: 3px solid rgba(255,255,255,0.9);
-  outline-offset: 2px;
-}
+        .slide-features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-.social-icon.facebook { 
-  background: linear-gradient(45deg, #3b5998, #4c70ba); 
-}
+        .slide-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: #374151;
+        }
 
-.social-icon.twitter  { 
-  background: linear-gradient(45deg, #1da1f2, #0d8bd9); 
-}
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #1f2937;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
 
-.social-icon.linkedin { 
-  background: linear-gradient(45deg, #0077b5, #00a0dc); 
-}
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
 
-/* Hamburger (mobile only) */
-.hamburger {
-  display: none;
-  width: 44px; 
-  height: 44px;
-  border-radius: 8px;
-  align-items: center; 
-  justify-content: center;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  flex-direction: column;
-  gap: 4px;
-  transition: all 0.2s ease;
-  position: relative;
-  z-index: 52;
-}
+        .feature-card {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-.hamburger:hover {
-  background: rgba(0,0,0,0.05);
-}
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+        }
 
-.hamburger:focus,
-.hamburger:focus-visible {
-  outline: 2px solid #2563EB;
-  outline-offset: 2px;
-}
+        .feature-card img {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
 
-.hamburger span {
-  display: block;
-  width: 22px; 
-  height: 2px;
-  background: #111827;
-  border-radius: 2px;
-  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-  transform-origin: center;
-}
+        .feature-card-text {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #374151;
+        }
 
-/* Overlay */
-.sidebar-overlay {
-  position: fixed; 
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(2px);
-  opacity: 0; 
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 40;
-}
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
 
-/* Sidebar drawer */
-.mobile-sidebar {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: min(84vw, 320px);
-  background: #fff;
-  transform: translateX(-100%);
-  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 2px 0 24px rgba(0,0,0,0.15);
-  z-index: 41;
-  display: flex; 
-  flex-direction: column;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
+        .nav-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #6b7280;
+        }
 
-.sidebar-header {
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between;
-  padding: 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  background: #f9fafb;
-  flex-shrink: 0;
-}
+        .nav-btn:hover {
+            background: white;
+            border-color: #667eea;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
 
-.sidebar-title {
-  font-weight: 700; 
-  font-size: 1.125rem;
-  color: #111827;
-}
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
 
-.close-btn {
-  width: 40px; 
-  height: 40px;
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center;
-  border-radius: 8px; 
-  cursor: pointer; 
-  color: #111827;
-  transition: all 0.2s ease;
-  font-size: 24px;
-  border: none;
-  background: transparent;
-  line-height: 1;
-}
+        .dots-container {
+            display: flex;
+            gap: 0.5rem;
+        }
 
-.close-btn:hover { 
-  background: rgba(0,0,0,0.08);
-  color: #2563EB; 
-}
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-.close-btn:focus,
-.close-btn:focus-visible {
-  outline: 2px solid #2563EB;
-  outline-offset: 2px;
-}
+        .dot.active {
+            background: #1f2937;
+            transform: scale(1.2);
+        }
 
-.sidebar-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1;
-}
+        @media (max-width: 768px) {
+            .slide {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
 
-.sidebar-phone {
-  display: inline-flex; 
-  align-items: center; 
-  gap: 12px;
-  color: #2563EB; 
-  text-decoration: none; 
-  font-weight: 600;
-  padding: 14px 16px;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-  border: 2px solid transparent;
-}
+            .slide-title {
+                font-size: 2rem;
+            }
 
-.sidebar-phone:hover {
-  background: rgba(37, 99, 235, 0.08);
-  border-color: rgba(37, 99, 235, 0.2);
-}
+            .section-title {
+                font-size: 2rem;
+            }
 
-.sidebar-phone:focus,
-.sidebar-phone:focus-visible {
-  outline: 2px solid #2563EB;
-  outline-offset: 2px;
-}
+            .carousel-container {
+                padding: 1rem;
+            }
 
-.sidebar-divider {
-  height: 1px; 
-  background: rgba(0,0,0,0.08); 
-  margin: 12px 0;
-}
+            .slide-content {
+                padding: 1rem;
+            }
+        }
 
-.sidebar-social {
-  display: flex; 
-  gap: 16px; 
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+        /* Auto-scroll animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-/* Toggle interactions */
-#nav-toggle:checked ~ .sidebar-overlay {
-  opacity: 1; 
-  pointer-events: auto;
-}
-
-#nav-toggle:checked ~ .mobile-sidebar {
-  transform: translateX(0);
-}
-
-/* Animate hamburger into X when open */
-#nav-toggle:checked ~ .navbar .hamburger span:nth-child(2) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-#nav-toggle:checked ~ .navbar .hamburger span:nth-child(3) {
-  opacity: 0;
-  transform: scale(0);
-}
-
-#nav-toggle:checked ~ .navbar .hamburger span:nth-child(4) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-right { 
-    display: none; 
-  }
-  
-  .hamburger { 
-    display: inline-flex; 
-  }
-  
-  .nav-container {
-    padding: 0 12px;
-  }
-  
-  .sidebar-social .social-icon {
-    width: 48px;
-    height: 48px;
-  }
-  
-  .sidebar-social .social-icon svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mobile-sidebar {
-    width: 100vw;
-  }
-  
-  .nav-container {
-    padding: 0 8px;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .navbar {
-    border-bottom: 2px solid #000;
-  }
-  
-  .social-icon {
-    outline: 2px solid rgba(0,0,0,0.5);
-  }
-  
-  .hamburger span {
-    background: #000;
-  }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .social-icon::before {
-    display: none;
-  }
-}
-
-/* Demo page content */
-.page-content { 
-  padding: 24px;
-  min-height: calc(100vh - 64px);
-}
-
-.placeholder {
-  max-width: 800px; 
-  margin: 32px auto; 
-  background: #fff; 
-  border-radius: 12px;
-  padding: 32px; 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06); 
-  border: 1px solid rgba(0,0,0,0.05);
-}
-
-.placeholder h1 {
-  margin-top: 0;
-  color: #111827;
-}
-
-/* Accessibility utility */
-.sr-only {
-  position: absolute; 
-  width: 1px; 
-  height: 1px; 
-  padding: 0; 
-  margin: -1px;
-  overflow: hidden; 
-  clip: rect(0, 0, 0, 0); 
-  white-space: nowrap; 
-  border: 0;
-}
-
-/* Ensure interactive elements have minimum touch target size */
-@media (pointer: coarse) {
-  .social-icon {
-    min-width: 44px;
-    min-height: 44px;
-  }
-  
-  .hamburger {
-    min-width: 44px;
-    min-height: 44px;
-  }
-  
-  .close-btn {
-    min-width: 44px;
-    min-height: 44px;
-  }
-}
-
-/* Focus trap for sidebar */
-.mobile-sidebar:focus-within {
-  outline: none;
-}
-
-/* Prevent text selection on interactive elements */
-.hamburger,
-.close-btn,
-.social-icon {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+        .slide.entering {
+            animation: slideIn 0.8s ease-out;
+        }
     </style>
+</head>
+<body>
+    <section class="carousel-section">
+        <div style="width: 100%; max-width: 1400px;">
+            <div class="section-header">
+                <h2 class="section-title">Discover Your <span class="gradient-text">Dream Home</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Given the high-end imagery and pricing, a title that conveys exclusivity and sophistication will align best.</p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="slide active" data-slide="0">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sunlit coastline and sea">
+                            <div class="slide-overlay">
+                                <div class="slide-overlay-text">Shoreline Serenity</div>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <p class="slide-category">Curated Retreats</p>
+                            <h2 class="slide-title">Discover Your Next Escape</h2>
+                            <p class="slide-description">Immerse yourself in sunlit coastlines and crafted comforts. Designed for those who value time, taste, and tranquility.</p>
+                            <ul class="slide-features">
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Tailored stays in handpicked coastal hideaways</span>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Concierge planning for seamless travel</span>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Exclusive experiences with local experts</span>
+                                </li>
+                            </ul>
+                            <div class="feature-cards">
+                                <div class="feature-card">
+                                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=200&auto=format&fit=crop" alt="Tours">
+                                    <span class="feature-card-text">Guided Tours</span>
+                                </div>
+                                <div class="feature-card">
+                                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=200&auto=format&fit=crop" alt="VIP">
+                                    <span class="feature-card-text">VIP Access</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide" data-slide="1">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Minimalist luxury living room">
+                            <div class="slide-overlay">
+                                <div class="slide-overlay-text">Interior Poise</div>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <p class="slide-category">Elevated Interiors</p>
+                            <h2 class="slide-title">Live the Art of Comfort</h2>
+                            <p class="slide-description">Tactile materials, balanced light, and considered palettes. Spaces composed to slow the moment.</p>
+                            <ul class="slide-features">
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Handpicked textiles and crafted furnishings</span>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Ambient lighting by design studios</span>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Quiet palettes for restorative living</span>
+                                </li>
+                            </ul>
+                            <div class="feature-cards">
+                                <div class="feature-card">
+                                    <img src="https://images.unsplash.com/photo-1560448075-bb4caa6c0f11?q=80&w=200&auto=format&fit=crop" alt="Home">
+                                    <span class="feature-card-text">Residences</span>
+                                </div>
+                                <div class="feature-card">
+                                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=200&auto=format&fit=crop" alt="Lighting">
+                                    <span class="feature-card-text">Lighting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide" data-slide="2">
+                        <div class="slide-image">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop" alt="Serene forest path">
+                            <div class="slide-overlay">
+                                <div class="slide-overlay-text">Alpine Quiet</div>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <p class="slide-category">Slow Living</p>
+                            <h2 class="slide-title">Find Calm in Nature</h2>
+                            <p class="slide-description">Wander forest paths, breathe alpine air, and reset with mindful rituals shaped by the seasons.</p>
+                            <ul class="slide-features">
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Guided hikes and nature immersion</span>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Mindful wellness sessions</span>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">✓</div>
+                                    <span>Seasonal cuisine rooted in place</span>
+                                </li>
+                            </ul>
+                            <div class="feature-cards">
+                                <div class="feature-card">
+                                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=200&auto=format&fit=crop" alt="Wellness">
+                                    <span class="feature-card-text">Wellness</span>
+                                </div>
+                                <div class="feature-card">
+                                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=200&auto=format&fit=crop" alt="Photography">
+                                    <span class="feature-card-text">Photo Walks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <button class="nav-btn" id="prevBtn" aria-label="Previous slide">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="dots-container" id="dotsContainer">
+                        <div class="dot active" data-slide="0"></div>
+                        <div class="dot" data-slide="1"></div>
+                        <div class="dot" data-slide="2"></div>
+                    </div>
+                    
+                    <button class="nav-btn" id="nextBtn" aria-label="Next slide">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
-      // Enhanced JavaScript for better cross-browser support
-      const navToggle = document.getElementById('nav-toggle');
-      const body = document.body;
-      const sidebar = document.querySelector('.mobile-sidebar');
-      const overlay = document.querySelector('.sidebar-overlay');
-      const hamburger = document.querySelector('.hamburger');
-      const closeBtn = document.querySelector('.close-btn');
-      
-      // Track focus for accessibility
-      let lastFocusedElement = null;
-      
-      // Toggle sidebar state
-      function toggleSidebar(open) {
-        navToggle.checked = open;
-        if (open) {
-          lastFocusedElement = document.activeElement;
-          body.classList.add('sidebar-open');
-          // Focus the close button for better UX
-          setTimeout(() => closeBtn?.focus(), 50);
-        } else {
-          body.classList.remove('sidebar-open');
-          // Return focus to hamburger
-          setTimeout(() => {
-            if (lastFocusedElement && lastFocusedElement.focus) {
-              lastFocusedElement.focus();
-            } else {
-              hamburger?.focus();
+        class SimpleCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.slides = document.querySelectorAll('.slide');
+                this.dots = document.querySelectorAll('.dot');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.track = document.getElementById('carouselTrack');
+                this.autoScrollInterval = null;
+                this.autoScrollDelay = 5000; // 5 seconds
+                
+                this.init();
             }
-          }, 50);
+
+            init() {
+                this.bindEvents();
+                this.startAutoScroll();
+                this.updateSlide(0, false); // Initialize without animation
+            }
+
+            bindEvents() {
+                // Navigation buttons
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Dot navigation
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Pause auto-scroll on hover
+                const carousel = document.querySelector('.carousel-container');
+                carousel.addEventListener('mouseenter', () => this.pauseAutoScroll());
+                carousel.addEventListener('mouseleave', () => this.startAutoScroll());
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+
+                // Touch/swipe support
+                let startX = null;
+                let startY = null;
+                
+                carousel.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
+                    this.pauseAutoScroll();
+                }, { passive: true });
+
+                carousel.addEventListener('touchmove', (e) => {
+                    if (!startX || !startY) return;
+                    
+                    let currentX = e.touches[0].clientX;
+                    let currentY = e.touches[0].clientY;
+                    
+                    let diffX = startX - currentX;
+                    let diffY = startY - currentY;
+                    
+                    // Only handle horizontal swipes
+                    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                        e.preventDefault();
+                        if (diffX > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                        startX = null;
+                        startY = null;
+                    }
+                }, { passive: false });
+
+                carousel.addEventListener('touchend', () => {
+                    startX = null;
+                    startY = null;
+                    this.startAutoScroll();
+                }, { passive: true });
+            }
+
+            updateSlide(index, animate = true) {
+                // Remove active classes
+                this.slides.forEach(slide => {
+                    slide.classList.remove('active', 'entering');
+                });
+                this.dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+
+                // Add active classes
+                this.slides[index].classList.add('active');
+                this.dots[index].classList.add('active');
+
+                if (animate) {
+                    this.slides[index].classList.add('entering');
+                }
+
+                // Smooth scroll effect
+                const slideWidth = this.slides[0].offsetWidth + 32; // including gap
+                this.track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+                // Update navigation buttons
+                this.prevBtn.disabled = index === 0;
+                this.nextBtn.disabled = index === this.slides.length - 1;
+
+                this.currentSlide = index;
+            }
+
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.slides.length;
+                this.goToSlide(nextIndex);
+            }
+
+            prevSlide() {
+                const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+                this.goToSlide(prevIndex);
+            }
+
+            goToSlide(index) {
+                if (index === this.currentSlide) return;
+                this.updateSlide(index);
+                this.restartAutoScroll();
+            }
+
+            startAutoScroll() {
+                this.pauseAutoScroll();
+                this.autoScrollInterval = setInterval(() => {
+                    this.nextSlide();
+                }, this.autoScrollDelay);
+            }
+
+            pauseAutoScroll() {
+                if (this.autoScrollInterval) {
+                    clearInterval(this.autoScrollInterval);
+                    this.autoScrollInterval = null;
+                }
+            }
+
+            restartAutoScroll() {
+                this.pauseAutoScroll();
+                this.startAutoScroll();
+            }
         }
-      }
-      
-      // Listen for checkbox changes
-      navToggle.addEventListener('change', function() {
-        toggleSidebar(this.checked);
-      });
-      
-      // Handle keyboard activation for hamburger and close button
-      hamburger?.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleSidebar(true);
-        }
-      });
-      
-      closeBtn?.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleSidebar(false);
-        }
-      });
-      
-      // Handle window resize to close sidebar on desktop
-      window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && navToggle.checked) {
-          toggleSidebar(false);
-        }
-      });
-      
-      // Prevent scrolling on background when sidebar is open (iOS Safari fix)
-      let scrollPosition = 0;
-      
-      navToggle.addEventListener('change', function() {
-        if (this.checked) {
-          scrollPosition = window.pageYOffset;
-          body.style.position = 'fixed';
-          body.style.top = `-${scrollPosition}px`;
-          body.style.width = '100%';
-        } else {
-          body.style.position = '';
-          body.style.top = '';
-          body.style.width = '';
-          window.scrollTo(0, scrollPosition);
-        }
-      });
-      
-      // Enhanced touch handling for mobile
-      let touchStartY = 0;
-      let touchEndY = 0;
-      
-      sidebar?.addEventListener('touchstart', function(e) {
-        touchStartY = e.changedTouches[0].screenY;
-      }, { passive: true });
-      
-      sidebar?.addEventListener('touchend', function(e) {
-        touchEndY = e.changedTouches[0].screenY;
-        // Prevent accidental swipe-to-close on sidebar content
-        e.stopPropagation();
-      }, { passive: true });
-      
-      // Add swipe-to-close gesture
-      overlay?.addEventListener('touchstart', function(e) {
-        touchStartY = e.changedTouches[0].screenY;
-      }, { passive: true });
-      
-      overlay?.addEventListener('touchend', function(e) {
-        touchEndY = e.changedTouches[0].screenY;
-        const swipeDistance = Math.abs(touchEndY - touchStartY);
-        
-        // If it's more of a tap than a swipe, close the sidebar
-        if (swipeDistance < 50) {
-          toggleSidebar(false);
-        }
-      }, { passive: true });
-      
-      // Animate social icons on load
-      function animateSocialIcons() {
-        const socialIcons = document.querySelectorAll('.social-icon');
-        socialIcons.forEach((icon, index) => {
-          icon.style.opacity = '0';
-          icon.style.transform = 'translateY(20px)';
-          
-          setTimeout(() => {
-            icon.style.transition = 'all 0.6s cubic-bezier(0.4,0,0.2,1)';
-            icon.style.opacity = '1';
-            icon.style.transform = 'translateY(0)';
-          }, 100 + (index * 100));
+
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new SimpleCarousel();
         });
-      }
-      
-      // Run animations when page loads
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', animateSocialIcons);
-      } else {
-        animateSocialIcons();
-      }
-      
-      // Add smooth scroll behavior for anchor links (if any are added later)
-      document.addEventListener('click', function(e) {
-        const target = e.target.closest('a[href^="#"]');
-        if (target && target.getAttribute('href') !== '#') {
-          e.preventDefault();
-          const targetElement = document.querySelector(target.getAttribute('href'));
-          if (targetElement) {
-            // Close sidebar if open
-            if (navToggle.checked) {
-              toggleSidebar(false);
-            }
-            
-            setTimeout(() => {
-              targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }, navToggle.checked ? 300 : 0);
-          }
-        }
-      });
-      
-      // Performance optimization: debounce resize handler
-      function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-          const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-          };
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
+
+        // Add some scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
-      }
-      
-      const debouncedResize = debounce(function() {
-        if (window.innerWidth > 768 && navToggle.checked) {
-          toggleSidebar(false);
-        }
-      }, 250);
-      
-      window.addEventListener('resize', debouncedResize);
-      
-      // Add loading state management
-      window.addEventListener('load', function() {
-        document.body.classList.add('loaded');
-      });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.section-header, .carousel-container');
+            animateElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.8s ease-out';
+                observer.observe(el);
+            });
+        });
     </script>
-  </body>
+</body>
 </html>
