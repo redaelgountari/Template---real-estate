@@ -58,12 +58,13 @@
        <input id="nav-toggle" type="checkbox" aria-hidden="true" />
 
     <!-- Top Navbar -->
-    <nav class="navbar" role="navigation" aria-label="Primary">
-      <div class="nav-container">
+<nav class="navbar" role="navigation" aria-label="Primary" style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.8); position: sticky; top: 0; z-index: 1000;">      <div class="nav-container">
         <!-- Left: Logo -->
-        <a href="#" class="logo" aria-label="Villa Sérénité Home">
+        <!-- <a href="#" class="logo" aria-label="Villa Sérénité Home">
           Villa Sérénité
-        </a>
+        </a> -->
+        <img width="60px" height="60px" src="/logo verlia.png" alt="">
+        
 
         <!-- Right: Desktop actions -->
         <div class="nav-right">
@@ -75,17 +76,17 @@
           </a>
 
           <div class="social-icons" aria-label="Réseaux sociaux">
-            <a href="https://facebook.com/villaserenite" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.facebook.com/profile.php?id=61566000283481&locale=fr_FR" target="_blank" rel="noopener noreferrer"
                class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
             </a>
 
-            <a href="https://twitter.com/villaserenite" target="_blank" rel="noopener noreferrer"
-               class="social-icon twitter" aria-label="Suivez-nous sur Twitter">
+            <a href="https://www.instagram.com/verlia_living/" target="_blank" rel="noopener noreferrer"
+              class="social-icon instagram" aria-label="Suivez-nous sur Instagram">
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
               </svg>
             </a>
 
@@ -855,219 +856,198 @@
     <!-- carousell section 03  -->
 
       <section id="hero-carousel" class="relative w-full py-6 sm:py-10">
-        <div id="carousel" class="relative w-full overflow-hidden">
-          <div class="grain"></div>
-
-          <div id="carousel-track" class="flex w-full will-change-transform" style="touch-action: pan-y">
-            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Discover Your Next Escape" tabindex="0">
-              
-              <div class="relative p-6 sm:p-10 flex flex-col justify-center">
-                <div class="max-w-xl space-y-4 ">
-                  <p class="text-sm tracking-wider uppercase text-ink-500">Curated Retreats</p>
-                  <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">Discover Your Next Escape</h2>
-                  <p class="text-ink-700">Immerse yourself in sunlit coastlines and crafted comforts. Designed for those who value time, taste, and tranquility.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae veniam excepturi odio laudantium, eius ea quasi impedit beatae quidem iusto. Expedita quam dolor qui voluptatem. Sed animi hic id nisi.
-                  </p>
-                  
-                  <ul class="mt-4 space-y-3">
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Tailored stays in handpicked coastal hideaways</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Concierge planning for seamless travel</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Exclusive experiences with local experts</span>
-                    </li>
-                  </ul>
-                  <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m16 8-4 8-4-4 8-4"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=200&auto=format&fit=crop" alt="Coastal thumbnail" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">Guided Tours</span>
-                      </div>
-                    </a>
-                    <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=200&auto=format&fit=crop" alt="Dining thumbnail" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">VIP Access</span>
-                      </div>
-                    </a>
-                    <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 10v12"/><path d="M19 3H5v1a7 7 0 0 0 14 0V3Z"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1456066775592-3aa39f5f58e8?q=80&w=200&auto=format&fit=crop" alt="Wine thumbnail" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">Tastings</span>
-                      </div>
-                    </a>
-                  </div>
+    <div id="carousel" class="relative w-full overflow-hidden">
+        <div class="grain"></div>
+<div class="section-header">
+                <h2 class="section-title">Discover Your <span class="gradient-text">Dream Property</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Explore luxury villas and apartments crafted for extraordinary living.</p>
+            </div>
+        <div id="carousel-track" class="flex w-full will-change-transform" style="touch-action: pan-y">
+            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Luxury Waterfront Villas" tabindex="0">
+                <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                    <div class="max-w-xl space-y-4">
+                        <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">Exclusive Properties</p>
+                        <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Luxury Waterfront Villas</h2>
+                        <p class="slide-description text-ink-700">Discover exceptional waterfront living with our collection of private villas. Each property offers breathtaking views, premium amenities, and bespoke architecture designed for discerning homeowners.</p>
+                        
+                        <ul class="slide-list mt-4 space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>Private beach access and infinity pools</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>Smart home technology and security systems</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>24/7 concierge and property management</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=200&auto=format&fit=crop" alt="Villa thumbnail" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Villa Tours</span>
+                                </div>
+                            </a>
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=200&auto=format&fit=crop" alt="Security thumbnail" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Security</span>
+                                </div>
+                            </a>
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=200&auto=format&fit=crop" alt="Amenities thumbnail" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Amenities</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <figure class="relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
-                <img class="h-full w-full object-cover" src="/max-whitehead-uJ0aYoAyh7w-unsplash.jpg" alt="Sunlit coastline and sea." />
-
-                <div class="img-overlay pointer-events-none absolute inset-0 hidden md:flex items-end bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transform-gpu translate-y-2 transition duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                  <div class="p-6 text-white space-y-1">
-                    <h3 class="text-2xl font-semibold">Shoreline Serenity</h3>
-                    <p class="text-white/90">Salt air, golden hours, and coastal paths for lingering walks.</p>
-                  </div>
-                </div>
-
-                <figcaption class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent md:hidden"></figcaption>
-                <div class="absolute bottom-6 left-6 right-6 md:hidden text-white space-y-2">
-                  <h3 class="text-2xl font-semibold">Shoreline Serenity</h3>
-                  <p class="text-white/90">Salt air, golden hours, and coastal paths for lingering walks.</p>
-                </div>
-              </figure>
-
+                
+                <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
+                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2000&auto=format&fit=crop" alt="Luxury waterfront villa with infinity pool." />
+                    <div class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                        <div class="p-6 text-white space-y-1">
+                            <h3 class="text-2xl font-semibold">Azure Heights</h3>
+                            <p class="text-white/90">Panoramic sea views from this 6-bedroom contemporary masterpiece.</p>
+                        </div>
+                    </div>
+                </figure>
             </article>
 
-            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Live the Art of Comfort" tabindex="0">
-              
-
-              <div class="relative p-6 sm:p-10 flex flex-col justify-center">
-                <div class="max-w-xl space-y-4">
-                  <p class="text-sm tracking-wider uppercase text-ink-500">Elevated Interiors</p>
-                  <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">Live the Art of Comfort</h2>
-                  <p class="text-ink-700">Immerse yourself in sunlit coastlines and crafted comforts. Designed for those who value time, taste, and tranquility.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae veniam excepturi odio laudantium, eius ea quasi impedit beatae quidem iusto. Expedita quam dolor qui voluptatem. Sed animi hic id nisi.
-                  </p>
-                  <ul class="mt-4 space-y-3">
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Handpicked textiles and crafted furnishings</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Ambient lighting by design studios</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Quiet palettes for restorative living</span>
-                    </li>
-                  </ul>
-                  <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1560448075-bb4caa6c0f11?q=80&w=200&auto=format&fit=crop" alt="Home thumb" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">Residences</span>
-                      </div>
-                    </a>
-                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8l3 7H5L8 2Z"/><path d="M12 9v13"/><path d="M8 22h8"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=200&auto=format&fit=crop" alt="Lamp thumb" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">Lighting</span>
-                      </div>
-                    </a>
-                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M4 12h16"/><path d="M5 22h14"/><path d="m7 12 1 10"/><path d="m16 12-1 10"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?q=80&w=200&auto=format&fit=crop" alt="Palette thumb" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">Finishes</span>
-                      </div>
-                    </a>
-                  </div>
+            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Urban Luxury Apartments" tabindex="0">
+                <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                    <div class="max-w-xl space-y-4">
+                        <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">City Living</p>
+                        <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Urban Luxury Apartments</h2>
+                        <p class="slide-description text-ink-700">Sophisticated high-rise living in the heart of the city. Our premium apartments combine cutting-edge design with unparalleled access to urban amenities and cultural hotspots.</p>
+                        
+                        <ul class="slide-list mt-4 space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>Floor-to-ceiling windows with city skyline views</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>Resident-only amenities including rooftop pools</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>Walkability score of 98 - live where the action is</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 21 19-9L3 3v7l9 2-9 2v7z"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=200&auto=format&fit=crop" alt="Location thumb" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Location</span>
+                                </div>
+                            </a>
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="m5 6 2 3"/><path d="m19 6-2 3"/><path d="M3 12h18"/><path d="M18 16v3"/><path d="M18 22v-3"/><path d="M6 16v3"/><path d="M6 22v-3"/><path d="M12 16v3"/><path d="M12 22v-3"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=200&auto=format&fit=crop" alt="Building thumb" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Floor Plans</span>
+                                </div>
+                            </a>
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12a10 10 0 0 0-20 0"/><path d="M22 12a10 10 0 0 1-20 0"/><path d="M12 2v20"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=200&auto=format&fit=crop" alt="Amenities thumb" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Building Features</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <figure class="relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
-                <img class="h-full w-full object-cover" src="/blog-architecture-cs-civil-engeneering.jpg" alt="Minimalist luxury living room." />
-
-                <div class="img-overlay pointer-events-none absolute inset-0 hidden md:flex items-end bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transform-gpu translate-y-2 transition duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                  <div class="p-6 text-white space-y-1">
-                    <h3 class="text-2xl font-semibold">Interior Poise</h3>
-                    <p class="text-white/90">Soft textures and silhouettes that invite you to linger.</p>
-                  </div>
-                </div>
-
-                <figcaption class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent md:hidden"></figcaption>
-                <div class="absolute bottom-6 left-6 right-6 md:hidden text-white space-y-2">
-                  <h3 class="text-2xl font-semibold">Interior Poise</h3>
-                  <p class="text-white/90">Soft textures and silhouettes that invite you to linger.</p>
-                </div>
-              </figure>
+                
+                <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
+                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2000&auto=format&fit=crop" alt="Modern luxury apartment interior." />
+                    <div class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                        <div class="p-6 text-white space-y-1">
+                            <h3 class="text-2xl font-semibold">The Metropolitan</h3>
+                            <p class="text-white/90">Downtown living redefined with 360° city views.</p>
+                        </div>
+                    </div>
+                </figure>
             </article>
 
-            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Find Calm in Nature" tabindex="0">
-              <div class="relative p-6 sm:p-10 flex flex-col justify-center">
-                <div class="max-w-xl space-y-4">
-                  <p class="text-sm tracking-wider uppercase text-ink-500">Slow Living</p>
-                  <h2 class="text-3xl sm:text-4xl font-semibold leading-tight">Find Calm in Nature</h2>
-                  <p class="text-ink-700">Immerse yourself in sunlit coastlines and crafted comforts. Designed for those who value time, taste, and tranquility.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae veniam excepturi odio laudantium, eius ea quasi impedit beatae quidem iusto. Expedita quam dolor qui voluptatem. Sed animi hic id nisi.
-                  </p>
+            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Gated Community Homes" tabindex="0">
+                <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                    <div class="max-w-xl space-y-4">
+                        <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">Secure Living</p>
+                        <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Gated Community Homes</h2>
+                        <p class="slide-description text-ink-700">Experience the perfect balance of privacy and community in our exclusive gated developments. Family-friendly neighborhoods with premium shared facilities and lush green spaces.</p>
 
-                  <ul class="mt-4 space-y-3">
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Guided hikes and nature immersion</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Mindful wellness sessions</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                      <span>Seasonal cuisine rooted in place</span>
-                    </li>
-                  </ul>
+                        <ul class="slide-list mt-4 space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>24/7 security with controlled access points</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>Community centers and recreational facilities</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>Landscaped gardens and walking trails</span>
+                            </li>
+                        </ul>
 
-                  
-                  <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 21S3 17 3 10a8 8 0 0 1 8-8c7 0 11 8 11 8s-2.5 7-11 11Z"/><path d="M12 5v14"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=200&auto=format&fit=crop" alt="Leaf thumb" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">Wellness</span>
-                      </div>
-                    </a>
-                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3l2-3h8l2 3h3a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=200&auto=format&fit=crop" alt="Camera thumb" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">Photo Walks</span>
-                      </div>
-                    </a>
-                    <a href="#" class="rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Z"/><path d="M9 3v15"/><path d="M15 6v15"/></svg>
-                      <div class="flex items-center gap-2">
-                        <img src="https://images.unsplash.com/photo-1520975922203-b285bcf0c8df?q=80&w=200&auto=format&fit=crop" alt="Map thumb" class="h-8 w-8 rounded object-cover" />
-                        <span class="font-medium">Trail Maps</span>
-                      </div>
-                    </a>
-                  </div>
+                        <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?q=80&w=200&auto=format&fit=crop" alt="Security thumb" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Security</span>
+                                </div>
+                            </a>
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="m5 6 2 3"/><path d="m19 6-2 3"/><path d="M3 12h18"/><path d="M18 16v3"/><path d="M18 22v-3"/><path d="M6 16v3"/><path d="M6 22v-3"/><path d="M12 16v3"/><path d="M12 22v-3"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=200&auto=format&fit=crop" alt="Community thumb" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Community</span>
+                                </div>
+                            </a>
+                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <div class="flex items-center gap-2">
+                                    <img src="/familly.jpeg" alt="Family thumb" class="h-8 w-8 rounded object-cover" />
+                                    <span class="font-medium">Family Life</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-                <figure class="relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
-                <img class="h-full w-full object-cover Slow Living" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop" alt="Serene forest path." />
-
-                <div class="img-overlay pointer-events-none absolute inset-0 hidden md:flex items-end bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transform-gpu translate-y-2 transition duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                  <div class="p-6 text-white space-y-1">
-                    <h3 class="text-2xl font-semibold">Alpine Quiet</h3>
-                    <p class="text-white/90">Forest trails and still lakes for unhurried time.</p>
-                  </div>
-                </div>
-
-                <figcaption class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent md:hidden"></figcaption>
-                <div class="absolute bottom-6 left-6 right-6 md:hidden text-white space-y-2">
-                  <h3 class="text-2xl font-semibold">Alpine Quiet</h3>
-                  <p class="text-white/90">Forest trails and still lakes for unhurried time.</p>
-                </div>
-              </figure>
+                
+                <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
+                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2000&auto=format&fit=crop" alt="Beautiful homes in gated community." />
+                    <div class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                        <div class="p-6 text-white space-y-1">
+                            <h3 class="text-2xl font-semibold">The Oaks</h3>
+                            <p class="text-white/90">Luxury family homes surrounded by century-old trees.</p>
+                        </div>
+                    </div>
+                </figure>
             </article>
-          </div>
-
-          <div style="margin-top: 40px;">
-            <nav id="dots" class="pointer-events-auto absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-white/90 px-2 py-1" role="tablist" aria-label="Slide navigation"></nav>
-          </div>
         </div>
-      </section>
+
+        <div style="margin-top: 40px;">
+            <nav id="dots" class="pointer-events-auto absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-white/90 px-2 py-1" role="tablist" aria-label="Slide navigation"></nav>
+        </div>
+    </div>
+</section>
+
 
     <!-- Enhanced Contact Section -->
     <section id="contact" class="contact-section">
@@ -1175,326 +1155,319 @@
 </head>
 <body>
    <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const track = document.getElementById('carousel-track')
-        const slides = Array.from(track.querySelectorAll('.slide'))
-        const dotsNav = document.getElementById('dots')
-        const carouselSection = document.getElementById('hero-carousel')
-
-        let index = 0
-        const count = slides.length
-        const duration = 0.8
-        const ease = 'power3.inOut'
-        let autoTimer = null
-        const AUTOPLAY_MS = 9000
-
-        slides.forEach((_, i) => {
-          const b = document.createElement('button')
-          b.className = 'dot'
-          b.type = 'button'
-          b.setAttribute('role', 'tab')
-          b.setAttribute('aria-controls', `slide-${i + 1}`)
-          b.setAttribute('aria-label', `Go to slide ${i + 1}`)
-          b.addEventListener('click', () => goTo(i))
-          dotsNav.appendChild(b)
-        })
-
-        function updateDots() {
-          Array.from(dotsNav.children).forEach((dot, i) => dot.setAttribute('aria-current', i === index ? 'true' : 'false'))
-        }
-
-        slides.forEach((slide, i) => {
-          const image = slide.querySelector('figure img')
-          const textEls = slide.querySelectorAll('h2, p, li, .feature-card, .text-sm')
-          gsap.set(image, { opacity: 0, scale: 1.03, xPercent: 3 })
-          gsap.set(textEls, { opacity: 0, y: 18 })
-          slide.id = `slide-${i + 1}`
-        })
-
-        function animateSlideIn(i) {
-          const slide = slides[i]
-          const image = slide.querySelector('figure img')
-          const textEls = slide.querySelectorAll('h2, p, li, .feature-card, .text-sm')
-          const tl = gsap.timeline()
-          tl.to(track, { xPercent: -i * 100, duration, ease }, 0)
-          tl.to(image, { opacity: 1, xPercent: 0, scale: 1, duration: 0.9, ease: 'power3.out' }, 0.05)
-          tl.to(textEls, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.06 }, 0.15)
-        }
-
-        function resetSlideStates(i) {
-          const slide = slides[i]
-          const image = slide.querySelector('figure img')
-          const textEls = slide.querySelectorAll('h2, p, li, .feature-card, .text-sm')
-          gsap.set(image, { opacity: 0, scale: 1.03, xPercent: 3 })
-          gsap.set(textEls, { opacity: 0, y: 18 })
-        }
-
-        function goTo(i) {
-          if (i === index) return
-          index = (i + count) % count
-          slides.forEach((_, s) => { if (s !== index) resetSlideStates(s) })
-          updateDots()
-          animateSlideIn(index)
-          restartAutoplay()
-        }
-
-        function next() { goTo(index + 1) }
-        function prev() { goTo(index - 1) }
-
-        function startAutoplay() { stopAutoplay(); autoTimer = setInterval(next, AUTOPLAY_MS) }
-        function stopAutoplay() { if (autoTimer) clearInterval(autoTimer); autoTimer = null }
-        function restartAutoplay() { stopAutoplay(); startAutoplay() }
-
-        let startX = 0, deltaX = 0, isTouching = false
-        function onPointerDown(e) { isTouching = true; startX = e.touches ? e.touches[0].clientX : e.clientX; deltaX = 0; stopAutoplay() }
-        function onPointerMove(e) { if (!isTouching) return; const currentX = e.touches ? e.touches[0].clientX : e.clientX; deltaX = currentX - startX }
-        function onPointerUp() {
-          if (!isTouching) return
-          isTouching = false
-          const threshold = 50
-          if (deltaX > threshold) prev()
-          else if (deltaX < -threshold) next()
-          else restartAutoplay()
-          deltaX = 0
-        }
-
-        track.addEventListener('touchstart', onPointerDown, { passive: true })
-        track.addEventListener('touchmove', onPointerMove, { passive: true })
-        track.addEventListener('touchend', onPointerUp)
-        track.addEventListener('mousedown', onPointerDown)
-        window.addEventListener('mousemove', onPointerMove)
-        window.addEventListener('mouseup', onPointerUp)
-
-        const carousel = document.getElementById('carousel')
-        carousel.addEventListener('mouseenter', stopAutoplay)
-        carousel.addEventListener('mouseleave', startAutoplay)
-        carousel.addEventListener('focusin', stopAutoplay)
-        carousel.addEventListener('focusout', startAutoplay)
-
-        gsap.to(carousel, {
-          scale: 0.965,
-          autoAlpha: 0.78,
-          transformOrigin: 'center center',
-          ease: 'none',
-          scrollTrigger: { trigger: carouselSection, start: 'top top', end: 'bottom+=60% top', scrub: true }
-        })
-
-        updateDots()
-        animateSlideIn(0)
-        startAutoplay()
-
-        carouselSection.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowRight') next()
-          if (e.key === 'ArrowLeft') prev()
-        })
-      })
-      // Enhanced JavaScript for better cross-browser support
-      const navToggle = document.getElementById('nav-toggle');
-      const body = document.body;
-      const sidebar = document.querySelector('.mobile-sidebar');
-      const overlay = document.querySelector('.sidebar-overlay');
-      const hamburger = document.querySelector('.hamburger');
-      const closeBtn = document.querySelector('.close-btn');
-      
-      // Track focus for accessibility
-      let lastFocusedElement = null;
-      
-      // Toggle sidebar state
-      function toggleSidebar(open) {
-        navToggle.checked = open;
-        if (open) {
-          lastFocusedElement = document.activeElement;
-          body.classList.add('sidebar-open');
-          // Focus the close button for better UX
-          setTimeout(() => closeBtn?.focus(), 50);
-        } else {
-          body.classList.remove('sidebar-open');
-          // Return focus to hamburger
-          setTimeout(() => {
-            if (lastFocusedElement && lastFocusedElement.focus) {
-              lastFocusedElement.focus();
-            } else {
-              hamburger?.focus();
-            }
-          }, 50);
-        }
-      }
-      
-      // Listen for checkbox changes
-      navToggle.addEventListener('change', function() {
-        toggleSidebar(this.checked);
-      });
-      
-      // Handle keyboard activation for hamburger and close button
-      hamburger?.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleSidebar(true);
-        }
-      });
-      
-      closeBtn?.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleSidebar(false);
-        }
-      });
-      
-      // Handle window resize to close sidebar on desktop
-      window.addEventListener('resize', function() {
-        if (window.innerWidth > 768 && navToggle.checked) {
-          toggleSidebar(false);
-        }
-      });
-      
-      // Prevent scrolling on background when sidebar is open (iOS Safari fix)
-      let scrollPosition = 0;
-      
-      navToggle.addEventListener('change', function() {
-        if (this.checked) {
-          scrollPosition = window.pageYOffset;
-          body.style.position = 'fixed';
-          body.style.top = `-${scrollPosition}px`;
-          body.style.width = '100%';
-        } else {
-          body.style.position = '';
-          body.style.top = '';
-          body.style.width = '';
-          window.scrollTo(0, scrollPosition);
-        }
-      });
-      
-      // Enhanced touch handling for mobile
-      let touchStartY = 0;
-      let touchEndY = 0;
-      
-      sidebar?.addEventListener('touchstart', function(e) {
-        touchStartY = e.changedTouches[0].screenY;
-      }, { passive: true });
-      
-      sidebar?.addEventListener('touchend', function(e) {
-        touchEndY = e.changedTouches[0].screenY;
-        // Prevent accidental swipe-to-close on sidebar content
-        e.stopPropagation();
-      }, { passive: true });
-      
-      // Add swipe-to-close gesture
-      overlay?.addEventListener('touchstart', function(e) {
-        touchStartY = e.changedTouches[0].screenY;
-      }, { passive: true });
-      
-      overlay?.addEventListener('touchend', function(e) {
-        touchEndY = e.changedTouches[0].screenY;
-        const swipeDistance = Math.abs(touchEndY - touchStartY);
+    gsap.registerPlugin(ScrollTrigger);
         
-        // If it's more of a tap than a swipe, close the sidebar
-        if (swipeDistance < 50) {
-          toggleSidebar(false);
+        // Initialize variables
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        // Create dots navigation
+        function createDots() {
+            const dotsContainer = document.getElementById('dots');
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-slate-800 scale-125' : 'bg-slate-400'}`;
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
         }
-      }, { passive: true });
-      
-      // Animate social icons on load
-      function animateSocialIcons() {
-        const socialIcons = document.querySelectorAll('.social-icon');
-        socialIcons.forEach((icon, index) => {
-          icon.style.opacity = '0';
-          icon.style.transform = 'translateY(20px)';
-          
-          setTimeout(() => {
-            icon.style.transition = 'all 0.6s cubic-bezier(0.4,0,0.2,1)';
-            icon.style.opacity = '1';
-            icon.style.transform = 'translateY(0)';
-          }, 100 + (index * 100));
-        });
-      }
-      
-      // Run animations when page loads
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', animateSocialIcons);
-      } else {
-        animateSocialIcons();
-      }
-      
-      // Add smooth scroll behavior for anchor links (if any are added later)
-      document.addEventListener('click', function(e) {
-        const target = e.target.closest('a[href^="#"]');
-        if (target && target.getAttribute('href') !== '#') {
-          e.preventDefault();
-          const targetElement = document.querySelector(target.getAttribute('href'));
-          if (targetElement) {
-            // Close sidebar if open
-            if (navToggle.checked) {
-              toggleSidebar(false);
+        
+        // Update dots
+        function updateDots() {
+            const dots = document.querySelectorAll('#dots button');
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.className = 'w-2 h-2 rounded-full bg-slate-800 scale-125 transition-all duration-300';
+                } else {
+                    dot.className = 'w-2 h-2 rounded-full bg-slate-400 transition-all duration-300';
+                }
+            });
+        }
+        
+        // Go to specific slide
+        function goToSlide(slideIndex) {
+            const track = document.getElementById('carousel-track');
+            currentSlide = slideIndex;
+            
+            // Animate slide transition
+            gsap.to(track, {
+                x: -slideIndex * 100 + '%',
+                duration: 1.2,
+                ease: 'power3.inOut'
+            });
+            
+            // Update slide states
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === slideIndex);
+            });
+            
+            updateDots();
+            animateSlideContent(slideIndex);
+        }
+        
+        // Animate slide content
+        function animateSlideContent(slideIndex) {
+            const currentSlideEl = slides[slideIndex];
+            
+            // Reset animations
+            // gsap.set(currentSlideEl.querySelectorAll('.slide-tag, .slide-title, .slide-description, .slide-list li, .feature-card, .slide-image'), {
+            //     opacity: 0,
+            //     y: 30,
+            //     scale: 0.95
+            // });
+            
+            // Create timeline for slide content
+            const tl = gsap.timeline();
+            
+            tl.to(currentSlideEl.querySelector('.slide-tag'), {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'power3.out'
+            })
+            .to(currentSlideEl.querySelector('.slide-title'), {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 1,
+                ease: 'power3.out'
+            }, '-=0.6')
+            .to(currentSlideEl.querySelector('.slide-description'), {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'power2.out'
+            }, '-=0.7')
+            .to(currentSlideEl.querySelectorAll('.slide-list li'), {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: 'power2.out'
+            }, '-=0.6')
+            .to(currentSlideEl.querySelectorAll('.feature-card'), {
+                opacity: 1,
+                y: 0,
+                duration: 0.7,
+                stagger: 0.1,
+                ease: 'back.out(1.7)'
+            }, '-=0.4')
+            .to(currentSlideEl.querySelector('.slide-image'), {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 1.2,
+                ease: 'power3.out'
+            }, '-=1');
+        }
+        
+        // Main scroll animation using ScrollTrigger
+        function initScrollAnimations() {
+            // Hero carousel entrance
+            gsap.fromTo('#hero-carousel', 
+                {
+                    opacity: 0,
+                    y: 100,
+                    scale: 0.95
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 1.5,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#hero-carousel',
+                        start: 'top 85%',
+                        end: 'bottom 15%',
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+            
+            // Parallax effect on scroll
+            gsap.to('.slide-image img', {
+                yPercent: -20,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#hero-carousel',
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+            
+            // Grain texture animation
+            gsap.to('.grain', {
+                rotation: 360,
+                duration: 60,
+                repeat: -1,
+                ease: 'none'
+            });
+            
+            // Removed auto-advance slides based on scroll position
+            
+            // Scale effect on scroll
+            gsap.to('#hero-carousel', {
+                scale: 0.85,
+                borderRadius: '24px',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#hero-carousel',
+                    start: 'center center',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+            
+            // Individual slide animations on scroll
+            slides.forEach((slide, index) => {
+                // Individual slide animations on scroll (removed scroll-based slide changes)
+                ScrollTrigger.create({
+                    trigger: slide,
+                    start: 'top 70%',
+                    end: 'bottom 30%',
+                    onEnter: () => {
+                        // Only animate if this is the current active slide
+                        if (index === currentSlide) {
+                            animateSlideContent(index);
+                        }
+                    }
+                });
+                
+                // Feature cards hover animation enhancement
+                const featureCards = slide.querySelectorAll('.feature-card');
+                featureCards.forEach((card, cardIndex) => {
+                    card.addEventListener('mouseenter', () => {
+                        gsap.to(card, {
+                            y: -5,
+                            scale: 1.02,
+                            duration: 0.3,
+                            ease: 'power2.out'
+                        });
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        gsap.to(card, {
+                            y: 0,
+                            scale: 1,
+                            duration: 0.3,
+                            ease: 'power2.out'
+                        });
+                    });
+                });
+            });
+        }
+        
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            createDots();
+            
+            // Initial slide setup
+            slides[0].classList.add('active');
+            animateSlideContent(0);
+            
+            // Initialize scroll animations
+            initScrollAnimations();
+            
+            // Add smooth scrolling behavior
+            document.documentElement.style.scrollBehavior = 'smooth';
+            
+            // Auto-advance slides with interval (optional)
+            let autoAdvanceInterval;
+            
+            function startAutoAdvance() {
+                autoAdvanceInterval = setInterval(() => {
+                    const nextSlide = (currentSlide + 1) % totalSlides;
+                    goToSlide(nextSlide);
+                }, 7000); // Change slide every 5 seconds
             }
             
-            setTimeout(() => {
-              targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }, navToggle.checked ? 300 : 0);
-          }
-        }
-      });
-
-      gsap.registerPlugin(ScrollTrigger);
-
-  // Animate each slide into view
-  gsap.utils.toArray("#hero-carousel .slide").forEach((slide, i) => {
-    gsap.from(slide, {
-      scrollTrigger: {
-        trigger: slide,
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power3.out",
-      delay: i * 0.1
-    });
-  });
-
-  // Parallax effect on images
-  gsap.utils.toArray("#hero-carousel figure img").forEach(img => {
-    gsap.to(img, {
-      yPercent: 15,
-      ease: "none",
-      scrollTrigger: {
-        trigger: img.closest(".slide"),
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true
-      }
-    });
-  });
-      
-      // Performance optimization: debounce resize handler
-      function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-          const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-          };
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-        };
-      }
-      
-      const debouncedResize = debounce(function() {
-        if (window.innerWidth > 768 && navToggle.checked) {
-          toggleSidebar(false);
-        }
-      }, 250);
-      
-      window.addEventListener('resize', debouncedResize);
-      
-      // Add loading state management
-      window.addEventListener('load', function() {
-        document.body.classList.add('loaded');
-      });
-      
+            function stopAutoAdvance() {
+                clearInterval(autoAdvanceInterval);
+            }
+            
+            // Start auto-advance
+            startAutoAdvance();
+            
+            // Pause auto-advance on hover
+            const carousel = document.getElementById('hero-carousel');
+            carousel.addEventListener('mouseenter', stopAutoAdvance);
+            carousel.addEventListener('mouseleave', startAutoAdvance);
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    const prevSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+                    goToSlide(prevSlide);
+                    stopAutoAdvance();
+                } else if (e.key === 'ArrowRight') {
+                    const nextSlide = (currentSlide + 1) % totalSlides;
+                    goToSlide(nextSlide);
+                    stopAutoAdvance();
+                }
+            });
+            
+            // Touch/swipe support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carousel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // Swipe left - next slide
+                        const nextSlide = (currentSlide + 1) % totalSlides;
+                        goToSlide(nextSlide);
+                    } else {
+                        // Swipe right - previous slide
+                        const prevSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+                        goToSlide(prevSlide);
+                    }
+                    stopAutoAdvance();
+                }
+            }
+            
+            // Intersection Observer for performance optimization
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '50px'
+            };
+            
+            const carouselObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Carousel is visible - enable animations
+                        entry.target.style.willChange = 'transform';
+                    } else {
+                        // Carousel is not visible - disable animations for performance
+                        entry.target.style.willChange = 'auto';
+                    }
+                });
+            }, observerOptions);
+            
+            carouselObserver.observe(carousel);
+        });
+        
+        // Refresh ScrollTrigger on window resize
+        window.addEventListener('resize', () => {
+            ScrollTrigger.refresh();
+        });
     </script>
 
 
