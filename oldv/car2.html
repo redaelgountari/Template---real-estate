@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Premium Real Estate Gallery</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            glow: 'glow 2s ease-in-out infinite alternate',
+            'slide-up': 'slideUp 0.4s ease-out',
+            'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+          },
+          backdropBlur: { xs: '2px' },
+        },
+      },
+    };
+  </script>
+  <style>
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+    @keyframes glow { from { box-shadow: 0 0 20px rgba(59,130,246,.5); } to { box-shadow: 0 0 30px rgba(59,130,246,.8), 0 0 40px rgba(59,130,246,.3); } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes bounceSubtle { 0%,20%,50%,80%,100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen font-display text-slate-800">
+  <main>
+    <section class="py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="carousel-container relative">
+          <div class="relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm shadow-2xl border border-white/20 p-8">
+            <div class="relative">
+              <div id="carouselTrack" class="flex gap-8 transition-transform duration-700 ease-out will-change-transform">
+                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Luxury Villa in Malibu, California" tabindex="0">
+                  <div class="relative h-64 lg:h-72 overflow-hidden">
+                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Villa exterior with pool in Malibu" loading="lazy" draggable="false" />
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                        Luxury Villa
+                      </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                      Luxury
+                    </div>
+                    <div class="absolute top-4 left-4 flex gap-2">
+                      <div class="bg-black/70 backdrop-blur-md text-white px-2 py-1 rounded-lg text-xs flex items-center gap-1" aria-label="18 photos">📸 <span>18</span></div>
+                      <div class="bg-black/70 backdrop-blur-md text-white px-2 py-1 rounded-lg text-xs flex items-center gap-1" aria-label="Rating 4.9">⭐ <span>4.9</span></div>
+                    </div>
+                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                        <div class="space-y-2">
+                          <div class="text-2xl font-bold text-slate-900">$2,500,000</div>
+                          <div class="flex items-center text-slate-700 text-sm">
+                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            Malibu, California
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">5 Bed</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">4 Bath</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2m-6 12V8"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">3,500 ft²</div>
+                          </div>
+                        </div>
+                        <!-- <div class="mt-4 flex">
+                          <button class="bg-slate-900 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-600 transition-colors shadow" type="button">View Details</button>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Luxury Villa in Malibu, California" tabindex="0">
+                  <div class="relative h-64 lg:h-72 overflow-hidden">
+                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Villa exterior with pool in Malibu" loading="lazy" draggable="false" />
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                        Luxury Villa
+                      </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                      Luxury
+                    </div>
+                    <div class="absolute top-4 left-4 flex gap-2">
+                      <div class="bg-black/70 backdrop-blur-md text-white px-2 py-1 rounded-lg text-xs flex items-center gap-1" aria-label="18 photos">📸 <span>18</span></div>
+                      <div class="bg-black/70 backdrop-blur-md text-white px-2 py-1 rounded-lg text-xs flex items-center gap-1" aria-label="Rating 4.9">⭐ <span>4.9</span></div>
+                    </div>
+                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                        <div class="space-y-2">
+                          <div class="text-2xl font-bold text-slate-900">$2,500,000</div>
+                          <div class="flex items-center text-slate-700 text-sm">
+                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            Malibu, California
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">5 Bed</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">4 Bath</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2m-6 12V8"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">3,500 ft²</div>
+                          </div>
+                        </div>
+                        <!-- <div class="mt-4 flex">
+                          <button class="bg-slate-900 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-600 transition-colors shadow" type="button">View Details</button>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Modern Penthouse in Manhattan, New York" tabindex="0">
+                  <div class="relative h-64 lg:h-72 overflow-hidden">
+                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Penthouse interior in Manhattan" loading="lazy" draggable="false" />
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                        Modern Penthouse
+                      </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                      Featured
+                    </div>
+                    <div class="absolute top-4 left-4 flex gap-2">
+                      <div class="bg-black/70 backdrop-blur-md text-white px-2 py-1 rounded-lg text-xs flex items-center gap-1" aria-label="24 photos">📸 <span>24</span></div>
+                      <div class="bg-black/70 backdrop-blur-md text-white px-2 py-1 rounded-lg text-xs flex items-center gap-1" aria-label="Rating 4.8">⭐ <span>4.8</span></div>
+                    </div>
+                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                        <div class="space-y-2">
+                          <div class="text-2xl font-bold text-slate-900">$3,200,000</div>
+                          <div class="flex items-center text-slate-700 text-sm">
+                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            Manhattan, New York
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">4 Bed</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">3 Bath</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">2,800 ft²</div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Waterfront Estate in Miami Beach, Florida" tabindex="0">
+                  <div class="relative h-64 lg:h-72 overflow-hidden">
+                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Waterfront Estate at Miami Beach" loading="lazy" draggable="false" />
+                    <div class="absolute inset-x-0 bottom-0 p-4">
+                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                        Waterfront Estate
+                      </div>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                      New
+                    </div>
+                    <div class="absolute top-4 left-4 flex gap-2">
+                      <div class="bg-black/70 backdrop-blur-md text-white px-2 py-1 rounded-lg text-xs flex items-center gap-1" aria-label="32 photos">📸 <span>32</span></div>
+                      <div class="bg-black/70 backdrop-blur-md text-white px-2 py-1 rounded-lg text-xs flex items-center gap-1" aria-label="Rating 5.0">⭐ <span>5.0</span></div>
+                    </div>
+                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                        <div class="space-y-2">
+                          <div class="text-2xl font-bold text-slate-900">$4,750,000</div>
+                          <div class="flex items-center text-slate-700 text-sm">
+                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            Miami Beach, Florida
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">6 Bed</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">5 Bath</div>
+                          </div>
+                          <div class="text-center">
+                            <div class="flex items-center justify-center mb-1">
+                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2"/>
+                              </svg>
+                            </div>
+                            <div class="text-xs text-slate-700">5,200 ft²</div>
+                          </div>
+                        </div>
+                        <div class="mt-4 flex">
+                          <button class="bg-slate-900 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-600 transition-colors shadow" type="button">View Details</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <button id="prevBtn" type="button" aria-label="Previous slide"
+            class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white border-2 border-blue-200 hover:border-blue-400 rounded-full flex items-center justify-center text-slate-700 hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl z-10 group">
+            <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button id="nextBtn" type="button" aria-label="Next slide"
+            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white border-2 border-blue-200 hover:border-blue-400 rounded-full flex items-center justify-center text-slate-700 hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl z-10 group">
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+        <div class="flex justify-center items-center mt-8 gap-6">
+          <div id="dotsContainer" class="flex gap-3" aria-label="Slide navigation"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.gsap && window.ScrollTrigger && window.ScrollToPlugin) {
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+      }
+      const track = document.getElementById('carouselTrack');
+      const slides = Array.from(document.querySelectorAll('.property-card'));
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dotsContainer = document.getElementById('dotsContainer');
+      const carouselContainer = document.querySelector('.carousel-container');
+      let currentSlideIndex = 0;
+      const totalSlides = slides.length;
+      let dots = [];
+      let autoPlayInterval = null;
+      function buildDots() {
+        dotsContainer.innerHTML = '';
+        dots = [];
+        for (let i = 0; i < totalSlides; i++) {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'dot w-3 h-3 bg-slate-300 rounded-full cursor-pointer transition-all duration-300 hover:bg-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400';
+          dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          dot.addEventListener('click', () => goToSlide(i));
+          dotsContainer.appendChild(dot);
+          dots.push(dot);
+        }
+      }
+      buildDots();
+      function getSlideStep() {
+        if (!slides.length) return 0;
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const styles = getComputedStyle(track);
+        const gap = parseFloat(styles.gap || '0');
+        return slideWidth + gap;
+      }
+      function updateCarousel(animate = true) {
+        const translateX = -currentSlideIndex * getSlideStep();
+        if (animate && window.gsap) {
+          gsap.to(track, { x: translateX, duration: 0.7, ease: 'power2.out' });
+        } else {
+          track.style.transform = 'translateX(' + translateX + 'px)';
+        }
+        dots.forEach((dot, index) => {
+          const isActive = index === currentSlideIndex;
+          dot.classList.toggle('bg-blue-500', isActive);
+          dot.classList.toggle('bg-slate-300', !isActive);
+          dot.classList.toggle('animate-glow', isActive);
+        });
+        if (window.gsap) {
+          slides.forEach((slide, index) => {
+            if (index === currentSlideIndex) {
+              gsap.to(slide, { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(1.7)' });
+            } else {
+              gsap.to(slide, { scale: 0.97, opacity: 0.9, duration: 0.5, ease: 'power2.out' });
+            }
+          });
+        }
+      }
+      function getMaxSlideIndex() {
+        const containerWidth = carouselContainer.querySelector('.overflow-hidden').offsetWidth;
+        const slideWidth = slides[0] ? slides[0].offsetWidth : 0;
+        const gap = 32;
+        const slidesPerView = Math.floor(containerWidth / (slideWidth + gap));
+        return Math.max(0, totalSlides - slidesPerView);
+      }
+      function nextSlide() {
+        const maxIndex = getMaxSlideIndex();
+        if (currentSlideIndex < maxIndex) {
+          currentSlideIndex++;
+          updateCarousel();
+        }
+      }
+      function prevSlide() {
+        if (currentSlideIndex > 0) {
+          currentSlideIndex--;
+          updateCarousel();
+        }
+      }
+      function goToSlide(index) {
+        const maxIndex = getMaxSlideIndex();
+        currentSlideIndex = Math.max(0, Math.min(index, maxIndex));
+        updateCarousel();
+      }
+      nextBtn.addEventListener('click', () => { nextSlide(); pauseAndResumeAutoPlay(); });
+      prevBtn.addEventListener('click', () => { prevSlide(); pauseAndResumeAutoPlay(); });
+      function startAutoPlay() { 
+        stopAutoPlay(); 
+        autoPlayInterval = setInterval(() => {
+          const maxIndex = getMaxSlideIndex();
+          if (currentSlideIndex >= maxIndex) {
+            currentSlideIndex = 0;
+          } else {
+            currentSlideIndex++;
+          }
+          updateCarousel();
+        }, 5000); 
+      }
+      function stopAutoPlay() { if (autoPlayInterval) clearInterval(autoPlayInterval); autoPlayInterval = null; }
+      function pauseAndResumeAutoPlay() { stopAutoPlay(); setTimeout(startAutoPlay, 3000); }
+      startAutoPlay();
+      if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+        carouselContainer.addEventListener('mouseleave', startAutoPlay);
+      }
+      window.scrollToTop = function() {
+        if (window.gsap && window.ScrollToPlugin) {
+          gsap.to(window, { scrollTo: { y: 0 }, duration: 1, ease: 'power2.inOut' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      };
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') { prevSlide(); pauseAndResumeAutoPlay(); }
+        else if (e.key === 'ArrowRight') { nextSlide(); pauseAndResumeAutoPlay(); }
+      });
+      let startX = 0, isDragging = false;
+      track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; isDragging = true; stopAutoPlay(); }, { passive: true });
+      track.addEventListener('touchmove', (e) => { if (!isDragging) return; e.preventDefault(); }, { passive: false });
+      track.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        const endX = e.changedTouches[0].clientX;
+        const diffX = startX - endX;
+        if (Math.abs(diffX) > 50) { if (diffX > 0) nextSlide(); else prevSlide(); }
+        isDragging = false;
+        setTimeout(startAutoPlay, 3000);
+      });
+      window.addEventListener('resize', () => updateCarousel(false));
+      updateCarousel(false);
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.utils.toArray('.parallax-img').forEach((img) => {
+          const card = img.closest('.property-card');
+          gsap.fromTo(img, { yPercent: -5, scale: 1.05 }, {
+            yPercent: 5, ease: 'none',
+            scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true }
+          });
+        });
+        gsap.timeline({ delay: 0.2 })
+          .from('.property-card', { y: 50, opacity: 0, duration: 0.8, stagger: 0.2, ease: 'power2.out' })
+          .from('#dotsContainer .dot', { scale: 0, duration: 0.3, stagger: 0.05, ease: 'back.out(1.7)' }, '-=0.3');
+        gsap.from('body', { opacity: 0, duration: 0.8, ease: 'power2.out' });
+      }
+      slides.forEach((card, index) => {
+        card.addEventListener('mouseenter', () => {
+          if (index !== currentSlideIndex && window.gsap) gsap.to(card, { y: -5, duration: 0.25, ease: 'power2.out' });
+        });
+        card.addEventListener('mouseleave', () => {
+          if (index !== currentSlideIndex && window.gsap) gsap.to(card, { y: 0, duration: 0.25, ease: 'power2.out' });
+        });
+        card.addEventListener('click', () => {
+          if (index !== currentSlideIndex) { goToSlide(index); pauseAndResumeAutoPlay(); }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

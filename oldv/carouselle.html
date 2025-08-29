@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Photos - Résidences Premium</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+            background: #0a0a0a;
+        }
+
+        /* Image Carousel Container */
+        .image-carousel {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* Main Carousel Track */
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Individual Image Slides */
+        .image-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Image Backgrounds */
+        .slide-1 { background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); }
+        .slide-2 { background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); }
+        .slide-3 { background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); }
+        .slide-4 { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); }
+        .slide-5 { background-image: url('https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); }
+        .slide-6 { background-image: url('https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); }
+        .slide-7 { background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); }
+        .slide-8 { background-image: url('https://images.unsplash.com/photo-1600573472592-401b489a3cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); }
+
+        /* Slide Overlay */
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg, 
+                rgba(0, 0, 0, 0.3) 0%, 
+                rgba(0, 0, 0, 0.1) 50%, 
+                rgba(0, 0, 0, 0.4) 100%
+            );
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-slide:hover .slide-overlay {
+            opacity: 0.6;
+        }
+
+        /* Slide Content */
+        .slide-content {
+            position: absolute;
+            bottom: 80px;
+            left: 60px;
+            color: white;
+            z-index: 3;
+            max-width: 500px;
+        }
+
+        .slide-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 200;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .slide-description {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .slide-features {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-number {
+            font-size: 1.8rem;
+            font-weight: 200;
+            color: #60A5FA;
+            display: block;
+        }
+
+        .feature-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.3rem;
+        }
+
+        .slide-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #3B82F6, #10B981);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .slide-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Image Counter */
+        .image-counter {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            color: white;
+            font-weight: 300;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 4;
+        }
+
+        /* Navigation Arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            backdrop-filter: blur(10px);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.8rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 4;
+            user-select: none;
+        }
+
+        .carousel-arrow:hover {
+            border-color: #60A5FA;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-arrow:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .arrow-prev {
+            left: 40px;
+        }
+
+        .arrow-next {
+            right: 40px;
+        }
+
+        /* Thumbnail Navigation */
+        .thumbnail-nav {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 4;
+            max-width: 90%;
+            overflow-x: auto;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thumbnail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            transition: opacity 0.3s ease;
+        }
+
+        .thumbnail.active {
+            border-color: #60A5FA;
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(96, 165, 250, 0.4);
+        }
+
+        .thumbnail.active::before {
+            opacity: 0;
+        }
+
+        .thumbnail:hover:not(.active) {
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .thumbnail:hover::before {
+            opacity: 0.1;
+        }
+
+        /* Progress Indicator */
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3B82F6, #10B981);
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 5;
+            box-shadow: 0 2px 10px rgba(96, 165, 250, 0.4);
+        }
+
+        /* Auto-play Controls */
+        .carousel-controls {
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            display: flex;
+            gap: 1rem;
+            z-index: 4;
+        }
+
+        .control-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: rgba(96, 165, 250, 0.2);
+            border-color: #60A5FA;
+            transform: scale(1.1);
+        }
+
+        .control-btn.active {
+            background: rgba(96, 165, 250, 0.3);
+            border-color: #60A5FA;
+        }
+
+        /* Fullscreen Mode */
+        .fullscreen-btn {
+            position: absolute;
+            bottom: 120px;
+            right: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 4;
+        }
+
+        .fullscreen-btn:hover {
+            background: rgba(96, 165, 250, 0.2);
+            border-color: #60A5FA;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .slide-content {
+                bottom: 140px;
+                left: 30px;
+                right: 30px;
+                max-width: none;
+            }
+
+            .slide-features {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .carousel-arrow {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .arrow-prev {
+                left: 20px;
+            }
+
+            .arrow-next {
+                right: 20px;
+            }
+
+            .image-counter,
+            .carousel-controls {
+                top: 30px;
+                left: 30px;
+                right: 30px;
+            }
+
+            .image-counter {
+                left: auto;
+                right: 30px;
+            }
+
+            .thumbnail-nav {
+                bottom: 20px;
+                max-width: 95%;
+            }
+
+            .thumbnail {
+                width: 60px;
+                height: 45px;
+            }
+        }
+
+        /* Loading Animation */
+        .carousel-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.2rem;
+            z-index: 6;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #60A5FA;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <section class="image-carousel" id="imageCarousel">
+        <!-- Loading State -->
+        <div class="carousel-loading" id="carouselLoading">
+            <div class="loading-spinner"></div>
+            <div>Chargement des images...</div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+            <div class="control-btn" id="playPauseBtn" title="Pause/Play">⏸️</div>
+            <div class="control-btn" id="shuffleBtn" title="Mode aléatoire">🔀</div>
+        </div>
+
+        <!-- Image Counter -->
+        <div class="image-counter">
+            <span id="currentIndex">1</span> / <span id="totalImages">8</span>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar"></div>
+
+        <!-- Carousel Track -->
+        <div class="carousel-track" id="carouselTrack">
+            <!-- Slide 1: Exterior View -->
+            <div class="image-slide slide-1">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Vue Extérieure</h2>
+                    <p class="slide-description">Architecture contemporaine avec façade en verre et jardins paysagers</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">4</span>
+                            <span class="feature-label">Étages</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">200</span>
+                            <span class="feature-label">Appartements</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">5000m²</span>
+                            <span class="feature-label">Jardins</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="slide-cta">Planifier une visite</a>
+                </div>
+            </div>
+
+            <!-- Slide 2: Living Room -->
+            <div class="image-slide slide-2">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Salon Principal</h2>
+                    <p class="slide-description">Espaces de vie lumineux avec vue panoramique et finitions premium</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">60m²</span>
+                            <span class="feature-label">Surface</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">4m</span>
+                            <span class="feature-label">Plafond</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">180°</span>
+                            <span class="feature-label">Vue</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="slide-cta">Découvrir l'intérieur</a>
+                </div>
+            </div>
+
+            <!-- Slide 3: Kitchen -->
+            <div class="image-slide slide-3">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Cuisine Moderne</h2>
+                    <p class="slide-description">Cuisine équipée avec îlot central et électroménager haut de gamme</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">25m²</span>
+                            <span class="feature-label">Surface</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Miele</span>
+                            <span class="feature-label">Équipement</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Quartz</span>
+                            <span class="feature-label">Plan Travail</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="slide-cta">Voir les équipements</a>
+                </div>
+            </div>
+
+            <!-- Slide 4: Bedroom -->
+            <div class="image-slide slide-4">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Suite Parentale</h2>
+                    <p class="slide-description">Chambre spacieuse avec dressing et salle de bain privative</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">35m²</span>
+                            <span class="feature-label">Chambre</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">15m²</span>
+                            <span class="feature-label">Dressing</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">12m²</span>
+                            <span class="feature-label">Sdb Privée</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="slide-cta">Voir les chambres</a>
+                </div>
+            </div>
+
+            <!-- Slide 5: Bathroom -->
+            <div class="image-slide slide-5">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Salle de Bain</h2>
+                    <p class="slide-description">Design spa avec baignoire îlot et douche à l'italienne</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">Marbre</span>
+                            <span class="feature-label">Revêtement</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Hansgrohe</span>
+                            <span class="feature-label">Robinetterie</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">LED</span>
+                            <span class="feature-label">Éclairage</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="slide-cta">Voir les finitions</a>
+                </div>
+            </div>
+
+            <!-- Slide 6: Balcony -->
+            <div class="image-slide slide-6">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Terrasse Privée</h2>
+                    <p class="slide-description">Espace extérieur avec vue imprenable sur la ville</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">40m²</span>
+                            <span class="feature-label">Surface</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Sud</span>
+                            <span class="feature-label">Exposition</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">360°</span>
+                            <span class="feature-label">Vue</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="slide-cta">Voir les terrasses</a>
+                </div>
+            </div>
+
+            <!-- Slide 7: Pool Area -->
+            <div class="image-slide slide-7">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Piscine & Spa</h2>
+                    <p class="slide-description">Espace détente avec piscine chauffée et zone spa</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">25m</span>
+                            <span class="feature-label">Piscine</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Chauffée</span>
+                            <span class="feature-label">Toute Année</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">Spa</span>
+                            <span class="feature-label">Wellness</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="slide-cta">Réserver le spa</a>
+                </div>
+            </div>
+
+            <!-- Slide 8: Garden -->
+            <div class="image-slide slide-8">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h2 class="slide-title">Jardins Paysagers</h2>
+                    <p class="slide-description">Espaces verts conçus par des paysagistes renommés</p>
+                    <div class="slide-features">
+                        <div class="feature-item">
+                            <span class="feature-number">3000m²</span>
+                            <span class="feature-label">Espaces Verts</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">50</span>
+                            <span class="feature-label">Essences</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-number">24/7</span>
+                            <span class="feature-label">Entretien</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="slide-cta">Visiter les jardins</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="carousel-arrow arrow-prev" id="prevBtn">‹</div>
+        <div class="carousel-arrow arrow-next" id="nextBtn">›</div>
+
+        <!-- Thumbnail Navigation -->
+        <div class="thumbnail-nav" id="thumbnailNav">
+            <!-- Thumbnails will be generated by JavaScript -->
+        </div>
+
+        <!-- Fullscreen Button -->
+        <div class="fullscreen-btn" id="fullscreenBtn" title="Mode plein écran">
+            ⛶
+        </div>
+    </section>
+
+    <script>
+        class PropertyImageCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 8;
+                this.isPlaying = true;
+                this.isShuffleMode = false;
+                this.autoPlayInterval = null;
+                this.slideTimeout = 5000; // 5 seconds
+                
+                this.carouselTrack = document.getElementById('carouselTrack');
+                this.progressBar = document.getElementById('progressBar');
+                this.currentIndexSpan = document.getElementById('currentIndex');
+                this.totalImagesSpan = document.getElementById('totalImages');
+                this.playPauseBtn = document.getElementById('playPauseBtn');
+                this.shuffleBtn = document.getElementById('shuffleBtn');
+                this.thumbnailNav = document.getElementById('thumbnailNav');
+                this.loading = document.getElementById('carouselLoading');
+
+                this.slides = [
+                    {
+                        bg: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        title: 'Vue Extérieure'
+                    },
+                    {
+                        bg: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        title: 'Salon Principal'
+                    },
+                    {
+                        bg: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        title: 'Cuisine Moderne'
+                    },
+                    {
+                        bg: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        title: 'Suite Parentale'
+                    },
+                    {
+                        bg: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        title: 'Salle de Bain'
+                    },
+                    {
+                        bg: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        title: 'Terrasse Privée'
+                    },
+                    {
+                        bg: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        title: 'Piscine & Spa'
+                    },
+                    {
+                        bg: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        title: 'Jardins Paysagers'
+                    }
+                ];
+
+                this.init();
+            }
+
+            async init() {
+                await this.preloadImages();
+                this.createThumbnails();
+                this.setupEventListeners();
+                this.startAutoPlay();
+                this.animateSlideContent();
+                this.hideLoading();
+            }
+
+            async preloadImages() {
+                const imagePromises = this.slides.map(slide => {
+                    return new Promise((resolve, reject) => {
+                        const img = new Image();
+                        img.onload = resolve;
+                        img.onerror = reject;
+                        img.src = slide.bg;
+                    });
+                });
+
+                try {
+                    await Promise.all(imagePromises);
+                } catch (error) {
+                    console.log('Some images failed to load, continuing anyway...');
+                }
+            }
+
+            hideLoading() {
+                gsap.to(this.loading, {
+                    opacity: 0,
+                    duration: 0.5,
+                    onComplete: () => {
+                        this.loading.style.display = 'none';
+                    }
+                });
+            }
+
+            createThumbnails() {
+                this.slides.forEach((slide, index) => {
+                    const thumbnail = document.createElement('div');
+                    thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+                    thumbnail.style.backgroundImage = `url(${slide.bg})`;
+                    thumbnail.setAttribute('data-slide', index);
+                    thumbnail.setAttribute('title', slide.title);
+                    
+                    thumbnail.addEventListener('click', () => {
+                        this.goToSlide(index);
+                    });
+
+                    this.thumbnailNav.appendChild(thumbnail);
+                });
+            }
+
+            setupEventListeners() {
+                // Arrow navigation
+                document.getElementById('prevBtn').addEventListener('click', () => {
+                    this.goToSlide(this.currentSlide - 1);
+                });
+
+                document.getElementById('nextBtn').addEventListener('click', () => {
+                    this.goToSlide(this.currentSlide + 1);
+                });
+
+                // Control buttons
+                this.playPauseBtn.addEventListener('click', () => {
+                    this.togglePlayPause();
+                });
+
+                this.shuffleBtn.addEventListener('click', () => {
+                    this.toggleShuffle();
+                });
+
+                // Fullscreen
+                document.getElementById('fullscreenBtn').addEventListener('click', () => {
+                    this.toggleFullscreen();
+                });
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    switch(e.key) {
+                        case 'ArrowLeft':
+                            this.goToSlide(this.currentSlide - 1);
+                            break;
+                        case 'ArrowRight':
+                            this.goToSlide(this.currentSlide + 1);
+                            break;
+                        case ' ':
+                            e.preventDefault();
+                            this.togglePlayPause();
+                            break;
+                        case 'f':
+                        case 'F':
+                            this.toggleFullscreen();
+                            break;
+                    }
+                });
+
+                // Touch/swipe support
+                let touchStartX = 0;
+                let touchEndX = 0;
+                let touchStartY = 0;
+                let touchEndY = 0;
+
+                this.carouselTrack.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                    touchStartY = e.changedTouches[0].screenY;
+                });
+
+                this.carouselTrack.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    touchEndY = e.changedTouches[0].screenY;
+                    this.handleSwipe(touchStartX, touchEndX, touchStartY, touchEndY);
+                });
+
+                // Pause on hover
+                document.querySelector('.image-carousel').addEventListener('mouseenter', () => {
+                    this.pauseAutoPlay();
+                });
+
+                document.querySelector('.image-carousel').addEventListener('mouseleave', () => {
+                    this.resumeAutoPlay();
+                });
+            }
+
+            handleSwipe(startX, endX, startY, endY) {
+                const deltaX = endX - startX;
+                const deltaY = endY - startY;
+                
+                // Check if horizontal swipe is stronger than vertical
+                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+                    if (deltaX > 0) {
+                        this.goToSlide(this.currentSlide - 1); // Swipe right
+                    } else {
+                        this.goToSlide(this.currentSlide + 1); // Swipe left
+                    }
+                }
+            }
+
+            goToSlide(slideIndex) {
+                // Handle boundaries
+                if (slideIndex >= this.totalSlides) slideIndex = 0;
+                if (slideIndex < 0) slideIndex = this.totalSlides - 1;
+
+                this.currentSlide = slideIndex;
+
+                // Update carousel position
+                const translateX = -slideIndex * 100;
+                gsap.to(this.carouselTrack, {
+                    x: `${translateX}%`,
+                    duration: 0.8,
+                    ease: "power2.out"
+                });
+
+                // Update UI elements
+                this.updateUI();
+                this.animateSlideContent();
+                this.resetAutoPlay();
+            }
+
+            updateUI() {
+                // Update counter
+                this.currentIndexSpan.textContent = this.currentSlide + 1;
+
+                // Update thumbnails
+                document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+                    thumb.classList.toggle('active', index === this.currentSlide);
+                });
+
+                // Update progress bar
+                const progressWidth = ((this.currentSlide + 1) / this.totalSlides) * 100;
+                gsap.to(this.progressBar, {
+                    width: `${progressWidth}%`,
+                    duration: 0.5,
+                    ease: "power2.out"
+                });
+            }
+
+            animateSlideContent() {
+                const currentSlideEl = this.carouselTrack.children[this.currentSlide];
+                const content = currentSlideEl.querySelector('.slide-content');
+
+                // Reset content animation
+                gsap.set(content.querySelectorAll('.slide-title, .slide-description, .slide-features, .slide-cta'), {
+                    opacity: 0,
+                    y: 50
+                });
+
+                // Animate content
+                const tl = gsap.timeline({ delay: 0.3 });
+                
+                tl.to(content.querySelector('.slide-title'), {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                })
+                .to(content.querySelector('.slide-description'), {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                }, "-=0.6")
+                .to(content.querySelector('.slide-features'), {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .to(content.querySelector('.slide-cta'), {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    ease: "back.out(1.7)"
+                }, "-=0.3");
+
+                // Animate feature numbers
+                content.querySelectorAll('.feature-number').forEach((number, index) => {
+                    gsap.fromTo(number, {
+                        scale: 0.5,
+                        opacity: 0
+                    }, {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: 0.8 + (index * 0.1),
+                        ease: "back.out(2)"
+                    });
+                });
+            }
+
+            togglePlayPause() {
+                if (this.isPlaying) {
+                    this.pauseAutoPlay();
+                    this.playPauseBtn.textContent = '▶️';
+                    this.playPauseBtn.classList.remove('active');
+                } else {
+                    this.resumeAutoPlay();
+                    this.playPauseBtn.textContent = '⏸️';
+                    this.playPauseBtn.classList.add('active');
+                }
+            }
+
+            toggleShuffle() {
+                this.isShuffleMode = !this.isShuffleMode;
+                this.shuffleBtn.classList.toggle('active', this.isShuffleMode);
+                
+                if (this.isShuffleMode) {
+                    this.shuffleBtn.style.color = '#60A5FA';
+                } else {
+                    this.shuffleBtn.style.color = '';
+                }
+            }
+
+            startAutoPlay() {
+                if (!this.isPlaying) return;
+                
+                this.autoPlayInterval = setInterval(() => {
+                    let nextSlide;
+                    if (this.isShuffleMode) {
+                        do {
+                            nextSlide = Math.floor(Math.random() * this.totalSlides);
+                        } while (nextSlide === this.currentSlide);
+                    } else {
+                        nextSlide = this.currentSlide + 1;
+                    }
+                    this.goToSlide(nextSlide);
+                }, this.slideTimeout);
+            }
+
+            pauseAutoPlay() {
+                this.isPlaying = false;
+                if (this.autoPlayInterval) {
+                    clearInterval(this.autoPlayInterval);
+                }
+            }
+
+            resumeAutoPlay() {
+                this.isPlaying = true;
+                this.startAutoPlay();
+            }
+
+            resetAutoPlay() {
+                if (this.autoPlayInterval) {
+                    clearInterval(this.autoPlayInterval);
+                }
+                if (this.isPlaying) {
+                    this.startAutoPlay();
+                }
+            }
+
+            toggleFullscreen() {
+                const carousel = document.getElementById('imageCarousel');
+                
+                if (!document.fullscreenElement) {
+                    if (carousel.requestFullscreen) {
+                        carousel.requestFullscreen();
+                    } else if (carousel.webkitRequestFullscreen) {
+                        carousel.webkitRequestFullscreen();
+                    } else if (carousel.msRequestFullscreen) {
+                        carousel.msRequestFullscreen();
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                }
+            }
+        }
+
+        // Initialize carousel when page loads
+        window.addEventListener('load', () => {
+            const carousel = new PropertyImageCarousel();
+            
+            // Make available globally for console debugging
+            window.propertyCarousel = carousel;
+
+            // Additional GSAP animations for UI elements
+            gsap.fromTo('.carousel-arrow', {
+                opacity: 0,
+                scale: 0.5
+            }, {
+                opacity: 1,
+                scale: 1,
+                duration: 1,
+                delay: 1,
+                stagger: 0.2,
+                ease: "back.out(1.7)"
+            });
+
+            gsap.fromTo('.carousel-controls .control-btn', {
+                opacity: 0,
+                y: -30
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 1.2,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+
+            gsap.fromTo('.image-counter', {
+                opacity: 0,
+                x: 30
+            }, {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                delay: 1.4,
+                ease: "power2.out"
+            });
+
+            gsap.fromTo('.thumbnail-nav', {
+                opacity: 0,
+                y: 30
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 1.6,
+                ease: "power2.out"
+            });
+
+            gsap.fromTo('.fullscreen-btn', {
+                opacity: 0,
+                scale: 0.5
+            }, {
+                opacity: 1,
+                scale: 1,
+                duration: 0.6,
+                delay: 1.8,
+                ease: "back.out(1.7)"
+            });
+        });
+
+        // Add some additional interactive effects
+        document.addEventListener('DOMContentLoaded', () => {
+            // Enhanced hover effects for CTAs
+            document.addEventListener('mouseover', (e) => {
+                if (e.target.classList.contains('slide-cta')) {
+                    gsap.to(e.target, {
+                        scale: 1.05,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                }
+            });
+
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.classList.contains('slide-cta')) {
+                    gsap.to(e.target, {
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                }
+            });
+
+            // Feature items hover animation
+            document.addEventListener('mouseover', (e) => {
+                if (e.target.closest('.feature-item')) {
+                    const item = e.target.closest('.feature-item');
+                    gsap.to(item, {
+                        y: -5,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                }
+            });
+
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.closest('.feature-item')) {
+                    const item = e.target.closest('.feature-item');
+                    gsap.to(item, {
+                        y: 0,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                }
+            });
+
+            // Add parallax effect to slide overlays
+            document.addEventListener('mousemove', (e) => {
+                const carousel = document.getElementById('imageCarousel');
+                const rect = carousel.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = (e.clientY - rect.top) / rect.height;
+
+                document.querySelectorAll('.slide-overlay').forEach((overlay) => {
+                    gsap.to(overlay, {
+                        backgroundPosition: `${50 + (x - 0.5) * 10}% ${50 + (y - 0.5) * 10}%`,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        });
+
+        // Handle fullscreen changes
+        document.addEventListener('fullscreenchange', () => {
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            if (document.fullscreenElement) {
+                fullscreenBtn.textContent = '⛉';
+                fullscreenBtn.title = 'Quitter plein écran';
+            } else {
+                fullscreenBtn.textContent = '⛶';
+                fullscreenBtn.title = 'Mode plein écran';
+            }
+        });
+
+        // Add loading progress feedback
+        window.addEventListener('load', () => {
+            console.log('🏠 Carousel d\'images immobilières chargé avec succès!');
+            console.log('⌨️ Raccourcis clavier: ←→ (navigation), Espace (pause), F (plein écran)');
+        });
+    </script>
+</body>
+</html>
