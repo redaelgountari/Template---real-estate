@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studios haut standing à L’Hermitage, Casablanca | Immobilier premium</title>
-    <meta name="description" content="Studios haut standing à L’Hermitage, Casablanca. À partir de 1.000.000 DHS. Cuisine italienne équipée, climatisation centralisée, isolation phonique et thermique, sécurité premium, fibre optique, garage, titres fonciers disponibles." />
+    <meta name="description"
+        content="Studios haut standing à L’Hermitage, Casablanca. À partir de 1.000.000 DHS. Cuisine italienne équipée, climatisation centralisée, isolation phonique et thermique, sécurité premium, fibre optique, garage, titres fonciers disponibles." />
     <meta property="og:title" content="Studios haut standing à L’Hermitage | Casablanca Immobilier" />
-    <meta property="og:description" content="Un projet moderne alliant élégance, confort et sécurité à Casablanca. À partir de 1.000.000 DHS." />
+    <meta property="og:description"
+        content="Un projet moderne alliant élégance, confort et sécurité à Casablanca. À partir de 1.000.000 DHS." />
     <meta property="og:image" content="elegant-mixed-use.png" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
@@ -16,38 +18,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <link rel="stylesheet" href="style2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Inter', 'system-ui', 'sans-serif'],
-          },
-          animation: {
-            float: 'float 6s ease-in-out infinite',
-            glow: 'glow 2s ease-in-out infinite alternate',
-            'slide-up': 'slideUp 0.4s ease-out',
-            'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
-          },
-          backdropBlur: { xs: '2px' },
-        },
-      },
-    };
-  </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        float: 'float 6s ease-in-out infinite',
+                        glow: 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.4s ease-out',
+                        'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+                    },
+                    backdropBlur: { xs: '2px' },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
-     <style>
-      .luxury-bg{background-image:radial-gradient(1000px 500px at 80% -10%,rgba(0,0,0,.07),transparent 60%),linear-gradient(180deg,#fafafa 0%,#ffffff 45%,#f5f5f7 100%)}
-      .grain{position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:radial-gradient(#000 .45px,transparent .45px);background-size:3px 3px;mix-blend-mode:multiply}
-      .dot{width:10px;height:10px;border-radius:9999px;background:#d1d5db;transition:all .2s}
-      .dot[aria-current="true"]{background:#111827;transform:scale(1.1)}
-      @media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+    <style>
+        .luxury-bg {
+            background-image: radial-gradient(1000px 500px at 80% -10%, rgba(0, 0, 0, .07), transparent 60%), linear-gradient(180deg, #fafafa 0%, #ffffff 45%, #f5f5f7 100%)
+        }
+
+        .grain {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .04;
+            background-image: radial-gradient(#000 .45px, transparent .45px);
+            background-size: 3px 3px;
+            mix-blend-mode: multiply
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 9999px;
+            background: #d1d5db;
+            transition: all .2s
+        }
+
+        .dot[aria-current="true"] {
+            background: #111827;
+            transform: scale(1.1)
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important
+            }
+        }
     </style>
     <!-- Animated Background -->
     <!-- <div class="animated-background"></div> -->
@@ -62,56 +94,65 @@
 
     <!-- Navigation -->
     <h1 class="sr-only">Studios haut standing à L’Hermitage</h1>
-       <input id="nav-toggle" type="checkbox" aria-hidden="true" />
+    <input id="nav-toggle" type="checkbox" aria-hidden="true" />
 
     <!-- Top Navbar -->
-<nav class="navbar" role="navigation" aria-label="Primary" style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.8); position: sticky; top: 0; z-index: 1000;">      <div class="nav-container">
-        <!-- Left: Logo -->
-        <!-- <a href="#" class="logo" aria-label="Villa Sérénité Home">
+    <nav class="navbar" role="navigation" aria-label="Primary"
+        style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.8); position: sticky; top: 0; z-index: 1000;">
+        <div class="nav-container">
+            <!-- Left: Logo -->
+            <!-- <a href="#" class="logo" aria-label="Villa Sérénité Home">
           Villa Sérénité
         </a> -->
-        <img width="60px" height="60px" src="/logo verlia.png" alt="Logo Verlia – projets immobiliers à Casablanca Hermitage">
-        
+            <img width="60px" height="60px" src="/logo verlia.png"
+                alt="Logo Verlia – projets immobiliers à Casablanca Hermitage">
 
-        <!-- Right: Desktop actions -->
-        <div class="nav-right">
-          <a href="tel:+33123456789" class="phone-link" aria-label="Call +33 1 23 45 67 89">
-            <svg class="phone-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <span class="phone-text">+33 1 23 45 67 89</span>
-          </a>
 
-          <div class="social-icons" aria-label="Réseaux sociaux">
-            <a href="https://www.facebook.com/profile.php?id=61566000283481&locale=fr_FR" target="_blank" rel="noopener noreferrer"
-               class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </a>
+            <!-- Right: Desktop actions -->
+            <div class="nav-right">
+                <a href="tel:+33123456789" class="phone-link" aria-label="Call +33 1 23 45 67 89">
+                    <svg class="phone-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    <span class="phone-text">+33 1 23 45 67 89</span>
+                </a>
 
-            <a href="https://www.instagram.com/verlia_living/" target="_blank" rel="noopener noreferrer"
-              class="social-icon instagram" aria-label="Suivez-nous sur Instagram">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-              </svg>
-            </a>
+                <div class="social-icons" aria-label="Réseaux sociaux">
+                    <a href="https://www.facebook.com/profile.php?id=61566000283481&locale=fr_FR" target="_blank"
+                        rel="noopener noreferrer" class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
 
-            <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer"
-               class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
-          </div>
+                    <a href="https://www.instagram.com/verlia_living/" target="_blank" rel="noopener noreferrer"
+                        class="social-icon instagram" aria-label="Suivez-nous sur Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer"
+                        class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor"
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile: Hamburger -->
+            <label class="hamburger" for="nav-toggle" role="button" tabindex="0" aria-controls="mobile-sidebar"
+                aria-label="Open menu">
+                <span class="sr-only">Open menu</span>
+                <span></span><span></span><span></span>
+            </label>
         </div>
-
-        <!-- Mobile: Hamburger -->
-        <label class="hamburger" for="nav-toggle" role="button" tabindex="0" aria-controls="mobile-sidebar" aria-label="Open menu">
-          <span class="sr-only">Open menu</span>
-          <span></span><span></span><span></span>
-        </label>
-      </div>
     </nav>
 
     <!-- Mobile: Overlay to close the drawer -->
@@ -119,48 +160,53 @@
 
     <!-- Mobile: Sidebar Drawer -->
     <aside id="mobile-sidebar" class="mobile-sidebar" aria-label="Mobile menu">
-      <div class="sidebar-header">
-        <span class="sidebar-title">Villa Sérénité</span>
-        <label class="close-btn" for="nav-toggle" role="button" tabindex="0" aria-label="Close menu">
-          <span aria-hidden="true">&times;</span>
-        </label>
-      </div>
-
-      <div class="sidebar-content">
-        <a href="tel:+33123456789" class="sidebar-phone">
-          <svg class="phone-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          <span>+33 1 23 45 67 89</span>
-        </a>
-
-        <div class="sidebar-divider" aria-hidden="true"></div>
-
-        <div class="sidebar-social">
-          <a href="https://facebook.com/villaserenite" target="_blank" rel="noopener noreferrer"
-             class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-          <a href="https://twitter.com/villaserenite" target="_blank" rel="noopener noreferrer"
-             class="social-icon twitter" aria-label="Suivez-nous sur Twitter">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-            </svg>
-          </a>
-          <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer"
-             class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </a>
+        <div class="sidebar-header">
+            <span class="sidebar-title">Villa Sérénité</span>
+            <label class="close-btn" for="nav-toggle" role="button" tabindex="0" aria-label="Close menu">
+                <span aria-hidden="true">&times;</span>
+            </label>
         </div>
-      </div>
+
+        <div class="sidebar-content">
+            <a href="tel:+33123456789" class="sidebar-phone">
+                <svg class="phone-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>+33 1 23 45 67 89</span>
+            </a>
+
+            <div class="sidebar-divider" aria-hidden="true"></div>
+
+            <div class="sidebar-social">
+                <a href="https://facebook.com/villaserenite" target="_blank" rel="noopener noreferrer"
+                    class="social-icon facebook" aria-label="Suivez-nous sur Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/villaserenite" target="_blank" rel="noopener noreferrer"
+                    class="social-icon twitter" aria-label="Suivez-nous sur Twitter">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/company/villaserenite" target="_blank" rel="noopener noreferrer"
+                    class="social-icon linkedin" aria-label="Suivez-nous sur LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
     </aside>
 
     <!-- <div id="home" class="hero"> -->
-            <section class="image-carousel" id="imageCarousel">
+    <section class="image-carousel" id="imageCarousel">
         <!-- Loading State -->
         <div class="carousel-loading" id="carouselLoading">
             <!-- <div class="loading-spinner"></div>
@@ -188,8 +234,9 @@
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h2 class="slide-title">Studios haut standing à L’Hermitage</h2>
-                    <p class="slide-description">À partir de 1.000.000 DHS • Un projet moderne à Casablanca alliant élégance, confort et sécurité.</p>
-                    <div class="slide-features">
+                    <p class="slide-description">À partir de 1.000.000 DHS • Un projet moderne à Casablanca alliant
+                        élégance, confort et sécurité.</p>
+                    <div class="slide-features flex flex-wrap gap-4">
                         <div class="feature-item">
                             <span class="feature-number">Cuisine</span>
                             <span class="feature-label">Italienne équipée</span>
@@ -203,8 +250,11 @@
                             <span class="feature-label">Optique</span>
                         </div>
                     </div>
-                    <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
-                    <a href="#contact" class="slide-cta" style="margin-left: 12px;" aria-label="Télécharger la brochure">Télécharger la brochure</a>
+                    <div class="mt-3 flex flex-wrap gap-3">
+                        <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
+                        <a href="#contact" class="slide-cta" aria-label="Télécharger la brochure">Télécharger la
+                            brochure</a>
+                    </div>
                 </div>
             </div>
 
@@ -213,7 +263,9 @@
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h2 class="slide-title">Un projet moderne, alliant élégance, confort et sécurité</h2>
-                    <p class="slide-description">Un projet moderne avec cuisine équipée, climatisation centralisée, isolation renforcée, fibre optique, garage et finitions premium. Titres fonciers disponibles. Emplacement idéal, sans vis-à-vis.</p>
+                    <p class="slide-description">Un projet moderne avec cuisine équipée, climatisation centralisée,
+                        isolation renforcée, fibre optique, garage et finitions premium. Titres fonciers disponibles.
+                        Emplacement idéal, sans vis-à-vis.</p>
                     <div class="slide-features">
                         <div class="feature-item">
                             <span class="feature-number">Climatisation</span>
@@ -228,7 +280,11 @@
                             <span class="feature-label">Foncier disponibles</span>
                         </div>
                     </div>
-                    <!-- <a href="#contact" class="slide-cta">Découvrir l'intérieur</a> -->
+                    <div class="mt-3 flex flex-wrap gap-3">
+                        <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
+                        <a href="#contact" class="slide-cta" aria-label="Télécharger la brochure">Télécharger la
+                            brochure</a>
+                    </div>
                 </div>
             </div>
 
@@ -237,7 +293,8 @@
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h2 class="slide-title">Cuisine italienne équipée</h2>
-                    <p class="slide-description">Équipements haut de gamme, finitions en marbre Ibiza, parquet et noyer massif.</p>
+                    <p class="slide-description">Équipements haut de gamme, finitions en marbre Ibiza, parquet et noyer
+                        massif.</p>
                     <div class="slide-features">
                         <div class="feature-item">
                             <span class="feature-number">25m²</span>
@@ -252,7 +309,11 @@
                             <span class="feature-label">Plan Travail</span>
                         </div>
                     </div>
-                    <!-- <a href="#contact" class="slide-cta">Voir les équipements</a> -->
+                    <div class="mt-3 flex flex-wrap gap-3">
+                        <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
+                        <a href="#contact" class="slide-cta" aria-label="Télécharger la brochure">Télécharger la
+                            brochure</a>
+                    </div>
                 </div>
             </div>
 
@@ -261,7 +322,8 @@
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h2 class="slide-title">Sécurité premium & confort</h2>
-                    <p class="slide-description">Vidéophone, poignées biométriques, immeuble sans vis-à-vis, fibre optique haut débit.</p>
+                    <p class="slide-description">Vidéophone, poignées biométriques, immeuble sans vis-à-vis, fibre
+                        optique haut débit.</p>
                     <div class="slide-features">
                         <div class="feature-item">
                             <span class="feature-number">35m²</span>
@@ -276,7 +338,11 @@
                             <span class="feature-label">Sdb Privée</span>
                         </div>
                     </div>
-                    <!-- <a href="#contact" class="slide-cta">Voir les chambres</a> -->
+                    <div class="mt-3 flex flex-wrap gap-3">
+                        <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
+                        <a href="#contact" class="slide-cta" aria-label="Télécharger la brochure">Télécharger la
+                            brochure</a>
+                    </div>
                 </div>
             </div>
 
@@ -285,7 +351,8 @@
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h2 class="slide-title">Garage et box privatifs</h2>
-                    <p class="slide-description">Espaces de stationnement sécurisés et privatifs pour plus de tranquillité.</p>
+                    <p class="slide-description">Espaces de stationnement sécurisés et privatifs pour plus de
+                        tranquillité.</p>
                     <div class="slide-features">
                         <div class="feature-item">
                             <span class="feature-number">Marbre</span>
@@ -300,7 +367,11 @@
                             <span class="feature-label">Éclairage</span>
                         </div>
                     </div>
-                    <!-- <a href="#contact" class="slide-cta">Voir les finitions</a> -->
+                    <div class="mt-3 flex flex-wrap gap-3">
+                        <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
+                        <a href="#contact" class="slide-cta" aria-label="Télécharger la brochure">Télécharger la
+                            brochure</a>
+                    </div>
                 </div>
             </div>
 
@@ -309,7 +380,8 @@
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h2 class="slide-title">Immeuble sans vis-à-vis</h2>
-                    <p class="slide-description">Emplacement recherché à Casablanca, garantissant intimité et bien-être.</p>
+                    <p class="slide-description">Emplacement recherché à Casablanca, garantissant intimité et bien-être.
+                    </p>
                     <div class="slide-features">
                         <div class="feature-item">
                             <span class="feature-number">40m²</span>
@@ -324,7 +396,11 @@
                             <span class="feature-label">Vue</span>
                         </div>
                     </div>
-                    <!-- <a href="#contact" class="slide-cta">Voir les terrasses</a> -->
+                    <div class="mt-3 flex flex-wrap gap-3">
+                        <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
+                        <a href="#contact" class="slide-cta" aria-label="Télécharger la brochure">Télécharger la
+                            brochure</a>
+                    </div>
                 </div>
             </div>
 
@@ -333,7 +409,8 @@
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h2 class="slide-title">Isolation renforcée</h2>
-                    <p class="slide-description">Isolation thermique et phonique pour un confort optimal toute l’année.</p>
+                    <p class="slide-description">Isolation thermique et phonique pour un confort optimal toute l’année.
+                    </p>
                     <div class="slide-features">
                         <div class="feature-item">
                             <span class="feature-number">25m</span>
@@ -348,7 +425,11 @@
                             <span class="feature-label">Wellness</span>
                         </div>
                     </div>
-                    <!-- <a href="#contact" class="slide-cta">Réserver le spa</a> -->
+                    <div class="mt-3 flex flex-wrap gap-3">
+                        <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
+                        <a href="#contact" class="slide-cta" aria-label="Télécharger la brochure">Télécharger la
+                            brochure</a>
+                    </div>
                 </div>
             </div>
 
@@ -357,7 +438,8 @@
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <h2 class="slide-title">Titres fonciers disponibles</h2>
-                    <p class="slide-description">Des logements prêts à l’acquisition pour investisseurs et jeunes actifs.</p>
+                    <p class="slide-description">Des logements prêts à l’acquisition pour investisseurs et jeunes
+                        actifs.</p>
                     <div class="slide-features">
                         <div class="feature-item">
                             <span class="feature-number">3000m²</span>
@@ -372,7 +454,11 @@
                             <span class="feature-label">Entretien</span>
                         </div>
                     </div>
-                    <!-- <a href="#contact" class="slide-cta">Visiter les jardins</a> -->
+                    <div class="mt-3 flex flex-wrap gap-3">
+                        <a href="#contact" class="slide-cta" aria-label="Demander une visite">Demander une visite</a>
+                        <a href="#contact" class="slide-cta" aria-label="Télécharger la brochure">Télécharger la
+                            brochure</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -390,9 +476,30 @@
         <div class="fullscreen-btn" id="fullscreenBtn" title="Mode plein écran" style="visibility: hidden;">
             ⛶
             <div class="container" style="margin-top: 2rem;">
-                <p class="section-subtitle" style="opacity:1; transform:none; text-align:center; margin-bottom: 1rem;">Situé au cœur du quartier Anoual à Casablanca, ce projet résidentiel haut standing redéfinit les standards du bien-être urbain.</p>
-                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    <iframe title="Carte – Casablanca Quartier Anoual" src="https://www.google.com/maps?q=Casablanca%20Quartier%20Anoual&output=embed" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="section-subtitle" style="opacity:1; transform:none; text-align:center; margin-bottom: 1rem;">
+                    Situé au cœur du quartier Anoual à Casablanca, ce projet résidentiel haut standing redéfinit les
+                    standards du bien-être urbain.</p>
+                <div
+                    style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <iframe title="Carte – Casablanca Quartier Anoual"
+                        src="https://www.google.com/maps?q=Casablanca%20Quartier%20Anoual&output=embed"
+                        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="container mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    <p class="section-subtitle md:text-left text-center max-w-xl leading-relaxed"
+                        style="opacity:1; transform:none;">Situé au cœur du quartier Anoual à Casablanca, ce projet
+                        résidentiel haut standing redéfinit les standards du bien-être urbain.</p>
+                    <div class="rounded-xl shadow-xl overflow-hidden">
+                        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                            <iframe title="Carte – Casablanca Quartier Anoual"
+                                src="https://www.google.com/maps?q=Casablanca%20Quartier%20Anoual&output=embed"
+                                style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -405,7 +512,9 @@
             <div class="section-header">
                 <h2 class="section-title">Un projet moderne, alliant élégance, confort et sécurité</h2>
                 <div class="section-divider"></div>
-                <p class="section-subtitle">Studios haut standing à Casablanca – L’Hermitage. Cuisine italienne équipée, climatisation centralisée, isolation renforcée, fibre optique, garage et finitions premium. Titres fonciers disponibles.</p>
+                <p class="section-subtitle max-w-3xl mx-auto leading-relaxed">Studios haut standing à Casablanca –
+                    L’Hermitage. Cuisine italienne équipée, climatisation centralisée, isolation renforcée, fibre
+                    optique, garage et finitions premium. Titres fonciers disponibles.</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -414,9 +523,13 @@
                         <div class="text-divider"></div>
                     </div>
 
-                    <div class="about-paragraphs">
-                        <p>Un projet moderne avec cuisine équipée, climatisation centralisée, isolation renforcée, fibre optique, garage et finitions premium. Titres fonciers disponibles. Emplacement idéal, sans vis-à-vis.</p>
-                        <p>Chaque logement bénéficie de prestations premium, pensées pour votre confort et votre tranquillité au quotidien, au cœur de Casablanca.</p>
+                    <div class="about-paragraphs space-y-3 max-w-3xl text-justify">
+                        <p class="leading-relaxed">Un projet moderne avec cuisine équipée, climatisation centralisée,
+                            isolation renforcée, fibre optique, garage et finitions premium. Titres fonciers
+                            disponibles. Emplacement idéal, sans vis-à-vis.</p>
+                        <p class="leading-relaxed ">Chaque logement bénéficie de prestations premium, pensées pour votre
+                            confort et votre tranquillité au quotidien, au cœur de Casablanca.</p>
+                            
                     </div>
 
                     <div class="about-stats">
@@ -453,7 +566,8 @@
     <section id="location" class="section location-section" style="width: auto;">
         <div class="location-container">
             <div class="location-header">
-                <h2 class="location-title">Votre nouveau chez-vous, en plein cœur de <span class="gradient-text">L’Hermitage</span></h2>
+                <h2 class="location-title">Votre nouveau chez-vous, en plein cœur de <span
+                        class="gradient-text">L’Hermitage</span></h2>
                 <div class="location-subtitle">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                         <path
@@ -466,9 +580,9 @@
 
             <div class="location-grid">
                 <div class="location-item">
-                    <div class="location-icon" >
+                    <div class="location-icon">
                         <svg width="55" height="55" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linejoin="round" stroke-width="1" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                            <path stroke-linejoin="round" stroke-width="1" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                         </svg>
                     </div>
                     <h4 class="location-label">Emplacement recherché</h4>
@@ -476,9 +590,10 @@
                 </div>
 
                 <div class="location-item">
-                    <div class="location-icon" >
+                    <div class="location-icon">
                         <svg width="55" height="55" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                     </div>
                     <h4 class="location-label">Confort urbain</h4>
@@ -486,9 +601,10 @@
                 </div>
 
                 <div class="location-item">
-                    <div class="location-icon" >
+                    <div class="location-icon">
                         <svg width="55" height="55" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4l1-12z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4l1-12z" />
                         </svg>
                     </div>
                     <h4 class="location-label">Investissement sûr</h4>
@@ -496,9 +612,10 @@
                 </div>
 
                 <div class="location-item">
-                    <div class="location-icon" >
+                    <div class="location-icon">
                         <svg width="55" height="55" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </div>
                     <h4 class="location-label">Vie pratique</h4>
@@ -514,7 +631,7 @@
     <section id="architecture" class="architecture section" style="width: 100%;">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Caractéristiques du projet</h2>
+                <h2 class="section-title">Une architecture qui <span class="gradient-text">respire</span></h2>
                 <div class="section-divider"></div>
                 <p class="section-subtitle">Chaque détail architectural a été pensé pour créer une harmonie parfaite
                     entre intérieur et extérieur</p>
@@ -562,51 +679,6 @@
                                 <p>Intégration paysagère respectueuse avec des matériaux durables et authentiques</p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.4 15a1.65 1.65 0 00.4-1V8a7.4 7.4 0 10-14.8 0v6a1.65 1.65 0 00.4 1L12 22z"/></svg>
-                            </div>
-                            <div>
-                                <h4>Sécurité premium (vidéophone, poignées biométriques)</h4>
-                                <p>Contrôle d’accès moderne et fiable</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2 4 4L21 4"/></svg>
-                            </div>
-                            <div>
-                                <h4>Garage et box privatifs</h4>
-                                <p>Espaces sécurisés et dédiés</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h20M6 6h12M8 18h8"/></svg>
-                            </div>
-                            <div>
-                                <h4>Fibre optique haut débit</h4>
-                                <p>Connexion rapide et stable</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                            </div>
-                            <div>
-                                <h4>Immeuble sans vis-à-vis</h4>
-                                <p>Intimité préservée au quotidien</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                            </div>
-                            <div>
-                                <h4>Titres fonciers disponibles</h4>
-                                <p>Biens prêts à l’acquisition</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!-- Visual Side -->
@@ -614,7 +686,7 @@
                     <div class="arch-visual-grid">
                         <div class="main-arch-image">
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Architecture moderne – studios haut standing Hermitage Casablanca">
+                                alt="Architecture moderne">
                             <div class="info-bubble info-bubble-1">
                                 <div class="label">Surface habitable</div>
                                 <div class="value">280m²</div>
@@ -627,11 +699,11 @@
                         <div class="side-images">
                             <div class="secondary-arch-image">
                                 <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                    alt="Finitions premium marbre Ibiza et parquet – projet Hermitage">
+                                    alt="Détail architectural">
                             </div>
                             <div class="tertiary-arch-image">
                                 <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                    alt="Espace intérieur lumineux – studios haut standing Casablanca">
+                                    alt="Espace intérieur">
                             </div>
                         </div>
                     </div>
@@ -642,482 +714,718 @@
     </section>
 
     <section class="py-16 px-4 architecture">
-      <div class="max-w-7xl mx-auto">
-           <div class="section-header">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-header">
                 <h2 class="section-title">Un projet d’exception à l’Hermitage, pensé pour vous</h2>
                 <div class="section-divider"></div>
-                <p class="section-subtitle">Chaque logement bénéficie de prestations premium : climatisation centralisée, cuisine italienne équipée, finitions en marbre et parquet, sécurité biométrique, fibre optique, isolation phonique et thermique.</p>
-                <ul class="slide-list mt-4 space-y-3" style="max-width: 780px; margin: 0 auto;">
-                    <li class="flex items-start gap-3">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>Emplacement recherché, immeuble sans vis-à-vis</span>
+                <p class="section-subtitle max-w-3xl mx-auto leading-relaxed mb-5">Chaque logement bénéficie de prestations
+                    premium : climatisation centralisée, cuisine italienne équipée, finitions en marbre et parquet,
+                    sécurité biométrique, fibre optique, isolation phonique et thermique.</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 max-w-5xl mx-auto">
+                    <li class="flex items-start gap-3 rounded-xl bg-white/70 backdrop-blur-sm p-4 shadow-sm h-full">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        <span class="leading-relaxed">Emplacement recherché, immeuble sans vis-à-vis</span>
                     </li>
-                    <li class="flex items-start gap-3">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>Titres fonciers disponibles – prêts à l’acquisition</span>
+                    <li class="flex items-start gap-3 rounded-xl bg-white/70 backdrop-blur-sm p-4 shadow-sm h-full">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        <span class="leading-relaxed">Titres fonciers disponibles – prêts à l’acquisition</span>
                     </li>
-                    <li class="flex items-start gap-3">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>Idéal pour investisseurs ou jeunes actifs</span>
+                    <li class="flex items-start gap-3 rounded-xl bg-white/70 backdrop-blur-sm p-4 shadow-sm h-full">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        <span class="leading-relaxed">Idéal pour investisseurs ou jeunes actifs</span>
                     </li>
                 </ul>
             </div>
 
             <!-- carouselle -->
 
-        <div class="carousel-container relative">
-          <div class="relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm  p-8">
-            <div class="relative">
-              <div id="carouselTrack" class="flex gap-8 transition-transform duration-700 ease-out will-change-transform">
-                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Luxury Villa in Malibu, California" tabindex="0">
-                  <div class="relative h-64 lg:h-72 overflow-hidden">
-                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Studios haut standing Hermitage Casablanca – façade moderne" loading="lazy" draggable="false" />
-                    <div class="absolute inset-x-0 bottom-0 p-4">
-                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
-                        Hermitage – Casablanca
-                      </div>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
-                      Luxury
-                    </div>
-                   
-                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
-                        <div class="space-y-2">
-                          <div class="text-2xl font-bold text-slate-900">À partir de 1.000.000 DHS</div>
-                          <div class="flex items-center text-slate-700 text-sm">
-                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                            </svg>
-                            Hermitage, Casablanca
-                          </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Cuisine italienne</div>
-                          </div>
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Sécurité premium</div>
-                          </div>
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2m-6 12V8"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Fibre optique</div>
-                          </div>
-                        </div>
-                        <!-- <div class="mt-4 flex">
+            <div class="carousel-container relative">
+                <div class="relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm  p-8">
+                    <div class="relative">
+                        <div id="carouselTrack"
+                            class="flex gap-8 transition-transform duration-700 ease-out will-change-transform">
+                            <article
+                                class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50"
+                                aria-label="Luxury Villa in Malibu, California" tabindex="0">
+                                <div class="relative overflow-hidden">
+                                    <img class="parallax-img w-full h-64 md:h-80 lg:h-96 object-cover object-center rounded-xl shadow-lg transition-transform duration-700 group-hover:scale-[1.03]"
+                                        src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="Studios haut standing Hermitage Casablanca – façade moderne" loading="lazy"
+                                        draggable="false" />
+                                    <div class="absolute inset-x-0 bottom-0 p-4">
+                                        <div
+                                            class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                                            Hermitage – Casablanca
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                                        Luxury
+                                    </div>
+
+                                    <div
+                                        class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                        <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                                            <div class="space-y-2">
+                                                <div class="text-2xl font-bold text-slate-900">À partir de 1.000.000 DHS
+                                                </div>
+                                                <div class="flex items-center text-slate-700 text-sm">
+                                                    <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor"
+                                                        viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path fill-rule="evenodd"
+                                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    Hermitage, Casablanca
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Cuisine italienne</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Sécurité premium</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2m-6 12V8" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Fibre optique</div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="mt-4 flex">
                           <button class="bg-slate-900 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-600 transition-colors shadow" type="button">View Details</button>
                         </div> -->
-                      </div>
-                    </div>
+                                        </div>
+                                    </div>
 
-                  </div>
-                </article>
-                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Luxury Villa in Malibu, California" tabindex="0">
-                  <div class="relative h-64 lg:h-72 overflow-hidden">
-                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Immobilier à Casablanca – studios haut standing Hermitage" loading="lazy" draggable="false" />
-                    <div class="absolute inset-x-0 bottom-0 p-4">
-                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
-                        Hermitage – Studios
-                      </div>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
-                      Luxury
-                    </div>
-                    
-                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                      <div class="w-full bg-white/90 backdrop-blur-3xl rounded-xl shadow-xl p-4">
+                                </div>
+                            </article>
+                            <article
+                                class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50"
+                                aria-label="Luxury Villa in Malibu, California" tabindex="0">
+                                <div class="relative overflow-hidden">
+                                    <img class="parallax-img w-full h-64 md:h-80 lg:h-96 object-cover object-center rounded-xl shadow-lg transition-transform duration-700 group-hover:scale-[1.03]"
+                                        src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="Immobilier à Casablanca – studios haut standing Hermitage" loading="lazy"
+                                        draggable="false" />
+                                    <div class="absolute inset-x-0 bottom-0 p-4">
+                                        <div
+                                            class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                                            Hermitage – Studios
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                                        Luxury
+                                    </div>
 
-                        <div class="space-y-2">
-                          <div class="text-2xl font-bold text-slate-900">À partir de 1.000.000 DHS</div>
-                          <div class="flex items-center text-slate-700 text-sm">
-                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                            </svg>
-                            Casablanca, Maroc
-                          </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Isolation renforcée</div>
-                          </div>
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Climatisation</div>
-                          </div>
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2m-6 12V8"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Garage privatif</div>
-                          </div>
-                        </div>
-                        <!-- <div class="mt-4 flex">
+                                    <div
+                                        class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                        <div class="w-full bg-white/90 backdrop-blur-3xl rounded-xl shadow-xl p-4">
+
+                                            <div class="space-y-2">
+                                                <div class="text-2xl font-bold text-slate-900">À partir de 1.000.000 DHS
+                                                </div>
+                                                <div class="flex items-center text-slate-700 text-sm">
+                                                    <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor"
+                                                        viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path fill-rule="evenodd"
+                                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    Casablanca, Maroc
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Isolation renforcée</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Climatisation</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2m-6 12V8" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Garage privatif</div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="mt-4 flex">
                           <button class="bg-slate-900 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-600 transition-colors shadow" type="button">View Details</button>
                         </div> -->
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Modern Penthouse in Manhattan, New York" tabindex="0">
-                  <div class="relative h-64 lg:h-72 overflow-hidden">
-                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intérieur moderne – studios Hermitage Casablanca" loading="lazy" draggable="false" />
-                    <div class="absolute inset-x-0 bottom-0 p-4">
-                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
-                        Modern Penthouse
-                      </div>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
-                      Nouveau
-                    </div>
-                    
-                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
-                        <div class="space-y-2">
-                          <div class="text-2xl font-bold text-slate-900">À partir de 1.000.000 DHS</div>
-                          <div class="flex items-center text-slate-700 text-sm">
-                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                            </svg>
-                            Hermitage, Casablanca
-                          </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Fibre optique</div>
-                          </div>
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Sécurité biométrique</div>
-                          </div>
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Matériaux nobles</div>
-                          </div>
-                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article
+                                class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50"
+                                aria-label="Modern Penthouse in Manhattan, New York" tabindex="0">
+                                <div class="relative overflow-hidden">
+                                    <img class="parallax-img w-full h-64 md:h-80 lg:h-96 object-cover object-center rounded-xl shadow-lg transition-transform duration-700 group-hover:scale-[1.03]"
+                                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="Intérieur moderne – studios Hermitage Casablanca" loading="lazy"
+                                        draggable="false" />
+                                    <div class="absolute inset-x-0 bottom-0 p-4">
+                                        <div
+                                            class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                                            Modern Penthouse
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                                        Nouveau
+                                    </div>
 
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50" aria-label="Waterfront Estate in Miami Beach, Florida" tabindex="0">
-                  <div class="relative h-64 lg:h-72 overflow-hidden">
-                    <img class="parallax-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Façade contemporaine – projet Hermitage Casablanca" loading="lazy" draggable="false" />
-                    <div class="absolute inset-x-0 bottom-0 p-4">
-                      <div class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
-                        Waterfront Estate
-                      </div>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
-                      À saisir
-                    </div>
-                   
-                    <div class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
-                      <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
-                        <div class="space-y-2">
-                          <div class="text-2xl font-bold text-slate-900">À partir de 1.000.000 DHS</div>
-                          <div class="flex items-center text-slate-700 text-sm">
-                            <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                            </svg>
-                            Casablanca – Hermitage
-                          </div>
+                                    <div
+                                        class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                        <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                                            <div class="space-y-2">
+                                                <div class="text-2xl font-bold text-slate-900">À partir de 1.000.000 DHS
+                                                </div>
+                                                <div class="flex items-center text-slate-700 text-sm">
+                                                    <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor"
+                                                        viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path fill-rule="evenodd"
+                                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    Hermitage, Casablanca
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Fibre optique</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Sécurité biométrique</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Matériaux nobles</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article
+                                class="property-card group relative flex-none w-80 lg:w-96 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer border border-slate-200/50"
+                                aria-label="Waterfront Estate in Miami Beach, Florida" tabindex="0">
+                                <div class="relative overflow-hidden">
+                                    <img class="parallax-img w-full h-64 md:h-80 lg:h-96 object-cover object-center rounded-xl shadow-lg transition-transform duration-700 group-hover:scale-[1.03]"
+                                        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        alt="Façade contemporaine – projet Hermitage Casablanca" loading="lazy"
+                                        draggable="false" />
+                                    <div class="absolute inset-x-0 bottom-0 p-4">
+                                        <div
+                                            class="inline-block bg-black/55 backdrop-blur-xs text-white px-4 py-2 rounded-xl text-lg font-semibold shadow-md">
+                                            Waterfront Estate
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide shadow-lg">
+                                        À saisir
+                                    </div>
+
+                                    <div
+                                        class="absolute inset-0 flex items-end p-4 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0">
+                                        <div class="w-full bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-4">
+                                            <div class="space-y-2">
+                                                <div class="text-2xl font-bold text-slate-900">À partir de 1.000.000 DHS
+                                                </div>
+                                                <div class="flex items-center text-slate-700 text-sm">
+                                                    <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor"
+                                                        viewBox="0 0 20 20" aria-hidden="true">
+                                                        <path fill-rule="evenodd"
+                                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    Casablanca – Hermitage
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Immeuble sans vis-à-vis</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Garage/Box privatifs</div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <div class="flex items-center justify-center mb-1">
+                                                        <svg class="w-4 h-4 text-blue-600" fill="none"
+                                                            stroke="currentColor" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-xs text-slate-700">Hermitage – Anoual</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 mt-4">
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Immeuble sans vis-à-vis</div>
-                          </div>
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Garage/Box privatifs</div>
-                          </div>
-                          <div class="text-center">
-                            <div class="flex items-center justify-center mb-1">
-                              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2"/>
-                              </svg>
-                            </div>
-                            <div class="text-xs text-slate-700">Hermitage – Anoual</div>
-                          </div>
-                        </div>
-                        
-                      </div>
                     </div>
-                  </div>
-                </article>
-              </div>
+                </div>
+                <button id="prevBtn" type="button" aria-label="Previous slide"
+                    class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white border-2 border-blue-200 hover:border-blue-400 rounded-full flex items-center justify-center text-slate-700 hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl z-10 group">
+                    <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn" type="button" aria-label="Next slide"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white border-2 border-blue-200 hover:border-blue-400 rounded-full flex items-center justify-center text-slate-700 hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl z-10 group">
+                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
             </div>
-          </div>
-          <button id="prevBtn" type="button" aria-label="Previous slide"
-            class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white border-2 border-blue-200 hover:border-blue-400 rounded-full flex items-center justify-center text-slate-700 hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl z-10 group">
-            <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-            </svg>
-          </button>
-          <button id="nextBtn" type="button" aria-label="Next slide"
-            class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white border-2 border-blue-200 hover:border-blue-400 rounded-full flex items-center justify-center text-slate-700 hover:text-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl z-10 group">
-            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </button>
+
+            <div class="flex justify-center items-center mt-8 gap-6" style="visibility: hidden;">
+                <div id="dotsContainer" class="flex gap-3" aria-label="Slide navigation"></div>
+            </div>
         </div>
-        
-        <div class="flex justify-center items-center mt-8 gap-6" style="visibility: hidden;">
-          <div id="dotsContainer" class="flex gap-3" aria-label="Slide navigation"></div>
-        </div>
-      </div>
     </section>
 
     <!-- carousell section 03  -->
 
-      <section id="hero-carousel" class="relative w-full py-6 sm:py-10">
-    <div id="carousel" class="relative w-full overflow-hidden">
-        <div class="grain"></div>
-<div class="section-header">
+    <section id="hero-carousel" class="relative w-full py-6 sm:py-10">
+        <div id="carousel" class="relative w-full overflow-hidden">
+            <div aria-hidden="true" class="absolute inset-0 w-full h-full"
+                ></div>
+            <div class="grain"></div>
+            <div class="section-header text-white">
                 <h2 class="section-title">Discover Your <span class="gradient-text">Dream Property</span></h2>
                 <div class="section-divider"></div>
                 <p class="section-subtitle">Explore luxury villas and apartments crafted for extraordinary living.</p>
             </div>
-        <div id="carousel-track" class="flex w-full will-change-transform" style="touch-action: pan-y">
-            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Luxury Waterfront Villas" tabindex="0">
-                <div class="relative p-6 sm:p-10 flex flex-col justify-center">
-                    <div class="max-w-xl space-y-4">
-                        <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">Exclusive Properties</p>
-                        <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Luxury Waterfront Villas</h2>
-                        <p class="slide-description text-ink-700">Discover exceptional waterfront living with our collection of private villas. Each property offers breathtaking views, premium amenities, and bespoke architecture designed for discerning homeowners.</p>
-                        
-                        <ul class="slide-list mt-4 space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>Private beach access and infinity pools</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>Smart home technology and security systems</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>24/7 concierge and property management</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=200&auto=format&fit=crop" alt="Villa thumbnail" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Villa Tours</span>
-                                </div>
-                            </a>
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=200&auto=format&fit=crop" alt="Security thumbnail" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Security</span>
-                                </div>
-                            </a>
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=200&auto=format&fit=crop" alt="Amenities thumbnail" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Amenities</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
-                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2000&auto=format&fit=crop" alt="Luxury waterfront villa with infinity pool." />
-                    <div class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                        <div class="p-6 text-white space-y-1">
-                            <h3 class="text-2xl font-semibold">Azure Heights</h3>
-                            <p class="text-white/90">Panoramic sea views from this 6-bedroom contemporary masterpiece.</p>
-                        </div>
-                    </div>
-                </figure>
-            </article>
+            <div id="carousel-track" class="flex w-full will-change-transform" style="touch-action: pan-y">
+                <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]"
+                    aria-label="Luxury Waterfront Villas" tabindex="0">
+                    <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                        <div class="max-w-xl space-y-4">
+                            <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">Exclusive Properties</p>
+                            <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Luxury Waterfront
+                                Villas</h2>
+                            <p class="slide-description text-ink-700">Discover exceptional waterfront living with our
+                                collection of private villas. Each property offers breathtaking views, premium
+                                amenities, and bespoke architecture designed for discerning homeowners.</p>
 
-            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Urban Luxury Apartments" tabindex="0">
-                <div class="relative p-6 sm:p-10 flex flex-col justify-center">
-                    <div class="max-w-xl space-y-4">
-                        <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">City Living</p>
-                        <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Urban Luxury Apartments</h2>
-                        <p class="slide-description text-ink-700">Sophisticated high-rise living in the heart of the city. Our premium apartments combine cutting-edge design with unparalleled access to urban amenities and cultural hotspots.</p>
-                        
-                        <ul class="slide-list mt-4 space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>Floor-to-ceiling windows with city skyline views</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>Resident-only amenities including rooftop pools</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>Walkability score of 98 - live where the action is</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 21 19-9L3 3v7l9 2-9 2v7z"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=200&auto=format&fit=crop" alt="Location thumb" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Location</span>
-                                </div>
-                            </a>
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="m5 6 2 3"/><path d="m19 6-2 3"/><path d="M3 12h18"/><path d="M18 16v3"/><path d="M18 22v-3"/><path d="M6 16v3"/><path d="M6 22v-3"/><path d="M12 16v3"/><path d="M12 22v-3"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=200&auto=format&fit=crop" alt="Building thumb" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Floor Plans</span>
-                                </div>
-                            </a>
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12a10 10 0 0 0-20 0"/><path d="M22 12a10 10 0 0 1-20 0"/><path d="M12 2v20"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=200&auto=format&fit=crop" alt="Amenities thumb" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Building Features</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
-                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2000&auto=format&fit=crop" alt="Modern luxury apartment interior." />
-                    <div class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                        <div class="p-6 text-white space-y-1">
-                            <h3 class="text-2xl font-semibold">The Metropolitan</h3>
-                            <p class="text-white/90">Downtown living redefined with 360° city views.</p>
-                        </div>
-                    </div>
-                </figure>
-            </article>
+                            <ul class="slide-list mt-4 space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>Private beach access and infinity pools</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>Smart home technology and security systems</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>24/7 concierge and property management</span>
+                                </li>
+                            </ul>
 
-            <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]" aria-label="Gated Community Homes" tabindex="0">
-                <div class="relative p-6 sm:p-10 flex flex-col justify-center">
-                    <div class="max-w-xl space-y-4">
-                        <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">Secure Living</p>
-                        <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Gated Community Homes</h2>
-                        <p class="slide-description text-ink-700">Experience the perfect balance of privacy and community in our exclusive gated developments. Family-friendly neighborhoods with premium shared facilities and lush green spaces.</p>
-
-                        <ul class="slide-list mt-4 space-y-3">
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>24/7 security with controlled access points</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>Community centers and recreational facilities</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>Landscaped gardens and walking trails</span>
-                            </li>
-                        </ul>
-
-                        <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?q=80&w=200&auto=format&fit=crop" alt="Security thumb" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Security</span>
-                                </div>
-                            </a>
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="m5 6 2 3"/><path d="m19 6-2 3"/><path d="M3 12h18"/><path d="M18 16v3"/><path d="M18 22v-3"/><path d="M6 16v3"/><path d="M6 22v-3"/><path d="M12 16v3"/><path d="M12 22v-3"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=200&auto=format&fit=crop" alt="Community thumb" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Community</span>
-                                </div>
-                            </a>
-                            <a href="#" class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                                <div class="flex items-center gap-2">
-                                    <img src="/familly.jpeg" alt="Family thumb" class="h-8 w-8 rounded object-cover" />
-                                    <span class="font-medium">Family Life</span>
-                                </div>
-                            </a>
+                            <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=200&auto=format&fit=crop"
+                                            alt="Villa thumbnail" class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Villa Tours</span>
+                                    </div>
+                                </a>
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=200&auto=format&fit=crop"
+                                            alt="Security thumbnail" class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Security</span>
+                                    </div>
+                                </a>
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=200&auto=format&fit=crop"
+                                            alt="Amenities thumbnail" class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Amenities</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none" tabindex="0">
-                    <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2000&auto=format&fit=crop" alt="Beautiful homes in gated community." />
-                    <div class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                        <div class="p-6 text-white space-y-1">
-                            <h3 class="text-2xl font-semibold">The Oaks</h3>
-                            <p class="text-white/90">Luxury family homes surrounded by century-old trees.</p>
+
+                    <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none"
+                        tabindex="0">
+                        <img class="h-full w-full object-cover object-center"
+                            src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2000&auto=format&fit=crop"
+                            alt="Luxury waterfront villa with infinity pool." />
+                        <div
+                            class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                            <div class="p-6 text-white space-y-1">
+                                <h3 class="text-2xl font-semibold">Azure Heights</h3>
+                                <p class="text-white/90">Panoramic sea views from this 6-bedroom contemporary
+                                    masterpiece.</p>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+
+                <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]"
+                    aria-label="Urban Luxury Apartments" tabindex="0">
+                    <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                        <div class="max-w-xl space-y-4">
+                            <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">City Living</p>
+                            <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Urban Luxury
+                                Apartments</h2>
+                            <p class="slide-description text-ink-700">Sophisticated high-rise living in the heart of the
+                                city. Our premium apartments combine cutting-edge design with unparalleled access to
+                                urban amenities and cultural hotspots.</p>
+
+                            <ul class="slide-list mt-4 space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>Floor-to-ceiling windows with city skyline views</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>Resident-only amenities including rooftop pools</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>Walkability score of 98 - live where the action is</span>
+                                </li>
+                            </ul>
+
+                            <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="m3 21 19-9L3 3v7l9 2-9 2v7z" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=200&auto=format&fit=crop"
+                                            alt="Location thumb" class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Location</span>
+                                    </div>
+                                </a>
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 2v4" />
+                                        <path d="m5 6 2 3" />
+                                        <path d="m19 6-2 3" />
+                                        <path d="M3 12h18" />
+                                        <path d="M18 16v3" />
+                                        <path d="M18 22v-3" />
+                                        <path d="M6 16v3" />
+                                        <path d="M6 22v-3" />
+                                        <path d="M12 16v3" />
+                                        <path d="M12 22v-3" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=200&auto=format&fit=crop"
+                                            alt="Building thumb" class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Floor Plans</span>
+                                    </div>
+                                </a>
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 12a10 10 0 0 0-20 0" />
+                                        <path d="M22 12a10 10 0 0 1-20 0" />
+                                        <path d="M12 2v20" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=200&auto=format&fit=crop"
+                                            alt="Amenities thumb" class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Building Features</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </figure>
-            </article>
+
+                    <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none"
+                        tabindex="0">
+                        <img class="h-full w-full object-cover object-center"
+                            src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2000&auto=format&fit=crop"
+                            alt="Modern luxury apartment interior." />
+                        <div
+                            class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                            <div class="p-6 text-white space-y-1">
+                                <h3 class="text-2xl font-semibold">The Metropolitan</h3>
+                                <p class="text-white/90">Downtown living redefined with 360° city views.</p>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+
+                <article class="slide w-full shrink-0 grid grid-cols-1 md:grid-cols-[2fr_2fr]"
+                    aria-label="Gated Community Homes" tabindex="0">
+                    <div class="relative p-6 sm:p-10 flex flex-col justify-center">
+                        <div class="max-w-xl space-y-4">
+                            <p class="slide-tag text-sm tracking-wider uppercase text-ink-500">Secure Living</p>
+                            <h2 class="slide-title text-3xl sm:text-4xl font-semibold leading-tight">Gated Community
+                                Homes</h2>
+                            <p class="slide-description text-ink-700">Experience the perfect balance of privacy and
+                                community in our exclusive gated developments. Family-friendly neighborhoods with
+                                premium shared facilities and lush green spaces.</p>
+
+                            <ul class="slide-list mt-4 space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>24/7 security with controlled access points</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>Community centers and recreational facilities</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="3">
+                                        <path d="M20 6L9 17l-5-5" />
+                                    </svg>
+                                    <span>Landscaped gardens and walking trails</span>
+                                </li>
+                            </ul>
+
+                            <div class="slide-cards mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?q=80&w=200&auto=format&fit=crop"
+                                            alt="Security thumb" class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Security</span>
+                                    </div>
+                                </a>
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 2v4" />
+                                        <path d="m5 6 2 3" />
+                                        <path d="m19 6-2 3" />
+                                        <path d="M3 12h18" />
+                                        <path d="M18 16v3" />
+                                        <path d="M18 22v-3" />
+                                        <path d="M6 16v3" />
+                                        <path d="M6 22v-3" />
+                                        <path d="M12 16v3" />
+                                        <path d="M12 22v-3" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=200&auto=format&fit=crop"
+                                            alt="Community thumb" class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Community</span>
+                                    </div>
+                                </a>
+                                <a href="#"
+                                    class="feature-card rounded-xl bg-white/70 hover:bg-white transition px-4 py-3 text-left hidden sm:flex items-center gap-3">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    <div class="flex items-center gap-2">
+                                        <img src="/familly.jpeg" alt="Family thumb"
+                                            class="h-8 w-8 rounded object-cover" />
+                                        <span class="font-medium">Family Life</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <figure class="slide-image relative h-[58vh] md:h-[70vh] overflow-hidden group focus:outline-none"
+                        tabindex="0">
+                        <img class="h-full w-full object-cover object-center"
+                            src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2000&auto=format&fit=crop"
+                            alt="Beautiful homes in gated community." />
+                        <div
+                            class="img-overlay pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                            <div class="p-6 text-white space-y-1">
+                                <h3 class="text-2xl font-semibold">The Oaks</h3>
+                                <p class="text-white/90">Luxury family homes surrounded by century-old trees.</p>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <nav id="dots"
+                    class="pointer-events-auto absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-white/90 px-2 py-1"
+                    role="tablist" aria-label="Slide navigation"></nav>
+            </div>
         </div>
-
-        <div style="margin-top: 40px;">
-            <nav id="dots" class="pointer-events-auto absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-white/90 px-2 py-1" role="tablist" aria-label="Slide navigation"></nav>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- Price Highlight -->
     <section class="section" aria-label="Prix du projet" style="background: transparent;">
-        <div class="container" style="text-align:center;">
-            <h2 class="section-title" style="margin-bottom: 0.75rem;">À partir de seulement 1.000.000 DHS</h2>
+        <div class="container text-center">
+            <h2 class="section-title mb-2">À partir de seulement 1.000.000 DHS</h2>
             <div class="section-divider"></div>
-            <a href="#contact" class="cta-button" aria-label="Planifier une visite">Planifier une visite</a>
+            <div class="mt-4">
+                <a href="#contact" class="cta-button" aria-label="Planifier une visite">Planifier une visite</a>
+            </div>
         </div>
     </section>
 
@@ -1138,8 +1446,9 @@
             <div class="contact-form-side" style="margin-top: -60px;">
                 <div class="luxury-form-container">
                     <div class="form-header">
-                        <h2>Prenez rendez-vous dès aujourd’hui</h2>
-                        <p>Visitez nos logements témoins et découvrez un projet pensé pour votre bien-être.</p>
+                        <h2 class="mb-2">Prenez rendez-vous dès aujourd’hui</h2>
+                        <p class="max-w-xl mx-auto leading-relaxed">Visitez nos logements témoins et découvrez un projet
+                            pensé pour votre bien-être.</p>
                     </div>
                     <form class="luxury-contact-form" id="luxuryContactForm">
                         <div class="minimal-form-group">
@@ -1177,6 +1486,7 @@
                                 <div class="line line-2"></div>
                             </div>
                         </button>
+
                         <div class="success-message" id="luxurySuccessMessage">
                             ✓ Votre message a été envoyé avec succès ! Nous vous recontacterons bientôt.
                         </div>
@@ -1185,14 +1495,12 @@
             </div>
         </div>
     </section>
-        <a href="https://wa.me/33123456789?text=Bonjour,%20je%20suis%20intéressé%20par%20Villa%20Sérénité" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="whatsapp-float" 
-       aria-label="Contactez-nous sur WhatsApp"
-       title="Contactez-nous sur WhatsApp">
+    <a href="https://wa.me/33123456789?text=Bonjour,%20je%20suis%20intéressé%20par%20Villa%20Sérénité" target="_blank"
+        rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp"
+        title="Contactez-nous sur WhatsApp">
         <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
         </svg>
     </a>
 
@@ -1224,325 +1532,326 @@
     <script src="car2.js"></script>
 
 
-</head>
-<body>
-   <script>
-    gsap.registerPlugin(ScrollTrigger);
-        
-        // Initialize variables
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-        
-        // Create dots navigation
-        function createDots() {
-            const dotsContainer = document.getElementById('dots');
-            dotsContainer.innerHTML = '';
-            
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-slate-800 scale-125' : 'bg-slate-400'}`;
-                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                dot.addEventListener('click', () => goToSlide(i));
-                dotsContainer.appendChild(dot);
-            }
-        }
-        
-        // Update dots
-        function updateDots() {
-            const dots = document.querySelectorAll('#dots button');
-            dots.forEach((dot, index) => {
-                if (index === currentSlide) {
-                    dot.className = 'w-2 h-2 rounded-full bg-slate-800 scale-125 transition-all duration-300';
-                } else {
-                    dot.className = 'w-2 h-2 rounded-full bg-slate-400 transition-all duration-300';
+    </head>
+
+    <body>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Initialize variables
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            // Create dots navigation
+            function createDots() {
+                const dotsContainer = document.getElementById('dots');
+                dotsContainer.innerHTML = '';
+
+                for (let i = 0; i < totalSlides; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-slate-800 scale-125' : 'bg-slate-400'}`;
+                    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                    dot.addEventListener('click', () => goToSlide(i));
+                    dotsContainer.appendChild(dot);
                 }
-            });
-        }
-        
-        // Go to specific slide
-        function goToSlide(slideIndex) {
-            const track = document.getElementById('carousel-track');
-            currentSlide = slideIndex;
-            
-            // Animate slide transition
-            gsap.to(track, {
-                x: -slideIndex * 100 + '%',
-                duration: 1.2,
-                ease: 'power3.inOut'
-            });
-            
-            // Update slide states
-            slides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === slideIndex);
-            });
-            
-            updateDots();
-            animateSlideContent(slideIndex);
-        }
-        
-        // Animate slide content
-        function animateSlideContent(slideIndex) {
-            const currentSlideEl = slides[slideIndex];
-            
-            // Reset animations
-            // gsap.set(currentSlideEl.querySelectorAll('.slide-tag, .slide-title, .slide-description, .slide-list li, .feature-card, .slide-image'), {
-            //     opacity: 0,
-            //     y: 30,
-            //     scale: 0.95
-            // });
-            
-            // Create timeline for slide content
-            const tl = gsap.timeline();
-            
-            tl.to(currentSlideEl.querySelector('.slide-tag'), {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: 'power3.out'
-            })
-            .to(currentSlideEl.querySelector('.slide-title'), {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 1,
-                ease: 'power3.out'
-            }, '-=0.6')
-            .to(currentSlideEl.querySelector('.slide-description'), {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: 'power2.out'
-            }, '-=0.7')
-            .to(currentSlideEl.querySelectorAll('.slide-list li'), {
-                opacity: 1,
-                y: 0,
-                duration: 0.6,
-                stagger: 0.1,
-                ease: 'power2.out'
-            }, '-=0.6')
-            .to(currentSlideEl.querySelectorAll('.feature-card'), {
-                opacity: 1,
-                y: 0,
-                duration: 0.7,
-                stagger: 0.1,
-                ease: 'back.out(1.7)'
-            }, '-=0.4')
-            .to(currentSlideEl.querySelector('.slide-image'), {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 1.2,
-                ease: 'power3.out'
-            }, '-=1');
-        }
-        
-        // Main scroll animation using ScrollTrigger
-        function initScrollAnimations() {
-            // Hero carousel entrance
-            gsap.fromTo('#hero-carousel', 
-                {
-                    opacity: 0,
-                    y: 100,
-                    scale: 0.95
-                },
-                {
+            }
+
+            // Update dots
+            function updateDots() {
+                const dots = document.querySelectorAll('#dots button');
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.className = 'w-2 h-2 rounded-full bg-slate-800 scale-125 transition-all duration-300';
+                    } else {
+                        dot.className = 'w-2 h-2 rounded-full bg-slate-400 transition-all duration-300';
+                    }
+                });
+            }
+
+            // Go to specific slide
+            function goToSlide(slideIndex) {
+                const track = document.getElementById('carousel-track');
+                currentSlide = slideIndex;
+
+                // Animate slide transition
+                gsap.to(track, {
+                    x: -slideIndex * 100 + '%',
+                    duration: 1.2,
+                    ease: 'power3.inOut'
+                });
+
+                // Update slide states
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === slideIndex);
+                });
+
+                updateDots();
+                animateSlideContent(slideIndex);
+            }
+
+            // Animate slide content
+            function animateSlideContent(slideIndex) {
+                const currentSlideEl = slides[slideIndex];
+
+                // Reset animations
+                // gsap.set(currentSlideEl.querySelectorAll('.slide-tag, .slide-title, .slide-description, .slide-list li, .feature-card, .slide-image'), {
+                //     opacity: 0,
+                //     y: 30,
+                //     scale: 0.95
+                // });
+
+                // Create timeline for slide content
+                const tl = gsap.timeline();
+
+                tl.to(currentSlideEl.querySelector('.slide-tag'), {
                     opacity: 1,
                     y: 0,
-                    scale: 1,
-                    duration: 1.5,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: '#hero-carousel',
-                        start: 'top 85%',
-                        end: 'bottom 15%',
-                        toggleActions: 'play none none reverse'
-                    }
-                }
-            );
-            
-            // Parallax effect on scroll
-            gsap.to('.slide-image img', {
-                yPercent: -20,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: '#hero-carousel',
-                    start: 'top bottom',
-                    end: 'bottom top',
-                    scrub: 1
-                }
-            });
-            
-            // Grain texture animation
-            gsap.to('.grain', {
-                rotation: 360,
-                duration: 60,
-                repeat: -1,
-                ease: 'none'
-            });
-            
-            // Removed auto-advance slides based on scroll position
-            
-            // Scale effect on scroll
-            gsap.to('#hero-carousel', {
-                scale: 0.85,
-                borderRadius: '24px',
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: '#hero-carousel',
-                    start: 'center center',
-                    end: 'bottom top',
-                    scrub: 1
-                }
-            });
-            
-            // Individual slide animations on scroll
-            slides.forEach((slide, index) => {
-                // Individual slide animations on scroll (removed scroll-based slide changes)
-                ScrollTrigger.create({
-                    trigger: slide,
-                    start: 'top 70%',
-                    end: 'bottom 30%',
-                    onEnter: () => {
-                        // Only animate if this is the current active slide
-                        if (index === currentSlide) {
-                            animateSlideContent(index);
+                    duration: 0.8,
+                    ease: 'power3.out'
+                })
+                    .to(currentSlideEl.querySelector('.slide-title'), {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 1,
+                        ease: 'power3.out'
+                    }, '-=0.6')
+                    .to(currentSlideEl.querySelector('.slide-description'), {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        ease: 'power2.out'
+                    }, '-=0.7')
+                    .to(currentSlideEl.querySelectorAll('.slide-list li'), {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
+                        stagger: 0.1,
+                        ease: 'power2.out'
+                    }, '-=0.6')
+                    .to(currentSlideEl.querySelectorAll('.feature-card'), {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.7,
+                        stagger: 0.1,
+                        ease: 'back.out(1.7)'
+                    }, '-=0.4')
+                    .to(currentSlideEl.querySelector('.slide-image'), {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 1.2,
+                        ease: 'power3.out'
+                    }, '-=1');
+            }
+
+            // Main scroll animation using ScrollTrigger
+            function initScrollAnimations() {
+                // Hero carousel entrance
+                gsap.fromTo('#hero-carousel',
+                    {
+                        opacity: 0,
+                        y: 100,
+                        scale: 0.95
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 1.5,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#hero-carousel',
+                            start: 'top 85%',
+                            end: 'bottom 15%',
+                            toggleActions: 'play none none reverse'
                         }
                     }
+                );
+
+                // Parallax effect on scroll
+                gsap.to('.slide-image img', {
+                    yPercent: -20,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#hero-carousel',
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: 1
+                    }
                 });
-                
-                // Feature cards hover animation enhancement
-                const featureCards = slide.querySelectorAll('.feature-card');
-                featureCards.forEach((card, cardIndex) => {
-                    card.addEventListener('mouseenter', () => {
-                        gsap.to(card, {
-                            y: -5,
-                            scale: 1.02,
-                            duration: 0.3,
-                            ease: 'power2.out'
+
+                // Grain texture animation
+                gsap.to('.grain', {
+                    rotation: 360,
+                    duration: 60,
+                    repeat: -1,
+                    ease: 'none'
+                });
+
+                // Removed auto-advance slides based on scroll position
+
+                // Scale effect on scroll
+                gsap.to('#hero-carousel', {
+                    scale: 0.85,
+                    borderRadius: '24px',
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#hero-carousel',
+                        start: 'center center',
+                        end: 'bottom top',
+                        scrub: 1
+                    }
+                });
+
+                // Individual slide animations on scroll
+                slides.forEach((slide, index) => {
+                    // Individual slide animations on scroll (removed scroll-based slide changes)
+                    ScrollTrigger.create({
+                        trigger: slide,
+                        start: 'top 70%',
+                        end: 'bottom 30%',
+                        onEnter: () => {
+                            // Only animate if this is the current active slide
+                            if (index === currentSlide) {
+                                animateSlideContent(index);
+                            }
+                        }
+                    });
+
+                    // Feature cards hover animation enhancement
+                    const featureCards = slide.querySelectorAll('.feature-card');
+                    featureCards.forEach((card, cardIndex) => {
+                        card.addEventListener('mouseenter', () => {
+                            gsap.to(card, {
+                                y: -5,
+                                scale: 1.02,
+                                duration: 0.3,
+                                ease: 'power2.out'
+                            });
+                        });
+
+                        card.addEventListener('mouseleave', () => {
+                            gsap.to(card, {
+                                y: 0,
+                                scale: 1,
+                                duration: 0.3,
+                                ease: 'power2.out'
+                            });
                         });
                     });
-                    
-                    card.addEventListener('mouseleave', () => {
-                        gsap.to(card, {
-                            y: 0,
-                            scale: 1,
-                            duration: 0.3,
-                            ease: 'power2.out'
-                        });
-                    });
                 });
-            });
-        }
-        
-        // Initialize everything when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            createDots();
-            
-            // Initial slide setup
-            slides[0].classList.add('active');
-            animateSlideContent(0);
-            
-            // Initialize scroll animations
-            initScrollAnimations();
-            
-            // Add smooth scrolling behavior
-            document.documentElement.style.scrollBehavior = 'smooth';
-            
-            // Auto-advance slides with interval (optional)
-            let autoAdvanceInterval;
-            
-            function startAutoAdvance() {
-                autoAdvanceInterval = setInterval(() => {
-                    const nextSlide = (currentSlide + 1) % totalSlides;
-                    goToSlide(nextSlide);
-                }, 7000); // Change slide every 5 seconds
             }
-            
-            function stopAutoAdvance() {
-                clearInterval(autoAdvanceInterval);
-            }
-            
-            // Start auto-advance
-            startAutoAdvance();
-            
-            // Pause auto-advance on hover
-            const carousel = document.getElementById('hero-carousel');
-            carousel.addEventListener('mouseenter', stopAutoAdvance);
-            carousel.addEventListener('mouseleave', startAutoAdvance);
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    const prevSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
-                    goToSlide(prevSlide);
-                    stopAutoAdvance();
-                } else if (e.key === 'ArrowRight') {
-                    const nextSlide = (currentSlide + 1) % totalSlides;
-                    goToSlide(nextSlide);
-                    stopAutoAdvance();
-                }
-            });
-            
-            // Touch/swipe support for mobile
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            carousel.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-            
-            carousel.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-            
-            function handleSwipe() {
-                const swipeThreshold = 50;
-                const diff = touchStartX - touchEndX;
-                
-                if (Math.abs(diff) > swipeThreshold) {
-                    if (diff > 0) {
-                        // Swipe left - next slide
+
+            // Initialize everything when DOM is loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                createDots();
+
+                // Initial slide setup
+                slides[0].classList.add('active');
+                animateSlideContent(0);
+
+                // Initialize scroll animations
+                initScrollAnimations();
+
+                // Add smooth scrolling behavior
+                document.documentElement.style.scrollBehavior = 'smooth';
+
+                // Auto-advance slides with interval (optional)
+                let autoAdvanceInterval;
+
+                function startAutoAdvance() {
+                    autoAdvanceInterval = setInterval(() => {
                         const nextSlide = (currentSlide + 1) % totalSlides;
                         goToSlide(nextSlide);
-                    } else {
-                        // Swipe right - previous slide
+                    }, 7000); // Change slide every 5 seconds
+                }
+
+                function stopAutoAdvance() {
+                    clearInterval(autoAdvanceInterval);
+                }
+
+                // Start auto-advance
+                startAutoAdvance();
+
+                // Pause auto-advance on hover
+                const carousel = document.getElementById('hero-carousel');
+                carousel.addEventListener('mouseenter', stopAutoAdvance);
+                carousel.addEventListener('mouseleave', startAutoAdvance);
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
                         const prevSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
                         goToSlide(prevSlide);
-                    }
-                    stopAutoAdvance();
-                }
-            }
-            
-            // Intersection Observer for performance optimization
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '50px'
-            };
-            
-            const carouselObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Carousel is visible - enable animations
-                        entry.target.style.willChange = 'transform';
-                    } else {
-                        // Carousel is not visible - disable animations for performance
-                        entry.target.style.willChange = 'auto';
+                        stopAutoAdvance();
+                    } else if (e.key === 'ArrowRight') {
+                        const nextSlide = (currentSlide + 1) % totalSlides;
+                        goToSlide(nextSlide);
+                        stopAutoAdvance();
                     }
                 });
-            }, observerOptions);
-            
-            carouselObserver.observe(carousel);
-        });
-        
-        // Refresh ScrollTrigger on window resize
-        window.addEventListener('resize', () => {
-            ScrollTrigger.refresh();
-        });
-    </script>
+
+                // Touch/swipe support for mobile
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                carousel.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+
+                carousel.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                });
+
+                function handleSwipe() {
+                    const swipeThreshold = 50;
+                    const diff = touchStartX - touchEndX;
+
+                    if (Math.abs(diff) > swipeThreshold) {
+                        if (diff > 0) {
+                            // Swipe left - next slide
+                            const nextSlide = (currentSlide + 1) % totalSlides;
+                            goToSlide(nextSlide);
+                        } else {
+                            // Swipe right - previous slide
+                            const prevSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+                            goToSlide(prevSlide);
+                        }
+                        stopAutoAdvance();
+                    }
+                }
+
+                // Intersection Observer for performance optimization
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '50px'
+                };
+
+                const carouselObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Carousel is visible - enable animations
+                            entry.target.style.willChange = 'transform';
+                        } else {
+                            // Carousel is not visible - disable animations for performance
+                            entry.target.style.willChange = 'auto';
+                        }
+                    });
+                }, observerOptions);
+
+                carouselObserver.observe(carousel);
+            });
+
+            // Refresh ScrollTrigger on window resize
+            window.addEventListener('resize', () => {
+                ScrollTrigger.refresh();
+            });
+        </script>
 
 
-</body>
+    </body>
 
 </html>
